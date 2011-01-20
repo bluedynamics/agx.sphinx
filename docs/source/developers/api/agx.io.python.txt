@@ -1,69 +1,69 @@
-agx.io.python
+node.ext.python
 =============
 
 API
 ---
 
-.. autoclass:: agx.io.python.Block
+.. autoclass:: node.ext.python.Block
   :members:
   :undoc-members:
   :show-inheritance:
 
-.. autointerface:: agx.io.python.interfaces.IBlock
+.. autointerface:: node.ext.python.interfaces.IBlock
   :members:
 
-.. autoclass:: agx.io.python.Class
+.. autoclass:: node.ext.python.Class
   :members:
   :undoc-members:
   :show-inheritance:
 
-.. autointerface:: agx.io.python.interfaces.IClass
+.. autointerface:: node.ext.python.interfaces.IClass
   :members:
 
-.. autoclass:: agx.io.python.Decorator
+.. autoclass:: node.ext.python.Decorator
   :members:
   :undoc-members:
   :show-inheritance:
 
-.. autointerface:: agx.io.python.interfaces.IDecorator
+.. autointerface:: node.ext.python.interfaces.IDecorator
   :members:
 
-.. autoclass:: agx.io.python.Function
+.. autoclass:: node.ext.python.Function
   :members:
   :undoc-members:
   :show-inheritance:
 
-.. autointerface:: agx.io.python.interfaces.IFunction
+.. autointerface:: node.ext.python.interfaces.IFunction
   :members:
 
-.. autoclass:: agx.io.python.Docstring
-  :members:
-  :undoc-members:
-  :show-inheritance:
-  
-.. autointerface:: agx.io.python.interfaces.IDocstring
-  :members:
-
-.. autoclass:: agx.io.python.Import
-  :members:
-  :undoc-members:
-  :show-inheritance:
-
-.. autointerface:: agx.io.python.interfaces.IImport
-  :members:
-
-.. autoclass:: agx.io.python.Module
+.. autoclass:: node.ext.python.Docstring
   :members:
   :undoc-members:
   :show-inheritance:
   
-.. autointerface:: agx.io.python.interfaces.IModule
+.. autointerface:: node.ext.python.interfaces.IDocstring
   :members:
 
-.. autoclass:: agx.io.python.ProtectedSection
+.. autoclass:: node.ext.python.Import
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+.. autointerface:: node.ext.python.interfaces.IImport
+  :members:
+
+.. autoclass:: node.ext.python.Module
   :members:
   :undoc-members:
   :show-inheritance:
   
-.. autointerface:: agx.io.python.interfaces.IProtectedSection
+.. autointerface:: node.ext.python.interfaces.IModule
+  :members:
+
+.. autoclass:: node.ext.python.ProtectedSection
+  :members:
+  :undoc-members:
+  :show-inheritance:
+  
+.. autointerface:: node.ext.python.interfaces.IProtectedSection
   :members:

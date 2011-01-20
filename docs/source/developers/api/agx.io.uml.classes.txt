@@ -1,83 +1,83 @@
-agx.io.uml.classes
+node.ext.uml.classes
 ==================
 
-Includes zope interfaces from `agx.io.uml.interfaces`.
+Includes zope interfaces from `node.ext.uml.interfaces`.
 
-.. automodule:: agx.io.uml.interfaces
+.. automodule:: node.ext.uml.interfaces
 
 API
 ---
 
-.. autoclass:: agx.io.uml.classes._TypedElement
+.. autoclass:: node.ext.uml.classes._TypedElement
   :members:
   :undoc-members:
 
-.. autoclass:: agx.io.uml.classes.Class
+.. autoclass:: node.ext.uml.classes.Class
   :members:
   :undoc-members:
 
-.. autointerface:: agx.io.uml.interfaces.IClass
+.. autointerface:: node.ext.uml.interfaces.IClass
   :members:
 
-.. autoclass:: agx.io.uml.classes.Interface
-  :members:
-  :undoc-members:
-
-.. autointerface:: agx.io.uml.interfaces.IInterface
-  :members:
-
-.. autoclass:: agx.io.uml.classes.Property
+.. autoclass:: node.ext.uml.classes.Interface
   :members:
   :undoc-members:
 
-.. autointerface:: agx.io.uml.interfaces.IProperty
+.. autointerface:: node.ext.uml.interfaces.IInterface
   :members:
 
-.. autoclass:: agx.io.uml.classes.Operation
-  :members:
-  :undoc-members:
-
-.. autointerface:: agx.io.uml.interfaces.IOperation
-  :members:
-
-.. autoclass:: agx.io.uml.classes.Parameter
+.. autoclass:: node.ext.uml.classes.Property
   :members:
   :undoc-members:
 
-.. autointerface:: agx.io.uml.interfaces.IParameter
+.. autointerface:: node.ext.uml.interfaces.IProperty
   :members:
 
-.. autoclass:: agx.io.uml.classes.Generalization
-  :members:
-  :undoc-members:
-
-.. autointerface:: agx.io.uml.interfaces.IGeneralization
-  :members:
-
-.. autoclass:: agx.io.uml.classes.InterfaceRealization
+.. autoclass:: node.ext.uml.classes.Operation
   :members:
   :undoc-members:
 
-.. autointerface:: agx.io.uml.interfaces.IInterfaceRealization
+.. autointerface:: node.ext.uml.interfaces.IOperation
   :members:
 
-.. autoclass:: agx.io.uml.classes.Association
+.. autoclass:: node.ext.uml.classes.Parameter
+  :members:
+  :undoc-members:
+
+.. autointerface:: node.ext.uml.interfaces.IParameter
+  :members:
+
+.. autoclass:: node.ext.uml.classes.Generalization
+  :members:
+  :undoc-members:
+
+.. autointerface:: node.ext.uml.interfaces.IGeneralization
+  :members:
+
+.. autoclass:: node.ext.uml.classes.InterfaceRealization
+  :members:
+  :undoc-members:
+
+.. autointerface:: node.ext.uml.interfaces.IInterfaceRealization
+  :members:
+
+.. autoclass:: node.ext.uml.classes.Association
   :members:
   :undoc-members:
   
-.. autointerface:: agx.io.uml.interfaces.IAssociation
+.. autointerface:: node.ext.uml.interfaces.IAssociation
   :members:
 
-.. autoclass:: agx.io.uml.classes.AssociationEnd
-  :members:
-  :undoc-members:
-
-.. autointerface:: agx.io.uml.interfaces.IAssociationEnd
-  :members:
-
-.. autoclass:: agx.io.uml.classes.Dependency
+.. autoclass:: node.ext.uml.classes.AssociationEnd
   :members:
   :undoc-members:
 
-.. autointerface:: agx.io.uml.interfaces.IDependency
+.. autointerface:: node.ext.uml.interfaces.IAssociationEnd
+  :members:
+
+.. autoclass:: node.ext.uml.classes.Dependency
+  :members:
+  :undoc-members:
+
+.. autointerface:: node.ext.uml.interfaces.IDependency
   :members:

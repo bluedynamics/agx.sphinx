@@ -1,4 +1,4 @@
-agx.io.uml.utils
+node.ext.uml.utils
 ================
 
 Convinience for every day tasks to work with the UML.
@@ -6,32 +6,32 @@ Convinience for every day tasks to work with the UML.
 API
 ---
 
-.. autoclass:: agx.io.uml.utils.Inheritance
+.. autoclass:: node.ext.uml.utils.Inheritance
   :members:
   :undoc-members:
   :show-inheritance:
   
-.. autoclass:: agx.io.uml.utils.Inheritors
+.. autoclass:: node.ext.uml.utils.Inheritors
   :members:
   :undoc-members:
   :show-inheritance:
   
-.. autoclass:: agx.io.uml.utils.Associations
+.. autoclass:: node.ext.uml.utils.Associations
   :members:
   :undoc-members:
   :show-inheritance:
   
-.. autoclass:: agx.io.uml.utils.Aggregations
+.. autoclass:: node.ext.uml.utils.Aggregations
   :members:
   :undoc-members:
   :show-inheritance:
   
-.. autoclass:: agx.io.uml.utils.Aggregators
+.. autoclass:: node.ext.uml.utils.Aggregators
   :members:
   :undoc-members:
   :show-inheritance:
   
-.. autoclass:: agx.io.uml.utils.TaggedValues
+.. autoclass:: node.ext.uml.utils.TaggedValues
   :members:
   :undoc-members:
   :show-inheritance:

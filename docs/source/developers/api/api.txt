@@ -8,11 +8,11 @@ AGX API documentation
    
    zodict
    agx.core
-   agx.io.xml
-   agx.io.xmi
-   agx.io.uml
-   agx.io.directory
-   agx.io.template
-   agx.io.python
+   node.ext.xml
+   node.ext.xmi
+   node.ext.uml
+   node.ext.directory
+   node.ext.template
+   node.ext.python
    agx.transform.xmi2uml
    agx.transform.uml2fs

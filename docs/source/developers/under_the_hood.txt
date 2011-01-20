@@ -41,14 +41,14 @@ modules.
   contains all transform related components and some base implementations aimed 
   to be used or derived from when providing own components.
 
-``agx.io.*`` 
+``node.ext.*`` 
   packages contain concrete I/O related implementations, i.e. for XML, UML,
   file-system directory, python-code, ...
   
 ``agx.transform.*`` 
   packages providing specific source and target tree instances for the 
   transformation chain- I.e. ``agx.transform.xml2uml`` provides an 
-  ``agx.io.xml`` tree as source and an ``agx.io.uml`` tree as target.
+  ``node.ext.xml`` tree as source and an ``node.ext.uml`` tree as target.
 
 ``agx.generator.*`` 
   packages are containing specific generator logic. Most of the time this is a 

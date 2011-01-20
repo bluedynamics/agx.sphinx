@@ -1,59 +1,59 @@
-agx.io.uml.core
+node.ext.uml.core
 ===============
 
-Includes zope interfaces from `agx.io.uml.interfaces`.
+Includes zope interfaces from `node.ext.uml.interfaces`.
 
-.. automodule:: agx.io.uml.interfaces
+.. automodule:: node.ext.uml.interfaces
 
 
 API
 ---
 
-.. autoclass:: agx.io.uml.core.UMLElement
+.. autoclass:: node.ext.uml.core.UMLElement
   :members:
   :undoc-members:
 
-.. autointerface:: agx.io.uml.interfaces.IUMLElement
+.. autointerface:: node.ext.uml.interfaces.IUMLElement
   :members:
 
-.. autoclass:: agx.io.uml.core.Profile
-  :members:
-  :undoc-members:
-
-.. autointerface:: agx.io.uml.interfaces.IProfile
-  :members:
-
-.. autoclass:: agx.io.uml.core.Datatype
+.. autoclass:: node.ext.uml.core.Profile
   :members:
   :undoc-members:
 
-.. autointerface:: agx.io.uml.interfaces.IDatatype
+.. autointerface:: node.ext.uml.interfaces.IProfile
   :members:
 
-.. autoclass:: agx.io.uml.core.Stereotype
-  :members:
-  :undoc-members:
-
-.. autointerface:: agx.io.uml.interfaces.IStereotype
-  :members:
-
-.. autoclass:: agx.io.uml.core.TaggedValue
+.. autoclass:: node.ext.uml.core.Datatype
   :members:
   :undoc-members:
 
-.. autointerface:: agx.io.uml.interfaces.ITaggedValue
+.. autointerface:: node.ext.uml.interfaces.IDatatype
   :members:
 
-.. autoclass:: agx.io.uml.core.Package
-  :members:
-  :undoc-members:
-
-.. autointerface:: agx.io.uml.interfaces.IPackage
-  :members:
-
-.. autoclass:: agx.io.uml.core.Model
+.. autoclass:: node.ext.uml.core.Stereotype
   :members:
   :undoc-members:
 
-.. autointerface:: agx.io.uml.interfaces.IModel
+.. autointerface:: node.ext.uml.interfaces.IStereotype
+  :members:
+
+.. autoclass:: node.ext.uml.core.TaggedValue
+  :members:
+  :undoc-members:
+
+.. autointerface:: node.ext.uml.interfaces.ITaggedValue
+  :members:
+
+.. autoclass:: node.ext.uml.core.Package
+  :members:
+  :undoc-members:
+
+.. autointerface:: node.ext.uml.interfaces.IPackage
+  :members:
+
+.. autoclass:: node.ext.uml.core.Model
+  :members:
+  :undoc-members:
+
+.. autointerface:: node.ext.uml.interfaces.IModel
   :members:

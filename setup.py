@@ -31,7 +31,7 @@ setup(name="agx.sphinx",
       install_requires=[
           'setuptools',
           ##code-section dependencies
-          'agx.flavour.dev',
+          'agx.dev',
           'sphinxcontrib-mscgen',
           'repoze.sphinx.autointerface',
           ##/code-section dependencies

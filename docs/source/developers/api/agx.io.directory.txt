@@ -1,17 +1,17 @@
-agx.io.directory
+node.ext.directory
 ================
 
 API
 ---
 
-.. autoclass:: agx.io.directory.Directory
+.. autoclass:: node.ext.directory.Directory
   :members:
   :undoc-members:
   :show-inheritance:
 
-.. autointerface:: agx.io.directory.interfaces.IDirectory
+.. autointerface:: node.ext.directory.interfaces.IDirectory
   :members:
 
-.. autointerface:: agx.io.directory.interfaces.IFile
+.. autointerface:: node.ext.directory.interfaces.IFile
   :members:
   

@@ -1,7 +1,7 @@
 agx.core
 ========
 
-agx.io.core.interfaces
+node.ext.core.interfaces
 ----------------------
 
 .. autointerface:: agx.core.interfaces.IConfLoader
