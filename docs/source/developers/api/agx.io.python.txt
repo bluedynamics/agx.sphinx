@@ -1,0 +1,69 @@
+agx.io.python
+=============
+
+API
+---
+
+.. autoclass:: agx.io.python.Block
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+.. autointerface:: agx.io.python.interfaces.IBlock
+  :members:
+
+.. autoclass:: agx.io.python.Class
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+.. autointerface:: agx.io.python.interfaces.IClass
+  :members:
+
+.. autoclass:: agx.io.python.Decorator
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+.. autointerface:: agx.io.python.interfaces.IDecorator
+  :members:
+
+.. autoclass:: agx.io.python.Function
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+.. autointerface:: agx.io.python.interfaces.IFunction
+  :members:
+
+.. autoclass:: agx.io.python.Docstring
+  :members:
+  :undoc-members:
+  :show-inheritance:
+  
+.. autointerface:: agx.io.python.interfaces.IDocstring
+  :members:
+
+.. autoclass:: agx.io.python.Import
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+.. autointerface:: agx.io.python.interfaces.IImport
+  :members:
+
+.. autoclass:: agx.io.python.Module
+  :members:
+  :undoc-members:
+  :show-inheritance:
+  
+.. autointerface:: agx.io.python.interfaces.IModule
+  :members:
+
+.. autoclass:: agx.io.python.ProtectedSection
+  :members:
+  :undoc-members:
+  :show-inheritance:
+  
+.. autointerface:: agx.io.python.interfaces.IProtectedSection
+  :members:

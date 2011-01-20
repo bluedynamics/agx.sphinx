@@ -1,0 +1,83 @@
+agx.io.uml.classes
+==================
+
+Includes zope interfaces from `agx.io.uml.interfaces`.
+
+.. automodule:: agx.io.uml.interfaces
+
+API
+---
+
+.. autoclass:: agx.io.uml.classes._TypedElement
+  :members:
+  :undoc-members:
+
+.. autoclass:: agx.io.uml.classes.Class
+  :members:
+  :undoc-members:
+
+.. autointerface:: agx.io.uml.interfaces.IClass
+  :members:
+
+.. autoclass:: agx.io.uml.classes.Interface
+  :members:
+  :undoc-members:
+
+.. autointerface:: agx.io.uml.interfaces.IInterface
+  :members:
+
+.. autoclass:: agx.io.uml.classes.Property
+  :members:
+  :undoc-members:
+
+.. autointerface:: agx.io.uml.interfaces.IProperty
+  :members:
+
+.. autoclass:: agx.io.uml.classes.Operation
+  :members:
+  :undoc-members:
+
+.. autointerface:: agx.io.uml.interfaces.IOperation
+  :members:
+
+.. autoclass:: agx.io.uml.classes.Parameter
+  :members:
+  :undoc-members:
+
+.. autointerface:: agx.io.uml.interfaces.IParameter
+  :members:
+
+.. autoclass:: agx.io.uml.classes.Generalization
+  :members:
+  :undoc-members:
+
+.. autointerface:: agx.io.uml.interfaces.IGeneralization
+  :members:
+
+.. autoclass:: agx.io.uml.classes.InterfaceRealization
+  :members:
+  :undoc-members:
+
+.. autointerface:: agx.io.uml.interfaces.IInterfaceRealization
+  :members:
+
+.. autoclass:: agx.io.uml.classes.Association
+  :members:
+  :undoc-members:
+  
+.. autointerface:: agx.io.uml.interfaces.IAssociation
+  :members:
+
+.. autoclass:: agx.io.uml.classes.AssociationEnd
+  :members:
+  :undoc-members:
+
+.. autointerface:: agx.io.uml.interfaces.IAssociationEnd
+  :members:
+
+.. autoclass:: agx.io.uml.classes.Dependency
+  :members:
+  :undoc-members:
+
+.. autointerface:: agx.io.uml.interfaces.IDependency
+  :members:

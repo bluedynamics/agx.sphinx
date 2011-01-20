@@ -1,0 +1,146 @@
+=============================
+Hello World - The first Model
+=============================
+
+Creating the first model and generating code using Eclipse.
+
+Create a project
+================
+
+Assuming **PyDev** is installed, select **PyDev** perspective, click
+**File** in main menu and select **new** -> **Pydev Project**.
+
+Enter desired name, commonly the egg name and click **finish**
+
+.. image:: hello_world_create_pydev_project.png
+
+Create new folder named **agx** inside new project by right clicking
+project in navigator and selecting **new** -> **Folder**.
+
+Create the Model
+================
+
+Open Papyrus perspective and navigate to **agx** folder.
+
+Create a new model by right clicking folder in navigator and selecting
+**new** -> **create an empty Model**, select target folder and enter a name
+for the model. finally click **finish**.
+
+.. image:: hello_world_create_empty_model.png
+
+Two files are created. The diagram file and a UML file. After refreshing they
+appear in **navigator**.
+
+.. image:: hello_world_navigator.png
+
+Open **outline** view by clicking **Window** and selecting **Show View** ->
+**Outline**.
+
+.. image:: hello_world_outline.png
+
+The UML model related tool-bar can be expanded at the top right.
+
+.. image:: hello_world_uml_toolbar.png
+
+Configure AGX
+=============
+
+Right click on already created **uml** file, select **Properties** and navigate
+to **AGX Properties**.
+
+Define output directory. This is where generated code goes to.
+
+Define generator executable. By clicking **apply** AGX Eclipse will fetch 
+provided profiles by invoking defined executable.
+
+Select **pydev** profile, and activate it by selecting it and clicking **>>**.
+
+Click **import selected profiles**. Selected profiles are now copied to UML
+Model location.
+
+.. image:: hello_world_agx_properties.png
+
+After refreshing navigator imported profile appear next to model. Keep
+in mind that it's essential to have model and profiles in the same folder. Thats
+because the path to profile is stored in model.
+
+.. image:: hello_world_import_profiles.png
+
+Apply profile(s) on model
+=========================
+
+Click **Properties** Tab at the bottom of Eclipse IDE, select model in
+outline and klick **Profiles** in properties tab.
+
+On the right you find the **+** icon for applying profiles.
+
+.. image:: hello_world_apply_profile.png
+
+Click **+** icon, navigate to **pyegg.profile.uml** in **agx** folder, select it
+and click **OK**.
+
+.. image:: hello_world_select_profile_to_apply.png
+
+Choose **pyegg** profile, click **OK** and save model (**ctrl + s**)
+
+.. image:: hello_world_choose_profiles.png
+
+Creating UML package for python egg
+===================================
+
+In this example we're just drawing a package generating python egg structure.
+The remaining profiles and generators are described in **Users Documentation**.
+
+Expand **Palette**, click *Package** and paint a package in your diagram.
+
+Click **Properties** Tab -> **General** and give it desired egg name. This must
+be target package name, preceiding names define the namespace packages.
+
+.. image:: hello_world_create_package.png
+
+Apply pyegg stereotype on package
+=================================
+
+Rickt click package in diagram and select **profile** -> **Apply Stereotype**.
+
+Select **pyegg** profile, click **->** and **OK**.
+
+.. image:: hello_world_select_stereotype.png
+
+**pyegg** stereotype now apears to be set on package.
+
+.. image:: hello_world_package_with_pyegg_stereotype.png
+
+Set tagged values for stereotype pyegg
+======================================
+
+Select package, in **Properties** Tab -> **Profile**. In **Applied stereotypes**
+expand **pyegg**.
+
+Now available tagged values appear for defined stereotype. Select tagged value
+name you want to define value for and click **+** button on the right to add
+value.
+
+UML2 does not support multi valued tagged values. In case where enumerations
+are needed, value is seperated by comma. Refer to **Users Documentation** for
+details.
+
+.. image:: hello_world_define_tagged_values.png
+
+Save changes after defining tagged values.
+
+Invoking AGX
+============
+
+The Model is now ready to be generated. Right click diagram related UML file
+**agx.hello.world.uml** in navigator and select **AGX** -> **generate**.
+
+AGX opens a console and prints generator output to it.
+
+.. image:: hello_world_agx_console.png
+
+After refreshing generated code appears in navigator.
+
+.. image:: hello_world_navigator_generated.png
+
+Congratulations. You have done your first AGX MDSD project.

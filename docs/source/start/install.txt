@@ -1,0 +1,36 @@
+==============
+Installing AGX
+==============
+
+Pre-Requirements
+----------------
+
+You need Python 2.6 and the dev-headers of libxml2 in order to run AGX.
+
+Install AGX from Source (currently the only method)
+---------------------------------------------------
+
+Checkout development project by typing
+::
+
+    svn co https://svn.plone.org/svn/archetypes/AGX/agx.flavour.dev/trunk install_dir
+
+Enter install_dir and run bootstrap
+::
+
+    python bootstrap.py
+
+Run Buildout
+::
+
+    ./bin/buildout
+
+When buildout has finished, the AGX binary is located at
+``bin/agx`` in install_dir.
+
+Run ``./bin/agx -i`` and you get output similar to this
+::
+
+    AGX 3.0-dev Development
+
+Congratulations, you can now use AGX.

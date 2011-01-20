@@ -1,0 +1,18 @@
+.. AGX API documentation index.
+
+AGX API documentation
+=====================
+
+.. toctree::
+   :maxdepth: 2
+   
+   zodict
+   agx.core
+   agx.io.xml
+   agx.io.xmi
+   agx.io.uml
+   agx.io.directory
+   agx.io.template
+   agx.io.python
+   agx.transform.xmi2uml
+   agx.transform.uml2fs

@@ -1,0 +1,59 @@
+agx.io.uml.core
+===============
+
+Includes zope interfaces from `agx.io.uml.interfaces`.
+
+.. automodule:: agx.io.uml.interfaces
+
+
+API
+---
+
+.. autoclass:: agx.io.uml.core.UMLElement
+  :members:
+  :undoc-members:
+
+.. autointerface:: agx.io.uml.interfaces.IUMLElement
+  :members:
+
+.. autoclass:: agx.io.uml.core.Profile
+  :members:
+  :undoc-members:
+
+.. autointerface:: agx.io.uml.interfaces.IProfile
+  :members:
+
+.. autoclass:: agx.io.uml.core.Datatype
+  :members:
+  :undoc-members:
+
+.. autointerface:: agx.io.uml.interfaces.IDatatype
+  :members:
+
+.. autoclass:: agx.io.uml.core.Stereotype
+  :members:
+  :undoc-members:
+
+.. autointerface:: agx.io.uml.interfaces.IStereotype
+  :members:
+
+.. autoclass:: agx.io.uml.core.TaggedValue
+  :members:
+  :undoc-members:
+
+.. autointerface:: agx.io.uml.interfaces.ITaggedValue
+  :members:
+
+.. autoclass:: agx.io.uml.core.Package
+  :members:
+  :undoc-members:
+
+.. autointerface:: agx.io.uml.interfaces.IPackage
+  :members:
+
+.. autoclass:: agx.io.uml.core.Model
+  :members:
+  :undoc-members:
+
+.. autointerface:: agx.io.uml.interfaces.IModel
+  :members:

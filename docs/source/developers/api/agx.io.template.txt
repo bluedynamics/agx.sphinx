@@ -1,0 +1,32 @@
+agx.io.template
+===============
+
+API
+---
+
+.. autoclass:: agx.io.template.SectionedTemplate
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+.. autoclass:: agx.io.template.JinjaTemplate
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+.. autoclass:: agx.io.template.XMLTemplate
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+.. autoclass:: agx.io.template.ZPTemplate
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+.. autointerface:: agx.io.template.interfaces.ITemplate
+  :members:
+
+.. autoclass:: agx.io.template.codesectionhandler.CodeSectionHandler
+  :members:
+  :undoc-members:

@@ -1,0 +1,10 @@
+agx.io.uml
+==========
+
+.. toctree::
+   :maxdepth: 2
+   
+   agx.io.uml.core
+   agx.io.uml.classes
+   agx.io.uml.utils
+   
