@@ -16,7 +16,7 @@ from UML2 diagrams.
 
 Its generic core is a framework to convert or transform any data 
 source tree into any data target tree. Its generic model of pipelined 
-multi pass transformations allows to solve complex source based tasks of 
+multi-pass transformations allows to solve complex source based tasks of 
 data-transformation.
 
 AGX roots are in the 2003 started ArchGenXML code-generator and is also its 

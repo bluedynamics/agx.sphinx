@@ -67,18 +67,18 @@ select :mod:`Papyrus modelling tools`.
 Installing Eclipse AGX
 ----------------------
 
-AGX Ships with an Eclipse Plugin for invoking the generator out of the IDE.
-The update site for this Plugin is at `<http://agx.me/updates/>`_. Install it
+AGX Ships with an Eclipse plugin for invoking the generator out of the IDE.
+The update site for this plugin is at `<http://agx.me/updates/>`_. Install it
 using the update manager.
 
 Using PyDev
 -----------
 
-PyDev is an Eclipse Plugin for Python development and the choice if you
+PyDev is an Eclipse plugin for Python development and the choice if you
 decide to use Eclipse as your Python IDE.
 
 Using it has the advantage of combining modeling, code generation and custom
-work on the generated stuff all in the same IDE - hurrey!.
+work on the generated stuff all in the same IDE - hurrah!.
 
 The update site for Pydev is at `<http://pydev.org/updates/>`_.
 
