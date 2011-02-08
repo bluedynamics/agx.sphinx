@@ -1,3 +1,6 @@
 *.pyc
 *.pyo
 src/agx.sphinx.egg-info
+.installed.cfg
+.mr.developer.cfg
+devsrc
