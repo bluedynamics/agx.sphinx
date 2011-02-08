@@ -19,11 +19,9 @@ bda-naked-python$ cd ..
 $ git clone git://github.com/bluedynamics/agx.dev.git
 $ cd agx.dev
 agx.dev$ ../bda-naked-python/parts/python/bin/python2.6 bootstrap.py
-agx.dev$ ./bin/buildout -v
+agx.dev$ ./bin/buildout -c [dev.cfg|anon.cfg]
 agx.dev$ cd ..
 
 3) What we can do now is we can run the tests:
 
-agx.dev$ chmod u+x ./bin/testall
-agx.dev$ ./bin/testall
-
+agx.dev$ ./bin/test
