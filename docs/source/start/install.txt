@@ -23,7 +23,7 @@ Enter agx.dev and run bootstrap
 Run Buildout
 ::
 
-    ./bin/buildout
+    ./bin/buildout -c [dev.cfg|anon.cfg]
 
 When buildout has finished, the AGX binary is located at
 ``bin/agx`` in install_dir.

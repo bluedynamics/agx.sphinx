@@ -18,7 +18,7 @@ bda-naked-python$ cd ..
 
 $ git clone git://github.com/bluedynamics/agx.dev.git
 $ cd agx.dev
-agx.dev$ ../bda-naked-python/parts/python/bin/python2.6 bootstrap.py
+agx.dev$ ../bda-naked-python/parts/python/bin/python2.6 bootstrap.py -c [dev.cfg|anon.cfg]
 agx.dev$ ./bin/buildout -c [dev.cfg|anon.cfg]
 agx.dev$ cd ..
 
