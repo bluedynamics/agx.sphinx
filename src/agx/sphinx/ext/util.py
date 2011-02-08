@@ -2,7 +2,7 @@
 # Copyright BlueDynamics Alliance - http://bluedynamics.com
 # GNU General Public License Version 2
 
-import agx.flavour.dev
+import agx.dev
 import zope.component
 from zope.component import getUtility
 from zope.configuration.xmlconfig import XMLConfig
@@ -25,7 +25,7 @@ class AGXInfo(object):
 
     def load_agx_config(self):
         XMLConfig('meta.zcml', zope.component)()
-        XMLConfig('configure.zcml', agx.flavour.dev)()
+        XMLConfig('configure.zcml', agx.dev)()
         confloader = self.confloader
         confloader()
 

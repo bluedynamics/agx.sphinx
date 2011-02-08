@@ -11,3 +11,5 @@ docs/make.bat
 docs/source/conf.py
 eggs/
 parts/
+docs/doctrees/
+docs/html/
