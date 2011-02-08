@@ -13,6 +13,7 @@ AGX Package Dependencies
 **Legend**:
 
 .. graphviz::
+
     digraph depslegend {
         size = "5,1";
         
@@ -34,7 +35,7 @@ AGX Package Dependencies
         "lxml" [style="filled", fillcolor="grey90", label="lxml", shape="Mrecord"];
         "uuid" [style="filled", fillcolor="grey90", label="uuid", shape="Mrecord"];
         "odict" [style="filled", fillcolor="grey90", label="odict", shape="Mrecord"];
-        "zodict" [style="filled", fillcolor="grey90", label="zodict", shape="Mrecord"];
+        "node" [style="filled", fillcolor="grey90", label="node", shape="Mrecord"];
         "Chameleon" [style="filled", fillcolor="grey90", label="Chameleon", shape="Mrecord"];
         "Jinja2" [style="filled", fillcolor="grey90", label="Jinja2", shape="Mrecord"];
         
@@ -62,18 +63,18 @@ AGX Package Dependencies
         
         "agx.flavour.dev" [style="filled", fillcolor="yellow2", label="agx.flavour.dev", shape="Mrecord"];
         
-        "zodict" -> "uuid" [arrowhead="none"];
-        "zodict" -> "odict" [arrowhead="none"];
-        "zodict" -> "zope.location" [arrowhead="none"];
-        "zodict" -> "zope.lifecycleevent" [arrowhead="none"];
+        "node" -> "uuid" [arrowhead="none"];
+        "node" -> "odict" [arrowhead="none"];
+        "node" -> "zope.location" [arrowhead="none"];
+        "node" -> "zope.lifecycleevent" [arrowhead="none"];
         
         "agx.flavour.dev" -> "agx.generator.uml" [arrowhead="none"];
         "agx.flavour.dev" -> "agx.generator.zca" [arrowhead="none"];
         
-        "agx.core" -> "zodict" [arrowhead="none"];
+        "agx.core" -> "node" [arrowhead="none"];
         "agx.core" -> "zope.configuration" [arrowhead="none"];
         
-        "node.ext.directory" -> "zodict" [arrowhead="none"];
+        "node.ext.directory" -> "node" [arrowhead="none"];
         
         "node.ext.python" -> "node.ext.directory" [arrowhead="none"];
         
@@ -82,11 +83,11 @@ AGX Package Dependencies
         "node.ext.template" -> "Chameleon" [arrowhead="none"];
         "node.ext.template" -> "Jinja2" [arrowhead="none"];
         
-        "node.ext.uml" -> "zodict" [arrowhead="none"];
+        "node.ext.uml" -> "node" [arrowhead="none"];
         
         "node.ext.xmi" -> "node.ext.xml" [arrowhead="none"];
         
-        "node.ext.xml" -> "zodict" [arrowhead="none"];
+        "node.ext.xml" -> "node" [arrowhead="none"];
         "node.ext.xml" -> "lxml" [arrowhead="none"];
         
         "node.ext.zcml" -> "node.ext.xml" [arrowhead="none"];
@@ -115,6 +116,7 @@ AGX Configuration
 **Legend**:
 
 .. graphviz::
+
     digraph configlegend {
         size = "5,1";
         

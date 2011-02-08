@@ -1,5 +1,5 @@
 node.ext.uml
-==========
+============
 
 .. toctree::
    :maxdepth: 2

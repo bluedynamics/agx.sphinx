@@ -25,7 +25,7 @@ and highly customizable.
 We tried to make extension work for developers as easy and as less code
 expensive as possible at the same time.
 
-Thus its easy for you to write own generators and hook them in existing 
+Thus its easy to write own generators and hook them in existing 
 transformation chains. Extending i.e. UML models by profiles with stereotypes 
 and tagged values and providing additional generators enables new behavior in 
 your generated code. 
@@ -55,39 +55,6 @@ modules.
   bunch of registered handlers for a transform. This handlers are responsible 
   to read from the source tree desired information and write nodes to the 
   target tree and are called by the transformation chain.
-
-``agx.flavour.*`` 
-  packages contain the specific AGX "setups", i.e. required components to 
-  generate code for a specific framework from UML diagrams, or to exchange data 
-  between systems, ...
-
-
-Trees and Leafs: The Node
--------------------------
-
-We designed the software to treat every data as tree - as the term
-*tree transformation* implies.
-
-Most data structures could be described as trees, i.e. a SQL table has its
-rows as child nodes, and this rows the columns as leafs. Other data
-sources are itself represented as trees like LDAP or XML what makes the
-handling of them even simpler.
-
-We do not distinguish between root, node and leaf, but have for simplicity one 
-base implementation for tree behaviour, called ``Node``. It is
-located in ``zodict.node`` and the god of all input/output (IO) tasks. This 
-class follows the signature of 
-
-* ``zope.interface.mapping.IFullMapping`` - Zopes Tool Kits interface 
-  description of a python dict and 
-* ``zope.location.interfaces.ILocation`` - to describe the hirarchical position
-  of the node. 
-
-Some convenience is promised due to ``zodict.interfaces.INode`` as
-well.
-
-At places where we need to determine a nodes role in the tree (root, node,
-leaf, source, target) this is done due interfaces.
 
   
 Components of the transformation chain

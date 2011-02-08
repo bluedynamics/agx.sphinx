@@ -6,7 +6,6 @@ AGX API documentation
 .. toctree::
    :maxdepth: 2
    
-   zodict
    agx.core
    node.ext.xml
    node.ext.xmi

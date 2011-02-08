@@ -1,5 +1,5 @@
 node.ext.uml.classes
-==================
+====================
 
 Includes zope interfaces from `node.ext.uml.interfaces`.
 

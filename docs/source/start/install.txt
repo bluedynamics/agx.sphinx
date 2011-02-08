@@ -13,12 +13,12 @@ Install AGX from Source (currently the only method)
 Checkout development project by typing
 ::
 
-    svn co https://svn.plone.org/svn/archetypes/AGX/agx.flavour.dev/trunk install_dir
+    git clone git://github.com/bluedynamics/agx.dev.git
 
-Enter install_dir and run bootstrap
+Enter agx.dev and run bootstrap
 ::
 
-    python bootstrap.py
+    python bootstrap.py -c [dev.cfg|anon.cfg]
 
 Run Buildout
 ::

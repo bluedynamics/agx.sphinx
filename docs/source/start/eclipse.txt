@@ -2,9 +2,7 @@
 Installing and configuring Eclipse for use with AGX
 ===================================================
 
-The setup for AGX described here uses Eclipse Galileo. In Eclipse Helios things
-don't work at the moment Papyrus isn't ready for Helios (Helios was just released when
-this docs were written).
+The setup for AGX described here uses Eclipse Galileo.
 
 Installing Eclipse
 ------------------

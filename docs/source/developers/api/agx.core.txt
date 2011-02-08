@@ -1,8 +1,8 @@
 agx.core
 ========
 
-node.ext.core.interfaces
-----------------------
+agx.core.interfaces
+-------------------
 
 .. autointerface:: agx.core.interfaces.IConfLoader
   :members:
