@@ -2,7 +2,7 @@
 About the Model Driven Approach
 ===============================
 
-AGX uses models to generate software from them. This approach is widely spreaded
+AGX uses models to generate software from them. This approach is widely spread
 in other programming languages like Java or C++. Python is suited well too for 
 the model driven approach.
 
@@ -22,7 +22,7 @@ graphical language designed to describe software through diagrams. There are
 several different types of diagrams available, but at the moment AGX uses only 
 class-diagrams.
 
-AGX is extensible using profiles and matching generators. Each profile defines 
+AGX can be extended by using profiles and matching generators. Each profile defines 
 a set of features and contains a UML profile loadable in any modern UML 
 modeling tool. It also contains AGX generators bound to the scope of the profile 
 responsible for generating Python code, structures or configuration.
