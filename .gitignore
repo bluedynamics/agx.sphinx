@@ -1,0 +1,16 @@
+*.pyc
+*.pyo
+src/agx.sphinx.egg-info
+.installed.cfg
+.mr.developer.cfg
+devsrc
+bin/
+develop-eggs/
+docs/Makefile
+docs/make.bat
+docs/source/conf.py
+eggs/
+parts/
+docs/doctrees/
+docs/html/
+.DS_Store
