@@ -1,14 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <description name="AGX Eclipse Updates" url="http://agx.me/updates">
-      Update Site containing AGX Eclipse plugin.
-   </description>
-   <feature url="features/org.eclipse.agx_1.0.3.jar" id="org.eclipse.agx" version="1.0.3">
-      <category name="python_mdsd"/>
-   </feature>
-   <category-def name="python_mdsd" label="MDSD for Python">
-      <description>
-         Model driven Software Development for Python
-      </description>
-   </category-def>
+   <feature url="features/org.eclipse.agx.feature_1.2.0.jar" id="org.eclipse.agx.feature" version="1.2"/>
 </site>
