@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.eclipse.agx_1.2.0.jar" id="org.eclipse.agx" version="1.2"/>
    <feature url="features/org.eclipse.agx_1.2.1.jar" id="org.eclipse.agx" version="1.2.1"/>
    <category-def name="mdsd" label="Model Driven Software Development"/>
 </site>
