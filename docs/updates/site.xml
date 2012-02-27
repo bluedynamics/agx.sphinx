@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/org.eclipse.agx_1.2.1.jar" id="org.eclipse.agx" version="1.2.1"/>
-   <category-def name="mdsd" label="Model Driven Software Development"/>
+   <feature url="features/org.eclipse.agx_1.2.2.jar" id="org.eclipse.agx" version="1.2.2">
+      <category name="python_mdsd"/>
+   </feature>
+   <category-def name="python_mdsd" label="MDSD">
+      <description>
+         Model Driven Software Development
+      </description>
+   </category-def>
 </site>
