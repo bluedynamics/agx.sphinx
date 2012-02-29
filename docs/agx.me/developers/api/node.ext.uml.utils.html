@@ -1,0 +1,366 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>node.ext.uml.utils &mdash; AGX 3.alpha documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.alpha',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="AGX 3.alpha documentation" href="../../index.html" />
+    <link rel="up" title="node.ext.uml" href="node.ext.uml.html" />
+    <link rel="next" title="node.ext.directory" href="node.ext.directory.html" />
+    <link rel="prev" title="node.ext.uml.classes" href="node.ext.uml.classes.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="node.ext.directory.html" title="node.ext.directory"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="node.ext.uml.classes.html" title="node.ext.uml.classes"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">AGX 3.alpha documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Developers Documentation</a> &raquo;</li>
+          <li><a href="api.html" >AGX API documentation</a> &raquo;</li>
+          <li><a href="node.ext.uml.html" accesskey="U">node.ext.uml</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/agx.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">node.ext.uml.utils</a><ul>
+<li><a class="reference internal" href="#api">API</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="node.ext.uml.classes.html"
+                        title="previous chapter">node.ext.uml.classes</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="node.ext.directory.html"
+                        title="next chapter">node.ext.directory</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/developers/api/node.ext.uml.utils.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="node-ext-uml-utils">
+<h1>node.ext.uml.utils<a class="headerlink" href="#node-ext-uml-utils" title="Permalink to this headline">¶</a></h1>
+<p>Convinience for every day tasks to work with the UML.</p>
+<div class="section" id="api">
+<h2>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="node.ext.uml.utils.Inheritance">
+<em class="property">class </em><tt class="descclassname">node.ext.uml.utils.</tt><tt class="descname">Inheritance</tt><big>(</big><em>context</em><big>)</big><a class="headerlink" href="#node.ext.uml.utils.Inheritance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">node.base.OrderedNode</span></tt></p>
+<p>Tree giving the inheritance tree point of view of arbitary UML-elements.</p>
+<p>By adapting an UML element this tree shows the generelizations of the
+element as a Node tree.</p>
+<p>On __getitem__ it returns the Inheritance adapter of the more general
+element.</p>
+<dl class="attribute">
+<dt id="node.ext.uml.utils.Inheritance.all">
+<tt class="descname">all</tt><a class="headerlink" href="#node.ext.uml.utils.Inheritance.all" title="Permalink to this definition">¶</a></dt>
+<dd><p>flattend (list) from the traversed tree of more general
+UML-elements.</p>
+<p>&#64;return: list of UMLElements.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="node.ext.uml.utils.Inheritance.iterkeys">
+<tt class="descname">iterkeys</tt><big>(</big><big>)</big><a class="headerlink" href="#node.ext.uml.utils.Inheritance.iterkeys" title="Permalink to this definition">¶</a></dt>
+<dd><p>iterates over uuids of more general UML-elements.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="node.ext.uml.utils.Inheritance.itervalues">
+<tt class="descname">itervalues</tt><big>(</big><big>)</big><a class="headerlink" href="#node.ext.uml.utils.Inheritance.itervalues" title="Permalink to this definition">¶</a></dt>
+<dd><p>iterates over more general UML-elements.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.utils.Inheritance.noderepr">
+<tt class="descname">noderepr</tt><a class="headerlink" href="#node.ext.uml.utils.Inheritance.noderepr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="node.ext.uml.utils.Inheritors">
+<em class="property">class </em><tt class="descclassname">node.ext.uml.utils.</tt><tt class="descname">Inheritors</tt><big>(</big><em>context</em><big>)</big><a class="headerlink" href="#node.ext.uml.utils.Inheritors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<p>Adapter giving the inverse inheritance point of view of arbitary
+UML-elements.</p>
+<dl class="attribute">
+<dt id="node.ext.uml.utils.Inheritors.all">
+<tt class="descname">all</tt><a class="headerlink" href="#node.ext.uml.utils.Inheritors.all" title="Permalink to this definition">¶</a></dt>
+<dd><p>UMLElements which are inheriting (less general) from the
+given UMLElement, following the tree down: childs of childs are
+included.</p>
+<p>&#64;return: list of UMLElements.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.utils.Inheritors.direct">
+<tt class="descname">direct</tt><a class="headerlink" href="#node.ext.uml.utils.Inheritors.direct" title="Permalink to this definition">¶</a></dt>
+<dd><p>UMLElements which are inheriting diretcly (less general) from the
+given UMLElement</p>
+<p>&#64;return: list of UMLElements.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="node.ext.uml.utils.Associations">
+<em class="property">class </em><tt class="descclassname">node.ext.uml.utils.</tt><tt class="descname">Associations</tt><big>(</big><em>context</em><big>)</big><a class="headerlink" href="#node.ext.uml.utils.Associations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<p>Adapter to get information about an UMLElements associations.</p>
+<dl class="attribute">
+<dt id="node.ext.uml.utils.Associations.all">
+<tt class="descname">all</tt><a class="headerlink" href="#node.ext.uml.utils.Associations.all" title="Permalink to this definition">¶</a></dt>
+<dd><p>All associations: direct, directlyrealized, inherited and
+inheritedrealized.</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">return</span></tt></dt>
+<dd>list of AssociationEnd instances.</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.utils.Associations.direct">
+<tt class="descname">direct</tt><a class="headerlink" href="#node.ext.uml.utils.Associations.direct" title="Permalink to this definition">¶</a></dt>
+<dd><p>All associations which are starting or ending directly at the given
+UML element.</p>
+<p>&#64;return: list of AssociationEnd instances.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.utils.Associations.directlyrealized">
+<tt class="descname">directlyrealized</tt><a class="headerlink" href="#node.ext.uml.utils.Associations.directlyrealized" title="Permalink to this definition">¶</a></dt>
+<dd><p>All associations which are on Interfaces with InterfaceRealizations
+directly on this UMLElement. This includes Associations from more
+general Interfaces of the contracted Interface (it takes the Inheritance
+tree of the Relaized interface into account).</p>
+<p>&#64;return: list of AssociationEnd instances.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.utils.Associations.inherited">
+<tt class="descname">inherited</tt><a class="headerlink" href="#node.ext.uml.utils.Associations.inherited" title="Permalink to this definition">¶</a></dt>
+<dd><p>All associations which are inherited from more general UML-Elements,
+the direct associations are not included.</p>
+<p>&#64;return: list of AssociationEnd instances.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.utils.Associations.inheritedrealized">
+<tt class="descname">inheritedrealized</tt><a class="headerlink" href="#node.ext.uml.utils.Associations.inheritedrealized" title="Permalink to this definition">¶</a></dt>
+<dd><p>All associations which are on Interfaces with InterfaceRealizations
+from more general UMLElements of this element. This includes
+Associations from more general Interfaces of the contracted Interface
+(it takes the Inheritance tree of the Relaized interface into account).
+It does not include directly realized associations.</p>
+<p>&#64;return: list of AssociationEnd instances.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="node.ext.uml.utils.Aggregations">
+<em class="property">class </em><tt class="descclassname">node.ext.uml.utils.</tt><tt class="descname">Aggregations</tt><big>(</big><em>context</em><big>)</big><a class="headerlink" href="#node.ext.uml.utils.Aggregations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#node.ext.uml.utils.Associations" title="node.ext.uml.utils.Associations"><tt class="xref py py-class docutils literal"><span class="pre">node.ext.uml.utils.Associations</span></tt></a></p>
+<p>Adapter to get information about an UMLElements aggregations.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="node.ext.uml.utils.Aggregators">
+<em class="property">class </em><tt class="descclassname">node.ext.uml.utils.</tt><tt class="descname">Aggregators</tt><big>(</big><em>context</em><big>)</big><a class="headerlink" href="#node.ext.uml.utils.Aggregators" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#node.ext.uml.utils.Associations" title="node.ext.uml.utils.Associations"><tt class="xref py py-class docutils literal"><span class="pre">node.ext.uml.utils.Associations</span></tt></a></p>
+<p>Adapter to get information about an UMLElements aggregators.</p>
+<p>This is done by adding a filter so the inherited methods of this class instances
+are taking onyl aggregations into account.</p>
+<dl class="attribute">
+<dt id="node.ext.uml.utils.Aggregators.allparticipants">
+<tt class="descname">allparticipants</tt><a class="headerlink" href="#node.ext.uml.utils.Aggregators.allparticipants" title="Permalink to this definition">¶</a></dt>
+<dd><p>All UMLElements the AssociationEnds of <cite>all</cite> are pointing to.</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">return</span></tt></dt>
+<dd>list of UMLElements</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="node.ext.uml.utils.TaggedValues">
+<em class="property">class </em><tt class="descclassname">node.ext.uml.utils.</tt><tt class="descname">TaggedValues</tt><big>(</big><em>context</em><big>)</big><a class="headerlink" href="#node.ext.uml.utils.TaggedValues" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<p>Adapter to get information about an UMLElements TaggedValues.</p>
+<dl class="method">
+<dt id="node.ext.uml.utils.TaggedValues.direct">
+<tt class="descname">direct</tt><big>(</big><em>tag</em>, <em>stereotype=None</em>, <em>default=&lt;object object at 0x444e650&gt;</em><big>)</big><a class="headerlink" href="#node.ext.uml.utils.TaggedValues.direct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access only tgvs directly applied through stereotypes on element.</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">tag</span></tt></dt>
+<dd>The name of the tag to fetch the value from. If no <tt class="docutils literal"><span class="pre">stereotype</span></tt>
+argument is given it is expected here in the form: <tt class="docutils literal"><span class="pre">STEREOTYPE:TAG</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">stereotype</span></tt></dt>
+<dd>Name of the stereotype. Can be omitted if it is part of <tt class="docutils literal"><span class="pre">tag</span></tt>
+argument.</dd>
+<dt><tt class="docutils literal"><span class="pre">return</span></tt></dt>
+<dd>some value</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="node.ext.uml.utils.TaggedValues.inherited">
+<tt class="descname">inherited</tt><big>(</big><em>tag</em>, <em>stereotype=None</em>, <em>alternatives=</em><span class="optional">[</span><span class="optional">]</span>, <em>aggregate=True</em><big>)</big><a class="headerlink" href="#node.ext.uml.utils.TaggedValues.inherited" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access tgvs on this element and more general elements of element.</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">tag</span></tt></dt>
+<dd>The name of the tag to fetch the value from. If no <tt class="docutils literal"><span class="pre">stereotype</span></tt>
+argument is given it is expected here in the form: <tt class="docutils literal"><span class="pre">STEREOTYPE:TAG</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">stereotype</span></tt></dt>
+<dd>Name of the stereotype. Can be omitted if it is part of <tt class="docutils literal"><span class="pre">tag</span></tt>
+argument.</dd>
+<dt><tt class="docutils literal"><span class="pre">alternatives</span></tt></dt>
+<dd>Look in more general elements also for stereotypes/tags in this list.
+Expects either a tuple <tt class="docutils literal"><span class="pre">tag,</span> <span class="pre">stereotype</span></tt> or a tag prefixed with
+stereotype as described above. Lookup order: arguments, order of list,
+first one hit wins.</dd>
+<dt><tt class="docutils literal"><span class="pre">aggregate</span></tt></dt>
+<dd>When <tt class="docutils literal"><span class="pre">True</span></tt> a list of all found values is returned. Otherwise it
+stops on the first matching tag and returns its value.</dd>
+<dt><tt class="docutils literal"><span class="pre">return</span></tt></dt>
+<dd>A value, or in case of <tt class="docutils literal"><span class="pre">aggregate</span></tt> a list of values.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="node.ext.uml.utils.TaggedValues.namespaced">
+<tt class="descname">namespaced</tt><big>(</big><em>tag</em>, <em>stereotype=None</em>, <em>alternatives=</em><span class="optional">[</span><span class="optional">]</span>, <em>aggregate=True</em><big>)</big><a class="headerlink" href="#node.ext.uml.utils.TaggedValues.namespaced" title="Permalink to this definition">¶</a></dt>
+<dd><p>Access tgvs on this element and elements down in namespace.</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">tag</span></tt></dt>
+<dd>The name of the tag to fetch the value from. If no <tt class="docutils literal"><span class="pre">stereotype</span></tt>
+argument is given it is expected here in the form: <tt class="docutils literal"><span class="pre">STEREOTYPE:TAG</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">stereotype</span></tt></dt>
+<dd>Name of the stereotype. Can be omitted if it is part of <tt class="docutils literal"><span class="pre">tag</span></tt>
+argument.</dd>
+<dt><tt class="docutils literal"><span class="pre">alternatives</span></tt></dt>
+<dd>Look in more general elements also for stereotypes/tags in this list.
+Expects either a tuple <tt class="docutils literal"><span class="pre">tag,</span> <span class="pre">stereotype</span></tt> or a tag prefixed with
+stereotyoe as described above.</dd>
+<dt><tt class="docutils literal"><span class="pre">aggregate</span></tt></dt>
+<dd>When <tt class="docutils literal"><span class="pre">True</span></tt> a list of all found values is returned. Otherwise it
+stops on the first matching tag and returns its value.</dd>
+<dt><tt class="docutils literal"><span class="pre">return</span></tt></dt>
+<dd>A value, or in case of <tt class="docutils literal"><span class="pre">aggregate</span></tt> a list of values.</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="node.ext.directory.html" title="node.ext.directory"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="node.ext.uml.classes.html" title="node.ext.uml.classes"
+             >previous</a> |</li>
+        <li><a href="../../index.html">AGX 3.alpha documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Developers Documentation</a> &raquo;</li>
+          <li><a href="api.html" >AGX API documentation</a> &raquo;</li>
+          <li><a href="node.ext.uml.html" >node.ext.uml</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+        &copy; Copyright 2009-2010, BlueDynamics Alliance et al.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2376477-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  </body>
+</html>

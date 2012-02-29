@@ -1,0 +1,165 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Getting started &mdash; AGX 3.alpha documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.alpha',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="AGX 3.alpha documentation" href="../index.html" />
+    <link rel="next" title="About the Model Driven Approach" href="modeling.html" />
+    <link rel="prev" title="AGX - Code-Generation and Tree-Transformation" href="../index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="modeling.html" title="About the Model Driven Approach"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="AGX - Code-Generation and Tree-Transformation"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">AGX 3.alpha documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/agx.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../index.html"
+                        title="previous chapter">AGX - Code-Generation and Tree-Transformation</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="modeling.html"
+                        title="next chapter">About the Model Driven Approach</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/start/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="getting-started">
+<h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modeling.html">About the Model Driven Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="install.html">Installing AGX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="install.html#pre-requirements">Pre-Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="install.html#install-agx-from-source-currently-the-only-method">Install AGX from Source (currently the only method)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="eclipse.html">Installing and configuring Eclipse for use with AGX</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eclipse.html#installing-eclipse">Installing Eclipse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eclipse.html#installing-antlr">Installing ANTLR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eclipse.html#installing-papyrus">Installing Papyrus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eclipse.html#installing-eclipse-agx">Installing Eclipse AGX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eclipse.html#using-pydev">Using PyDev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eclipse.html#using-aptana-studio">Using Aptana Studio</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hello_world.html">Hello World - The first Model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="hello_world.html#create-a-project">Create a project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hello_world.html#create-the-model">Create the model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hello_world.html#configure-agx">Configure AGX</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hello_world.html#apply-profile-s-on-model">Apply profile(s) on model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hello_world.html#creating-a-uml-package-for-a-python-egg">Creating a UML package for a python egg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hello_world.html#apply-pyegg-stereotype-on-package">Apply pyegg stereotype on package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hello_world.html#set-the-tagged-values-for-the-pyegg-stereotype">Set the tagged values for the pyegg stereotype</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hello_world.html#invoking-agx">Invoking AGX</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="modeling.html" title="About the Model Driven Approach"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="AGX - Code-Generation and Tree-Transformation"
+             >previous</a> |</li>
+        <li><a href="../index.html">AGX 3.alpha documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+        &copy; Copyright 2009-2010, BlueDynamics Alliance et al.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2376477-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  </body>
+</html>

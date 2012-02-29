@@ -1,0 +1,608 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>AGX Overview &mdash; AGX 3.alpha documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.alpha',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="AGX 3.alpha documentation" href="../index.html" />
+    <link rel="up" title="Developers Documentation" href="index.html" />
+    <link rel="next" title="Handler" href="handler.html" />
+    <link rel="prev" title="Under the hood" href="under_the_hood.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="handler.html" title="Handler"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="under_the_hood.html" title="Under the hood"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">AGX 3.alpha documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Developers Documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/agx.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">AGX Overview</a><ul>
+<li><a class="reference internal" href="#agx-package-dependencies">AGX Package Dependencies</a></li>
+<li><a class="reference internal" href="#agx-configuration">AGX Configuration</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="under_the_hood.html"
+                        title="previous chapter">Under the hood</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="handler.html"
+                        title="next chapter">Handler</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/developers/overview.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="agx-overview">
+<h1>AGX Overview<a class="headerlink" href="#agx-overview" title="Permalink to this headline">¶</a></h1>
+<p>This document shows an overview of package dependencies and the recent
+AGX configuration.</p>
+<p>It&#8217;s a good starting point when writing generators and handlers to figure out
+the right place for your stuff.</p>
+<div class="section" id="agx-package-dependencies">
+<h2>AGX Package Dependencies<a class="headerlink" href="#agx-package-dependencies" title="Permalink to this headline">¶</a></h2>
+<p><strong>Legend</strong>:</p>
+<p class="graphviz">
+<img src="../_images/graphviz-32e7fdeb3e02909df946f256be56e482c8653628.svg" alt="digraph depslegend {
+    size = &quot;5,1&quot;;
+
+    &quot;nonagx&quot; [style=&quot;filled&quot;, fillcolor=&quot;grey90&quot;, label=&quot;Non AGX&quot;, shape=&quot;record&quot;];
+    &quot;core&quot; [style=&quot;filled&quot;, fillcolor=&quot;pink2&quot;, label=&quot;Core&quot;, shape=&quot;record&quot;];
+    &quot;io&quot; [style=&quot;filled&quot;, fillcolor=&quot;palegreen3&quot;, label=&quot;IO&quot;, shape=&quot;record&quot;];
+    &quot;transform&quot; [style=&quot;filled&quot;, fillcolor=&quot;lightskyblue3&quot;, label=&quot;Transform&quot;, shape=&quot;record&quot;];
+    &quot;generator&quot; [style=&quot;filled&quot;, fillcolor=&quot;tan2&quot;, label=&quot;Generator&quot;, shape=&quot;record&quot;];
+    &quot;flavour&quot; [style=&quot;filled&quot;, fillcolor=&quot;yellow2&quot;, label=&quot;Flavour&quot;, shape=&quot;record&quot;];
+}" />
+</p>
+<p><strong>Diagram</strong>:</p>
+<p class="graphviz">
+<img src="../_images/graphviz-883a245b8ab73afca43c68516b72653e3bf26e46.svg" alt="digraph dependencies {
+    size = &quot;9,9&quot;
+
+    &quot;lxml&quot; [style=&quot;filled&quot;, fillcolor=&quot;grey90&quot;, label=&quot;lxml&quot;, shape=&quot;Mrecord&quot;];
+    &quot;uuid&quot; [style=&quot;filled&quot;, fillcolor=&quot;grey90&quot;, label=&quot;uuid&quot;, shape=&quot;Mrecord&quot;];
+    &quot;odict&quot; [style=&quot;filled&quot;, fillcolor=&quot;grey90&quot;, label=&quot;odict&quot;, shape=&quot;Mrecord&quot;];
+    &quot;node&quot; [style=&quot;filled&quot;, fillcolor=&quot;grey90&quot;, label=&quot;node&quot;, shape=&quot;Mrecord&quot;];
+    &quot;Chameleon&quot; [style=&quot;filled&quot;, fillcolor=&quot;grey90&quot;, label=&quot;Chameleon&quot;, shape=&quot;Mrecord&quot;];
+    &quot;Jinja2&quot; [style=&quot;filled&quot;, fillcolor=&quot;grey90&quot;, label=&quot;Jinja2&quot;, shape=&quot;Mrecord&quot;];
+
+    &quot;zope.location&quot; [style=&quot;filled&quot;, fillcolor=&quot;grey90&quot;, label=&quot;zope.location&quot;, shape=&quot;Mrecord&quot;];
+    &quot;zope.configuration&quot; [style=&quot;filled&quot;, fillcolor=&quot;grey90&quot;, label=&quot;zope.configuration&quot;, shape=&quot;Mrecord&quot;];
+    &quot;zope.lifecycleevent&quot; [style=&quot;filled&quot;, fillcolor=&quot;grey90&quot;, label=&quot;zope.lifecycleevent&quot;, shape=&quot;Mrecord&quot;];
+    &quot;zope.documenttemplate&quot; [style=&quot;filled&quot;, fillcolor=&quot;grey90&quot;, label=&quot;zope.documenttemplate&quot;, shape=&quot;Mrecord&quot;];
+
+    &quot;agx.core&quot; [style=&quot;filled&quot;, fillcolor=&quot;pink2&quot;, label=&quot;agx.core&quot;, shape=&quot;Mrecord&quot;];
+
+    &quot;node.ext.directory&quot; [style=&quot;filled&quot;, fillcolor=&quot;palegreen3&quot;, label=&quot;node.ext.directory&quot;, shape=&quot;Mrecord&quot;];
+    &quot;node.ext.python&quot; [style=&quot;filled&quot;, fillcolor=&quot;palegreen3&quot;, label=&quot;node.ext.directory&quot;, shape=&quot;Mrecord&quot;];
+    &quot;node.ext.template&quot; [style=&quot;filled&quot;, fillcolor=&quot;palegreen3&quot;, label=&quot;node.ext.template&quot;, shape=&quot;Mrecord&quot;];
+    &quot;node.ext.uml&quot; [style=&quot;filled&quot;, fillcolor=&quot;palegreen3&quot;, label=&quot;node.ext.uml&quot;, shape=&quot;Mrecord&quot;];
+    &quot;node.ext.xml&quot; [style=&quot;filled&quot;, fillcolor=&quot;palegreen3&quot;, label=&quot;node.ext.xml&quot;, shape=&quot;Mrecord&quot;];
+    &quot;node.ext.xmi&quot; [style=&quot;filled&quot;, fillcolor=&quot;palegreen3&quot;, label=&quot;node.ext.xmi&quot;, shape=&quot;Mrecord&quot;];
+    &quot;node.ext.zcml&quot; [style=&quot;filled&quot;, fillcolor=&quot;palegreen3&quot;, label=&quot;node.ext.zcml&quot;, shape=&quot;Mrecord&quot;];
+
+    &quot;agx.transform.uml2fs&quot; [style=&quot;filled&quot;, fillcolor=&quot;lightskyblue3&quot;, label=&quot;agx.transform.uml2fs&quot;, shape=&quot;Mrecord&quot;];
+    &quot;agx.transform.xmi2uml&quot; [style=&quot;filled&quot;, fillcolor=&quot;lightskyblue3&quot;, label=&quot;agx.transform.xmi2uml&quot;, shape=&quot;Mrecord&quot;];
+
+    &quot;agx.generator.uml&quot; [style=&quot;filled&quot;, fillcolor=&quot;tan2&quot;, label=&quot;agx.generator.uml&quot;, shape=&quot;Mrecord&quot;];
+    &quot;agx.generator.pyegg&quot; [style=&quot;filled&quot;, fillcolor=&quot;tan2&quot;, label=&quot;agx.generator.pyegg&quot;, shape=&quot;Mrecord&quot;];
+    &quot;agx.generator.zca&quot; [style=&quot;filled&quot;, fillcolor=&quot;tan2&quot;, label=&quot;agx.generator.zca&quot;, shape=&quot;Mrecord&quot;];
+    &quot;agx.generator.buildout&quot; [style=&quot;filled&quot;, fillcolor=&quot;tan2&quot;, label=&quot;agx.generator.buildout&quot;, shape=&quot;Mrecord&quot;];
+    &quot;agx.generator.plone&quot; [style=&quot;filled&quot;, fillcolor=&quot;tan2&quot;, label=&quot;agx.generator.plone&quot;, shape=&quot;Mrecord&quot;];
+    &quot;agx.generator.dexterity&quot; [style=&quot;filled&quot;, fillcolor=&quot;tan2&quot;, label=&quot;agx.generator.dexterity&quot;, shape=&quot;Mrecord&quot;];
+
+    &quot;agx.dev&quot; [style=&quot;filled&quot;, fillcolor=&quot;yellow2&quot;, label=&quot;agx.dev&quot;, shape=&quot;Mrecord&quot;];
+
+    &quot;node&quot; -&gt; &quot;uuid&quot; [arrowhead=&quot;none&quot;];
+    &quot;node&quot; -&gt; &quot;odict&quot; [arrowhead=&quot;none&quot;];
+    &quot;node&quot; -&gt; &quot;zope.location&quot; [arrowhead=&quot;none&quot;];
+    &quot;node&quot; -&gt; &quot;zope.lifecycleevent&quot; [arrowhead=&quot;none&quot;];
+
+    &quot;agx.dev&quot; -&gt; &quot;agx.generator.uml&quot; [arrowhead=&quot;none&quot;];
+    &quot;agx.dev&quot; -&gt; &quot;agx.generator.dexterity&quot; [arrowhead=&quot;none&quot;];
+
+    &quot;agx.core&quot; -&gt; &quot;node&quot; [arrowhead=&quot;none&quot;];
+    &quot;agx.core&quot; -&gt; &quot;zope.configuration&quot; [arrowhead=&quot;none&quot;];
+
+    &quot;node.ext.directory&quot; -&gt; &quot;node&quot; [arrowhead=&quot;none&quot;];
+
+    &quot;node.ext.python&quot; -&gt; &quot;node.ext.directory&quot; [arrowhead=&quot;none&quot;];
+
+    &quot;node.ext.template&quot; -&gt; &quot;node.ext.directory&quot; [arrowhead=&quot;none&quot;];
+    &quot;node.ext.template&quot; -&gt; &quot;zope.documenttemplate&quot; [arrowhead=&quot;none&quot;];
+    &quot;node.ext.template&quot; -&gt; &quot;Chameleon&quot; [arrowhead=&quot;none&quot;];
+    &quot;node.ext.template&quot; -&gt; &quot;Jinja2&quot; [arrowhead=&quot;none&quot;];
+
+    &quot;node.ext.uml&quot; -&gt; &quot;node&quot; [arrowhead=&quot;none&quot;];
+
+    &quot;node.ext.xmi&quot; -&gt; &quot;node.ext.xml&quot; [arrowhead=&quot;none&quot;];
+
+    &quot;node.ext.xml&quot; -&gt; &quot;node&quot; [arrowhead=&quot;none&quot;];
+    &quot;node.ext.xml&quot; -&gt; &quot;lxml&quot; [arrowhead=&quot;none&quot;];
+
+    &quot;node.ext.zcml&quot; -&gt; &quot;node.ext.xml&quot; [arrowhead=&quot;none&quot;];
+
+    &quot;agx.transform.xmi2uml&quot; -&gt; &quot;agx.core&quot; [arrowhead=&quot;none&quot;];
+    &quot;agx.transform.xmi2uml&quot; -&gt; &quot;node.ext.xmi&quot; [arrowhead=&quot;none&quot;];
+    &quot;agx.transform.xmi2uml&quot; -&gt; &quot;node.ext.uml&quot; [arrowhead=&quot;none&quot;];
+
+    &quot;agx.transform.uml2fs&quot; -&gt; &quot;agx.core&quot; [arrowhead=&quot;none&quot;];
+    &quot;agx.transform.uml2fs&quot; -&gt; &quot;node.ext.directory&quot; [arrowhead=&quot;none&quot;];
+
+    &quot;agx.generator.uml&quot; -&gt; &quot;agx.transform.xmi2uml&quot; [arrowhead=&quot;none&quot;];
+
+    &quot;agx.generator.pyegg&quot; -&gt; &quot;node.ext.template&quot; [arrowhead=&quot;none&quot;];
+    &quot;agx.generator.pyegg&quot; -&gt; &quot;node.ext.python&quot; [arrowhead=&quot;none&quot;];
+    &quot;agx.generator.pyegg&quot; -&gt; &quot;node.ext.uml&quot; [arrowhead=&quot;none&quot;];
+    &quot;agx.generator.pyegg&quot; -&gt; &quot;agx.transform.uml2fs&quot; [arrowhead=&quot;none&quot;];
+
+    &quot;agx.generator.zca&quot; -&gt; &quot;agx.generator.pyegg&quot; [arrowhead=&quot;none&quot;];
+    &quot;agx.generator.zca&quot; -&gt; &quot;node.ext.zcml&quot; [arrowhead=&quot;none&quot;];
+
+    &quot;agx.generator.buildout&quot; -&gt; &quot;agx.generator.pyegg&quot; [arrowhead=&quot;none&quot;];
+
+    &quot;agx.generator.plone&quot; -&gt; &quot;agx.generator.zca&quot; [arrowhead=&quot;none&quot;];
+    &quot;agx.generator.plone&quot; -&gt; &quot;agx.generator.buildout&quot; [arrowhead=&quot;none&quot;];
+
+    &quot;agx.generator.dexterity&quot; -&gt; &quot;agx.generator.plone&quot; [arrowhead=&quot;none&quot;];
+}" />
+</p>
+</div>
+<div class="section" id="agx-configuration">
+<h2>AGX Configuration<a class="headerlink" href="#agx-configuration" title="Permalink to this headline">¶</a></h2>
+<p><strong>Legend</strong>:</p>
+<p class="graphviz">
+<img src="../_images/graphviz-91f4db46b7304b94cae83d3ab7c3d96d86d8fe6e.svg" alt="digraph configlegend {
+    size = &quot;5,1&quot;;
+
+    &quot;transform&quot; [style=&quot;filled&quot;, fillcolor=&quot;lightskyblue3&quot;, label=&quot;Transform&quot;, shape=&quot;record&quot;];
+    &quot;generator&quot; [style=&quot;filled&quot;, fillcolor=&quot;pink2&quot;, label=&quot;Generator&quot;, shape=&quot;record&quot;];
+    &quot;targethandler&quot; [style=&quot;filled&quot;, fillcolor=&quot;tan2&quot;, label=&quot;Target handler&quot;, shape=&quot;record&quot;];
+    &quot;handler&quot; [style=&quot;filled&quot;, fillcolor=&quot;palegreen3&quot;, label=&quot;Handler&quot;, shape=&quot;record&quot;];
+    &quot;scope&quot; [style=&quot;filled&quot;, fillcolor=&quot;yellow2&quot;, label=&quot;Scope&quot;, shape=&quot;record&quot;];
+}" />
+</p>
+<p><strong>Diagram</strong>:</p>
+<p class="graphviz">
+<img src="../_images/graphviz-b83107590330c3873841bb81a3c5ecbffe1f618e.svg" alt="digraph agxconfig {
+size = &quot;9,26&quot;
+ratio = &quot;fill&quot;
+ranksep = &quot;0.2 equal&quot;
+nodesep = &quot;0.2 equal&quot;
+rankdir = &quot;LR&quot;
+&quot;agx.core._api.NullTargetHandler&quot; -&gt; &quot;uml2fs.connectorgenerator&quot; [style=dotted,arrowtail=none,dir=back]
+&quot;agx.core._api.NullTargetHandler&quot; -&gt; &quot;uml2fs.plonegenerator&quot; [style=dotted,arrowtail=none,dir=back]
+&quot;agx.core._api.NullTargetHandler&quot; -&gt; &quot;uml2fs.semanticsgenerator&quot; [style=dotted,arrowtail=none,dir=back]
+&quot;agx.core._api.NullTargetHandler&quot; -&gt; &quot;uml2fs.zcagenerator&quot; [style=dotted,arrowtail=none,dir=back]
+&quot;agx.core._api.NullTargetHandler&quot; -&gt; &quot;uml2fs.zcasemanticsgenerator&quot; [style=dotted,arrowtail=none,dir=back]
+&quot;agx.core._api.NullTargetHandler&quot; -&gt; &quot;xmi2uml.profilegenerator&quot; [style=dotted,arrowtail=none,dir=back]
+&quot;agx.core._api.NullTargetHandler&quot; -&gt; &quot;xmi2uml.stereotypegenerator&quot; [style=dotted,arrowtail=none,dir=back]
+&quot;agx.core._api.NullTargetHandler&quot; [style=&quot;filled&quot;,fillcolor=&quot;tan2&quot;,label=&quot;agx.core._api.NullTargetHandler |&quot;,shape=&quot;Mrecord&quot;]
+&quot;agx.core._api.TreeSyncPreperator&quot; -&gt; &quot;xmi2uml.datatypedependentgenerator&quot; [style=dotted,arrowtail=none,dir=back]
+&quot;agx.core._api.TreeSyncPreperator&quot; -&gt; &quot;xmi2uml.finalizegenerator&quot; [style=dotted,arrowtail=none,dir=back]
+&quot;agx.core._api.TreeSyncPreperator&quot; -&gt; &quot;xmi2uml.hierarchygenerator&quot; [style=dotted,arrowtail=none,dir=back]
+&quot;agx.core._api.TreeSyncPreperator&quot; [style=&quot;filled&quot;,fillcolor=&quot;tan2&quot;,label=&quot;agx.core._api.TreeSyncPreperator |&quot;,shape=&quot;Mrecord&quot;]
+&quot;agx.generator.pyegg.treesync.PackageSyncer&quot; -&gt; &quot;uml2fs.hierarchygenerator&quot; [style=dotted,arrowtail=none,dir=back]
+&quot;agx.generator.pyegg.treesync.PackageSyncer&quot; [style=&quot;filled&quot;,fillcolor=&quot;tan2&quot;,label=&quot;agx.generator.pyegg.treesync.PackageSyncer |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs&quot; -&gt; &quot;uml2fs.connectorgenerator&quot; [arrowhead=none]
+&quot;uml2fs&quot; -&gt; &quot;uml2fs.hierarchygenerator&quot; [arrowhead=none]
+&quot;uml2fs&quot; -&gt; &quot;uml2fs.plonegenerator&quot; [arrowhead=none]
+&quot;uml2fs&quot; -&gt; &quot;uml2fs.semanticsgenerator&quot; [arrowhead=none]
+&quot;uml2fs&quot; -&gt; &quot;uml2fs.zcagenerator&quot; [arrowhead=none]
+&quot;uml2fs&quot; -&gt; &quot;uml2fs.zcasemanticsgenerator&quot; [arrowhead=none]
+&quot;uml2fs&quot; [style=&quot;filled&quot;,fillcolor=&quot;lightskyblue3&quot;,label=&quot;Uml2fs |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.association&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.association |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.connectorgenerator&quot; -&gt; &quot;uml2fs.connectorgenerator.classgeneralization&quot; [arrowhead=none]
+&quot;uml2fs.connectorgenerator&quot; -&gt; &quot;uml2fs.connectorgenerator.collectpermissions&quot; [arrowhead=none]
+&quot;uml2fs.connectorgenerator&quot; -&gt; &quot;uml2fs.connectorgenerator.createpermission&quot; [arrowhead=none]
+&quot;uml2fs.connectorgenerator&quot; -&gt; &quot;uml2fs.connectorgenerator.gsprofiletypes&quot; [arrowhead=none]
+&quot;uml2fs.connectorgenerator&quot; -&gt; &quot;uml2fs.connectorgenerator.inheritanctokenizer&quot; [arrowhead=none]
+&quot;uml2fs.connectorgenerator&quot; -&gt; &quot;uml2fs.connectorgenerator.interfacegeneralization&quot; [arrowhead=none]
+&quot;uml2fs.connectorgenerator&quot; -&gt; &quot;uml2fs.connectorgenerator.pyfunctionfromclass&quot; [arrowhead=none]
+&quot;uml2fs.connectorgenerator&quot; -&gt; &quot;uml2fs.connectorgenerator.zcaadaptscollect&quot; [arrowhead=none]
+&quot;uml2fs.connectorgenerator&quot; -&gt; &quot;uml2fs.connectorgenerator.zcarealize&quot; [arrowhead=none]
+&quot;uml2fs.connectorgenerator&quot; -&gt; &quot;uml2fs.connectorgenerator.zcviewdepcollect&quot; [arrowhead=none]
+&quot;uml2fs.connectorgenerator&quot; [style=&quot;filled&quot;,fillcolor=&quot;pink2&quot;,label=&quot;Connectorgenerator |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.connectorgenerator.classgeneralization&quot; -&gt; &quot;uml2fs.pyclass&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.connectorgenerator.classgeneralization&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Classgeneralization |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.connectorgenerator.collectpermissions&quot; -&gt; &quot;uml2fs.zcapermits&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.connectorgenerator.collectpermissions&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Collectpermissions |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.connectorgenerator.createpermission&quot; -&gt; &quot;uml2fs.zcapermission&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.connectorgenerator.createpermission&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Createpermission |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.connectorgenerator.gsprofiletypes&quot; -&gt; &quot;uml2fs.contenttype&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.connectorgenerator.gsprofiletypes&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Gsprofiletypes |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.connectorgenerator.inheritanctokenizer&quot; -&gt; &quot;uml2fs.generalization&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.connectorgenerator.inheritanctokenizer&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Inheritanctokenizer |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.connectorgenerator.interfacegeneralization&quot; -&gt; &quot;uml2fs.zcainterface&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.connectorgenerator.interfacegeneralization&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Interfacegeneralization |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.connectorgenerator.pyfunctionfromclass&quot; -&gt; &quot;uml2fs.pyclass&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.connectorgenerator.pyfunctionfromclass&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Pyfunctionfromclass |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.connectorgenerator.zcaadaptscollect&quot; -&gt; &quot;uml2fs.zcaadapts&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.connectorgenerator.zcaadaptscollect&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Zcaadaptscollect |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.connectorgenerator.zcarealize&quot; -&gt; &quot;uml2fs.zcarealize&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.connectorgenerator.zcarealize&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Zcarealize |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.connectorgenerator.zcviewdepcollect&quot; -&gt; &quot;uml2fs.dependency&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.connectorgenerator.zcviewdepcollect&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Zcviewdepcollect |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.contenttype&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.contenttype |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.dependency&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.dependency |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.dxbehavior&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.dxbehavior |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.dxcollection&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.dxcollection |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.dxdict&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.dxdict |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.dxfield&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.dxfield |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.dxminmax&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.dxminmax |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.dxminmaxlen&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.dxminmaxlen |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.dxobject&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.dxobject |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.dxrichtext&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.dxrichtext |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.generalization&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.generalization |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.gsprofile&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.gsprofile |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.hierarchygenerator&quot; -&gt; &quot;uml2fs.hierarchygenerator.eggdirectories&quot; [arrowhead=none]
+&quot;uml2fs.hierarchygenerator&quot; -&gt; &quot;uml2fs.hierarchygenerator.eggdocuments&quot; [arrowhead=none]
+&quot;uml2fs.hierarchygenerator&quot; -&gt; &quot;uml2fs.hierarchygenerator.gsprofilecssregistry&quot; [arrowhead=none]
+&quot;uml2fs.hierarchygenerator&quot; -&gt; &quot;uml2fs.hierarchygenerator.gsprofiledirectories&quot; [arrowhead=none]
+&quot;uml2fs.hierarchygenerator&quot; -&gt; &quot;uml2fs.hierarchygenerator.gsprofilejsregistry&quot; [arrowhead=none]
+&quot;uml2fs.hierarchygenerator&quot; -&gt; &quot;uml2fs.hierarchygenerator.gsprofilemetadata&quot; [arrowhead=none]
+&quot;uml2fs.hierarchygenerator&quot; -&gt; &quot;uml2fs.hierarchygenerator.gsprofilezcml&quot; [arrowhead=none]
+&quot;uml2fs.hierarchygenerator&quot; -&gt; &quot;uml2fs.hierarchygenerator.plone__init__&quot; [arrowhead=none]
+&quot;uml2fs.hierarchygenerator&quot; -&gt; &quot;uml2fs.hierarchygenerator.ploneselfcontainedbuildout&quot; [arrowhead=none]
+&quot;uml2fs.hierarchygenerator&quot; -&gt; &quot;uml2fs.hierarchygenerator.pyattribute&quot; [arrowhead=none]
+&quot;uml2fs.hierarchygenerator&quot; -&gt; &quot;uml2fs.hierarchygenerator.pyclass&quot; [arrowhead=none]
+&quot;uml2fs.hierarchygenerator&quot; -&gt; &quot;uml2fs.hierarchygenerator.pydecorator&quot; [arrowhead=none]
+&quot;uml2fs.hierarchygenerator&quot; -&gt; &quot;uml2fs.hierarchygenerator.pyfunction&quot; [arrowhead=none]
+&quot;uml2fs.hierarchygenerator&quot; -&gt; &quot;uml2fs.hierarchygenerator.pymodule&quot; [arrowhead=none]
+&quot;uml2fs.hierarchygenerator&quot; -&gt; &quot;uml2fs.hierarchygenerator.pypackage&quot; [arrowhead=none]
+&quot;uml2fs.hierarchygenerator&quot; -&gt; &quot;uml2fs.hierarchygenerator.zcainterface&quot; [arrowhead=none]
+&quot;uml2fs.hierarchygenerator&quot; [style=&quot;filled&quot;,fillcolor=&quot;pink2&quot;,label=&quot;Hierarchygenerator |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.hierarchygenerator.eggdirectories&quot; -&gt; &quot;uml2fs.pythonegg&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.hierarchygenerator.eggdirectories&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Eggdirectories |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.hierarchygenerator.eggdocuments&quot; -&gt; &quot;uml2fs.pythonegg&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.hierarchygenerator.eggdocuments&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Eggdocuments |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.hierarchygenerator.gsprofilecssregistry&quot; -&gt; &quot;uml2fs.gsprofile&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.hierarchygenerator.gsprofilecssregistry&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Gsprofilecssregistry |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.hierarchygenerator.gsprofiledirectories&quot; -&gt; &quot;uml2fs.gsprofile&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.hierarchygenerator.gsprofiledirectories&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Gsprofiledirectories |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.hierarchygenerator.gsprofilejsregistry&quot; -&gt; &quot;uml2fs.gsprofile&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.hierarchygenerator.gsprofilejsregistry&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Gsprofilejsregistry |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.hierarchygenerator.gsprofilemetadata&quot; -&gt; &quot;uml2fs.gsprofile&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.hierarchygenerator.gsprofilemetadata&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Gsprofilemetadata |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.hierarchygenerator.gsprofilezcml&quot; -&gt; &quot;uml2fs.gsprofile&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.hierarchygenerator.gsprofilezcml&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Gsprofilezcml |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.hierarchygenerator.plone__init__&quot; -&gt; &quot;uml2fs.gsprofile&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.hierarchygenerator.plone__init__&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Plone__init__ |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.hierarchygenerator.ploneselfcontainedbuildout&quot; -&gt; &quot;uml2fs.pythonegg&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.hierarchygenerator.ploneselfcontainedbuildout&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Ploneselfcontainedbuildout |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.hierarchygenerator.pyattribute&quot; -&gt; &quot;uml2fs.pyattribute&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.hierarchygenerator.pyattribute&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Pyattribute |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.hierarchygenerator.pyclass&quot; -&gt; &quot;uml2fs.pyclass&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.hierarchygenerator.pyclass&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Pyclass |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.hierarchygenerator.pydecorator&quot; -&gt; &quot;uml2fs.pydecorator&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.hierarchygenerator.pydecorator&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Pydecorator |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.hierarchygenerator.pyfunction&quot; -&gt; &quot;uml2fs.pyfunction&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.hierarchygenerator.pyfunction&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Pyfunction |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.hierarchygenerator.pymodule&quot; -&gt; &quot;uml2fs.pymodule&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.hierarchygenerator.pymodule&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Pymodule |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.hierarchygenerator.pypackage&quot; -&gt; &quot;uml2fs.pypackage&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.hierarchygenerator.pypackage&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Pypackage |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.hierarchygenerator.zcainterface&quot; -&gt; &quot;uml2fs.zcainterface&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.hierarchygenerator.zcainterface&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Zcainterface |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.plonegenerator&quot; -&gt; &quot;uml2fs.plonegenerator.typeicon&quot; [arrowhead=none]
+&quot;uml2fs.plonegenerator&quot; [style=&quot;filled&quot;,fillcolor=&quot;pink2&quot;,label=&quot;Plonegenerator |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.plonegenerator.typeicon&quot; -&gt; &quot;uml2fs.contenttype&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.plonegenerator.typeicon&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Typeicon |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.pyattribute&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.pyattribute |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.pyclass&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.pyclass |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.pydecorator&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.pydecorator |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.pyfunction&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.pyfunction |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.pymodule&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.pymodule |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.pypackage&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.pypackage |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.pythonegg&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.pythonegg |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.semanticsgenerator&quot; -&gt; &quot;uml2fs.semanticsgenerator.dependencysorter&quot; [arrowhead=none]
+&quot;uml2fs.semanticsgenerator&quot; -&gt; &quot;uml2fs.semanticsgenerator.dxpackagedependencies&quot; [arrowhead=none]
+&quot;uml2fs.semanticsgenerator&quot; -&gt; &quot;uml2fs.semanticsgenerator.eggemptymoduleremoval&quot; [arrowhead=none]
+&quot;uml2fs.semanticsgenerator&quot; -&gt; &quot;uml2fs.semanticsgenerator.gsdynamicview&quot; [arrowhead=none]
+&quot;uml2fs.semanticsgenerator&quot; -&gt; &quot;uml2fs.semanticsgenerator.inheritanceorder&quot; [arrowhead=none]
+&quot;uml2fs.semanticsgenerator&quot; -&gt; &quot;uml2fs.semanticsgenerator.packageemptymoduleremoval&quot; [arrowhead=none]
+&quot;uml2fs.semanticsgenerator&quot; -&gt; &quot;uml2fs.semanticsgenerator.zcviewfinalize&quot; [arrowhead=none]
+&quot;uml2fs.semanticsgenerator&quot; [style=&quot;filled&quot;,fillcolor=&quot;pink2&quot;,label=&quot;Semanticsgenerator |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.semanticsgenerator.dependencysorter&quot; -&gt; &quot;uml2fs.pymodule&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.semanticsgenerator.dependencysorter&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Dependencysorter |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.semanticsgenerator.dxpackagedependencies&quot; -&gt; &quot;uml2fs.pythonegg&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.semanticsgenerator.dxpackagedependencies&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Dxpackagedependencies |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.semanticsgenerator.eggemptymoduleremoval&quot; -&gt; &quot;uml2fs.pythonegg&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.semanticsgenerator.eggemptymoduleremoval&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Eggemptymoduleremoval |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.semanticsgenerator.gsdynamicview&quot; -&gt; &quot;uml2fs.dependency&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.semanticsgenerator.gsdynamicview&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Gsdynamicview |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.semanticsgenerator.inheritanceorder&quot; -&gt; &quot;uml2fs.pyclass&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.semanticsgenerator.inheritanceorder&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Inheritanceorder |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.semanticsgenerator.packageemptymoduleremoval&quot; -&gt; &quot;uml2fs.pypackage&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.semanticsgenerator.packageemptymoduleremoval&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Packageemptymoduleremoval |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.semanticsgenerator.zcviewfinalize&quot; -&gt; &quot;uml2fs.viewclass&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.semanticsgenerator.zcviewfinalize&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Zcviewfinalize |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.viewclass&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.viewclass |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcaadapter&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.zcaadapter |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcaadapts&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.zcaadapts |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcagenerator&quot; -&gt; &quot;uml2fs.zcagenerator.behavioradapter&quot; [arrowhead=none]
+&quot;uml2fs.zcagenerator&quot; -&gt; &quot;uml2fs.zcagenerator.behaviorschema&quot; [arrowhead=none]
+&quot;uml2fs.zcagenerator&quot; -&gt; &quot;uml2fs.zcagenerator.dxcollection&quot; [arrowhead=none]
+&quot;uml2fs.zcagenerator&quot; -&gt; &quot;uml2fs.zcagenerator.dxdict&quot; [arrowhead=none]
+&quot;uml2fs.zcagenerator&quot; -&gt; &quot;uml2fs.zcagenerator.dxfield&quot; [arrowhead=none]
+&quot;uml2fs.zcagenerator&quot; -&gt; &quot;uml2fs.zcagenerator.dxminmax&quot; [arrowhead=none]
+&quot;uml2fs.zcagenerator&quot; -&gt; &quot;uml2fs.zcagenerator.dxminmaxlen&quot; [arrowhead=none]
+&quot;uml2fs.zcagenerator&quot; -&gt; &quot;uml2fs.zcagenerator.dxobject&quot; [arrowhead=none]
+&quot;uml2fs.zcagenerator&quot; -&gt; &quot;uml2fs.zcagenerator.dxrichtext&quot; [arrowhead=none]
+&quot;uml2fs.zcagenerator&quot; -&gt; &quot;uml2fs.zcagenerator.plonebrowserview&quot; [arrowhead=none]
+&quot;uml2fs.zcagenerator&quot; -&gt; &quot;uml2fs.zcagenerator.schemaclass&quot; [arrowhead=none]
+&quot;uml2fs.zcagenerator&quot; -&gt; &quot;uml2fs.zcagenerator.typeview&quot; [arrowhead=none]
+&quot;uml2fs.zcagenerator&quot; -&gt; &quot;uml2fs.zcagenerator.zcaadapter_py_imports&quot; [arrowhead=none]
+&quot;uml2fs.zcagenerator&quot; -&gt; &quot;uml2fs.zcagenerator.zcaadapter_zcml&quot; [arrowhead=none]
+&quot;uml2fs.zcagenerator&quot; -&gt; &quot;uml2fs.zcagenerator.zcaadapterdefaultinit&quot; [arrowhead=none]
+&quot;uml2fs.zcagenerator&quot; -&gt; &quot;uml2fs.zcagenerator.zcaadapts&quot; [arrowhead=none]
+&quot;uml2fs.zcagenerator&quot; -&gt; &quot;uml2fs.zcagenerator.zcarealize_finalize&quot; [arrowhead=none]
+&quot;uml2fs.zcagenerator&quot; -&gt; &quot;uml2fs.zcagenerator.zcautility&quot; [arrowhead=none]
+&quot;uml2fs.zcagenerator&quot; [style=&quot;filled&quot;,fillcolor=&quot;pink2&quot;,label=&quot;Zcagenerator |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcagenerator.behavioradapter&quot; -&gt; &quot;uml2fs.dxbehavior&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.zcagenerator.behavioradapter&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Behavioradapter |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcagenerator.behaviorschema&quot; -&gt; &quot;uml2fs.dxbehavior&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.zcagenerator.behaviorschema&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Behaviorschema |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcagenerator.dxcollection&quot; -&gt; &quot;uml2fs.dxcollection&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.zcagenerator.dxcollection&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Dxcollection |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcagenerator.dxdict&quot; -&gt; &quot;uml2fs.dxdict&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.zcagenerator.dxdict&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Dxdict |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcagenerator.dxfield&quot; -&gt; &quot;uml2fs.dxfield&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.zcagenerator.dxfield&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Dxfield |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcagenerator.dxminmax&quot; -&gt; &quot;uml2fs.dxminmax&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.zcagenerator.dxminmax&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Dxminmax |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcagenerator.dxminmaxlen&quot; -&gt; &quot;uml2fs.dxminmaxlen&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.zcagenerator.dxminmaxlen&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Dxminmaxlen |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcagenerator.dxobject&quot; -&gt; &quot;uml2fs.dxobject&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.zcagenerator.dxobject&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Dxobject |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcagenerator.dxrichtext&quot; -&gt; &quot;uml2fs.dxrichtext&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.zcagenerator.dxrichtext&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Dxrichtext |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcagenerator.plonebrowserview&quot; -&gt; &quot;uml2fs.viewclass&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.zcagenerator.plonebrowserview&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Plonebrowserview |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcagenerator.schemaclass&quot; -&gt; &quot;uml2fs.contenttype&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.zcagenerator.schemaclass&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Schemaclass |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcagenerator.typeview&quot; -&gt; &quot;uml2fs.contenttype&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.zcagenerator.typeview&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Typeview |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcagenerator.zcaadapter_py_imports&quot; -&gt; &quot;uml2fs.zcaadapter&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.zcagenerator.zcaadapter_py_imports&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Zcaadapter_py_imports |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcagenerator.zcaadapter_zcml&quot; -&gt; &quot;uml2fs.zcaadapter&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.zcagenerator.zcaadapter_zcml&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Zcaadapter_zcml |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcagenerator.zcaadapterdefaultinit&quot; -&gt; &quot;uml2fs.zcaadapter&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.zcagenerator.zcaadapterdefaultinit&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Zcaadapterdefaultinit |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcagenerator.zcaadapts&quot; -&gt; &quot;uml2fs.zcaadapter&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.zcagenerator.zcaadapts&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Zcaadapts |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcagenerator.zcarealize_finalize&quot; -&gt; &quot;uml2fs.pyclass&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.zcagenerator.zcarealize_finalize&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Zcarealize_finalize |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcagenerator.zcautility&quot; -&gt; &quot;uml2fs.zcautility&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.zcagenerator.zcautility&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Zcautility |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcainterface&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.zcainterface |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcapermission&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.zcapermission |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcapermits&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.zcapermits |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcarealize&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.zcarealize |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcasemanticsgenerator&quot; -&gt; &quot;uml2fs.zcasemanticsgenerator.gsbehavior&quot; [arrowhead=none]
+&quot;uml2fs.zcasemanticsgenerator&quot; -&gt; &quot;uml2fs.zcasemanticsgenerator.gscomposition&quot; [arrowhead=none]
+&quot;uml2fs.zcasemanticsgenerator&quot; -&gt; &quot;uml2fs.zcasemanticsgenerator.resourcedirectory&quot; [arrowhead=none]
+&quot;uml2fs.zcasemanticsgenerator&quot; -&gt; &quot;uml2fs.zcasemanticsgenerator.resourceregistries&quot; [arrowhead=none]
+&quot;uml2fs.zcasemanticsgenerator&quot; -&gt; &quot;uml2fs.zcasemanticsgenerator.standardbehavior&quot; [arrowhead=none]
+&quot;uml2fs.zcasemanticsgenerator&quot; -&gt; &quot;uml2fs.zcasemanticsgenerator.typemodulesorter&quot; [arrowhead=none]
+&quot;uml2fs.zcasemanticsgenerator&quot; [style=&quot;filled&quot;,fillcolor=&quot;pink2&quot;,label=&quot;Zcasemanticsgenerator |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcasemanticsgenerator.gsbehavior&quot; -&gt; &quot;uml2fs.dependency&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.zcasemanticsgenerator.gsbehavior&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Gsbehavior |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcasemanticsgenerator.gscomposition&quot; -&gt; &quot;uml2fs.association&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.zcasemanticsgenerator.gscomposition&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Gscomposition |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcasemanticsgenerator.resourcedirectory&quot; -&gt; &quot;uml2fs.gsprofile&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.zcasemanticsgenerator.resourcedirectory&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Resourcedirectory |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcasemanticsgenerator.resourceregistries&quot; -&gt; &quot;uml2fs.gsprofile&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.zcasemanticsgenerator.resourceregistries&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Resourceregistries |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcasemanticsgenerator.standardbehavior&quot; -&gt; &quot;uml2fs.contenttype&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.zcasemanticsgenerator.standardbehavior&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Standardbehavior |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcasemanticsgenerator.typemodulesorter&quot; -&gt; &quot;uml2fs.contenttype&quot; [style=dotted,arrowhead=none]
+&quot;uml2fs.zcasemanticsgenerator.typemodulesorter&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Typemodulesorter |&quot;,shape=&quot;Mrecord&quot;]
+&quot;uml2fs.zcautility&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;uml2fs.zcautility |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml&quot; -&gt; &quot;xmi2uml.datatypedependentgenerator&quot; [arrowhead=none]
+&quot;xmi2uml&quot; -&gt; &quot;xmi2uml.finalizegenerator&quot; [arrowhead=none]
+&quot;xmi2uml&quot; -&gt; &quot;xmi2uml.hierarchygenerator&quot; [arrowhead=none]
+&quot;xmi2uml&quot; -&gt; &quot;xmi2uml.profilegenerator&quot; [arrowhead=none]
+&quot;xmi2uml&quot; -&gt; &quot;xmi2uml.stereotypegenerator&quot; [arrowhead=none]
+&quot;xmi2uml&quot; [style=&quot;filled&quot;,fillcolor=&quot;lightskyblue3&quot;,label=&quot;Xmi2uml |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.association&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;xmi2uml.association |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.class&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;xmi2uml.class |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.datatype&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;xmi2uml.datatype |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.datatypedependentgenerator&quot; -&gt; &quot;xmi2uml.datatypedependentgenerator.anchorclass&quot; [arrowhead=none]
+&quot;xmi2uml.datatypedependentgenerator&quot; -&gt; &quot;xmi2uml.datatypedependentgenerator.anchorinterface&quot; [arrowhead=none]
+&quot;xmi2uml.datatypedependentgenerator&quot; -&gt; &quot;xmi2uml.datatypedependentgenerator.anchorpackage&quot; [arrowhead=none]
+&quot;xmi2uml.datatypedependentgenerator&quot; -&gt; &quot;xmi2uml.datatypedependentgenerator.dependency&quot; [arrowhead=none]
+&quot;xmi2uml.datatypedependentgenerator&quot; -&gt; &quot;xmi2uml.datatypedependentgenerator.generalization&quot; [arrowhead=none]
+&quot;xmi2uml.datatypedependentgenerator&quot; -&gt; &quot;xmi2uml.datatypedependentgenerator.interfacerealization&quot; [arrowhead=none]
+&quot;xmi2uml.datatypedependentgenerator&quot; -&gt; &quot;xmi2uml.datatypedependentgenerator.memberend&quot; [arrowhead=none]
+&quot;xmi2uml.datatypedependentgenerator&quot; -&gt; &quot;xmi2uml.datatypedependentgenerator.operation&quot; [arrowhead=none]
+&quot;xmi2uml.datatypedependentgenerator&quot; -&gt; &quot;xmi2uml.datatypedependentgenerator.ownedend&quot; [arrowhead=none]
+&quot;xmi2uml.datatypedependentgenerator&quot; -&gt; &quot;xmi2uml.datatypedependentgenerator.parameter&quot; [arrowhead=none]
+&quot;xmi2uml.datatypedependentgenerator&quot; -&gt; &quot;xmi2uml.datatypedependentgenerator.property&quot; [arrowhead=none]
+&quot;xmi2uml.datatypedependentgenerator&quot; [style=&quot;filled&quot;,fillcolor=&quot;pink2&quot;,label=&quot;Datatypedependentgenerator |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.datatypedependentgenerator.anchorclass&quot; -&gt; &quot;xmi2uml.class&quot; [style=dotted,arrowhead=none]
+&quot;xmi2uml.datatypedependentgenerator.anchorclass&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Anchorclass |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.datatypedependentgenerator.anchorinterface&quot; -&gt; &quot;xmi2uml.interface&quot; [style=dotted,arrowhead=none]
+&quot;xmi2uml.datatypedependentgenerator.anchorinterface&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Anchorinterface |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.datatypedependentgenerator.anchorpackage&quot; -&gt; &quot;xmi2uml.package&quot; [style=dotted,arrowhead=none]
+&quot;xmi2uml.datatypedependentgenerator.anchorpackage&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Anchorpackage |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.datatypedependentgenerator.dependency&quot; -&gt; &quot;xmi2uml.dependency&quot; [style=dotted,arrowhead=none]
+&quot;xmi2uml.datatypedependentgenerator.dependency&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Dependency |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.datatypedependentgenerator.generalization&quot; -&gt; &quot;xmi2uml.generalization&quot; [style=dotted,arrowhead=none]
+&quot;xmi2uml.datatypedependentgenerator.generalization&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Generalization |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.datatypedependentgenerator.interfacerealization&quot; -&gt; &quot;xmi2uml.interfacerealization&quot; [style=dotted,arrowhead=none]
+&quot;xmi2uml.datatypedependentgenerator.interfacerealization&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Interfacerealization |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.datatypedependentgenerator.memberend&quot; -&gt; &quot;xmi2uml.memberend&quot; [style=dotted,arrowhead=none]
+&quot;xmi2uml.datatypedependentgenerator.memberend&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Memberend |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.datatypedependentgenerator.operation&quot; -&gt; &quot;xmi2uml.operation&quot; [style=dotted,arrowhead=none]
+&quot;xmi2uml.datatypedependentgenerator.operation&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Operation |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.datatypedependentgenerator.ownedend&quot; -&gt; &quot;xmi2uml.ownedend&quot; [style=dotted,arrowhead=none]
+&quot;xmi2uml.datatypedependentgenerator.ownedend&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Ownedend |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.datatypedependentgenerator.parameter&quot; -&gt; &quot;xmi2uml.parameter&quot; [style=dotted,arrowhead=none]
+&quot;xmi2uml.datatypedependentgenerator.parameter&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Parameter |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.datatypedependentgenerator.property&quot; -&gt; &quot;xmi2uml.property&quot; [style=dotted,arrowhead=none]
+&quot;xmi2uml.datatypedependentgenerator.property&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Property |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.dependency&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;xmi2uml.dependency |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.finalizegenerator&quot; -&gt; &quot;xmi2uml.finalizegenerator.behaviorumlclass&quot; [arrowhead=none]
+&quot;xmi2uml.finalizegenerator&quot; -&gt; &quot;xmi2uml.finalizegenerator.schemaumlclass&quot; [arrowhead=none]
+&quot;xmi2uml.finalizegenerator&quot; [style=&quot;filled&quot;,fillcolor=&quot;pink2&quot;,label=&quot;Finalizegenerator |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.finalizegenerator.behaviorumlclass&quot; -&gt; &quot;xmi2uml.class&quot; [style=dotted,arrowhead=none]
+&quot;xmi2uml.finalizegenerator.behaviorumlclass&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Behaviorumlclass |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.finalizegenerator.schemaumlclass&quot; -&gt; &quot;xmi2uml.class&quot; [style=dotted,arrowhead=none]
+&quot;xmi2uml.finalizegenerator.schemaumlclass&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Schemaumlclass |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.generalization&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;xmi2uml.generalization |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.hierarchygenerator&quot; -&gt; &quot;xmi2uml.hierarchygenerator.association&quot; [arrowhead=none]
+&quot;xmi2uml.hierarchygenerator&quot; -&gt; &quot;xmi2uml.hierarchygenerator.class&quot; [arrowhead=none]
+&quot;xmi2uml.hierarchygenerator&quot; -&gt; &quot;xmi2uml.hierarchygenerator.datatype&quot; [arrowhead=none]
+&quot;xmi2uml.hierarchygenerator&quot; -&gt; &quot;xmi2uml.hierarchygenerator.interface&quot; [arrowhead=none]
+&quot;xmi2uml.hierarchygenerator&quot; -&gt; &quot;xmi2uml.hierarchygenerator.package&quot; [arrowhead=none]
+&quot;xmi2uml.hierarchygenerator&quot; -&gt; &quot;xmi2uml.hierarchygenerator.primitivetype&quot; [arrowhead=none]
+&quot;xmi2uml.hierarchygenerator&quot; [style=&quot;filled&quot;,fillcolor=&quot;pink2&quot;,label=&quot;Hierarchygenerator |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.hierarchygenerator.association&quot; -&gt; &quot;xmi2uml.association&quot; [style=dotted,arrowhead=none]
+&quot;xmi2uml.hierarchygenerator.association&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Association |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.hierarchygenerator.class&quot; -&gt; &quot;xmi2uml.class&quot; [style=dotted,arrowhead=none]
+&quot;xmi2uml.hierarchygenerator.class&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Class |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.hierarchygenerator.datatype&quot; -&gt; &quot;xmi2uml.datatype&quot; [style=dotted,arrowhead=none]
+&quot;xmi2uml.hierarchygenerator.datatype&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Datatype |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.hierarchygenerator.interface&quot; -&gt; &quot;xmi2uml.interface&quot; [style=dotted,arrowhead=none]
+&quot;xmi2uml.hierarchygenerator.interface&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Interface |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.hierarchygenerator.package&quot; -&gt; &quot;xmi2uml.package&quot; [style=dotted,arrowhead=none]
+&quot;xmi2uml.hierarchygenerator.package&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Package |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.hierarchygenerator.primitivetype&quot; -&gt; &quot;xmi2uml.primitivetype&quot; [style=dotted,arrowhead=none]
+&quot;xmi2uml.hierarchygenerator.primitivetype&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Primitivetype |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.interface&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;xmi2uml.interface |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.interfacerealization&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;xmi2uml.interfacerealization |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.memberend&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;xmi2uml.memberend |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.operation&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;xmi2uml.operation |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.ownedend&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;xmi2uml.ownedend |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.package&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;xmi2uml.package |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.parameter&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;xmi2uml.parameter |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.primitivetype&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;xmi2uml.primitivetype |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.profile&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;xmi2uml.profile |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.profilegenerator&quot; -&gt; &quot;xmi2uml.profilegenerator.profile&quot; [arrowhead=none]
+&quot;xmi2uml.profilegenerator&quot; -&gt; &quot;xmi2uml.profilegenerator.stereotypetokenizer&quot; [arrowhead=none]
+&quot;xmi2uml.profilegenerator&quot; [style=&quot;filled&quot;,fillcolor=&quot;pink2&quot;,label=&quot;Profilegenerator |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.profilegenerator.profile&quot; -&gt; &quot;xmi2uml.profile&quot; [style=dotted,arrowhead=none]
+&quot;xmi2uml.profilegenerator.profile&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Profile |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.profilegenerator.stereotypetokenizer&quot; -&gt; &quot;xmi2uml.stereotypedef&quot; [style=dotted,arrowhead=none]
+&quot;xmi2uml.profilegenerator.stereotypetokenizer&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Stereotypetokenizer |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.property&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;xmi2uml.property |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.stereotype&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;xmi2uml.stereotype |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.stereotypedef&quot; [style=&quot;filled&quot;,fillcolor=&quot;yellow2&quot;,label=&quot;xmi2uml.stereotypedef |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.stereotypegenerator&quot; -&gt; &quot;xmi2uml.stereotypegenerator.stereotype&quot; [arrowhead=none]
+&quot;xmi2uml.stereotypegenerator&quot; [style=&quot;filled&quot;,fillcolor=&quot;pink2&quot;,label=&quot;Stereotypegenerator |&quot;,shape=&quot;Mrecord&quot;]
+&quot;xmi2uml.stereotypegenerator.stereotype&quot; -&gt; &quot;xmi2uml.stereotype&quot; [style=dotted,arrowhead=none]
+&quot;xmi2uml.stereotypegenerator.stereotype&quot; [style=&quot;filled&quot;,fillcolor=&quot;palegreen3&quot;,label=&quot;Stereotype |&quot;,shape=&quot;Mrecord&quot;]
+}" />
+</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="handler.html" title="Handler"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="under_the_hood.html" title="Under the hood"
+             >previous</a> |</li>
+        <li><a href="../index.html">AGX 3.alpha documentation</a> &raquo;</li>
+          <li><a href="index.html" >Developers Documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+        &copy; Copyright 2009-2010, BlueDynamics Alliance et al.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2376477-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  </body>
+</html>

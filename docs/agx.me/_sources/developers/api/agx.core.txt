@@ -1,0 +1,75 @@
+agx.core
+========
+
+agx.core.interfaces
+-------------------
+
+.. autointerface:: agx.core.interfaces.IConfLoader
+  :members:
+
+.. autointerface:: agx.core.interfaces.IController
+  :members:
+
+.. autointerface:: agx.core.interfaces.IProcessor
+  :members:
+
+.. autointerface:: agx.core.interfaces.ITransform
+  :members:
+
+.. autointerface:: agx.core.interfaces.IGenerator
+  :members:
+
+.. autointerface:: agx.core.interfaces.IDispatcher
+  :members:
+
+.. autointerface:: agx.core.interfaces.IScope
+  :members:
+
+.. autointerface:: agx.core.interfaces.ITargetHandler
+  :members:
+
+.. autointerface:: agx.core.interfaces.IHandler
+  :members:
+
+.. autointerface:: agx.core.interfaces.IToken
+  :members:
+
+public API
+----------
+.. automodule:: agx.core
+  :members: token, handler, registerHandler, registerScope, registerGenerator, registerTransform 
+  :undoc-members:
+  
+   
+.. autoclass:: agx.core.Controller
+  :members:
+  :undoc-members:
+
+.. autoclass:: agx.core.Processor
+  :members:
+  :undoc-members:
+
+.. autoclass:: agx.core.Generator
+  :members:
+  :undoc-members:
+
+.. autoclass:: agx.core.TargetHandler
+  :members:
+  :undoc-members:
+
+.. autoclass:: agx.core.NullTargetHandler
+  :members:
+  :undoc-members:
+
+.. autoclass:: agx.core.TreeSyncPreperator
+  :members:
+  :undoc-members:
+
+.. autoclass:: agx.core.Scope
+  :members:
+  :undoc-members:
+
+.. autoclass:: agx.core.Handler
+  :members:
+  :undoc-members:
+

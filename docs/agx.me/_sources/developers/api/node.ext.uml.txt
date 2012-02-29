@@ -1,0 +1,10 @@
+node.ext.uml
+============
+
+.. toctree::
+   :maxdepth: 2
+   
+   node.ext.uml.core
+   node.ext.uml.classes
+   node.ext.uml.utils
+   

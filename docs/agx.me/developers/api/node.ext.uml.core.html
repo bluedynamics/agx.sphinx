@@ -1,0 +1,561 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>node.ext.uml.core &mdash; AGX 3.alpha documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.alpha',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="AGX 3.alpha documentation" href="../../index.html" />
+    <link rel="up" title="node.ext.uml" href="node.ext.uml.html" />
+    <link rel="next" title="node.ext.uml.classes" href="node.ext.uml.classes.html" />
+    <link rel="prev" title="node.ext.uml" href="node.ext.uml.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="node.ext.uml.classes.html" title="node.ext.uml.classes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="node.ext.uml.html" title="node.ext.uml"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">AGX 3.alpha documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Developers Documentation</a> &raquo;</li>
+          <li><a href="api.html" >AGX API documentation</a> &raquo;</li>
+          <li><a href="node.ext.uml.html" accesskey="U">node.ext.uml</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/agx.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">node.ext.uml.core</a><ul>
+<li><a class="reference internal" href="#api">API</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="node.ext.uml.html"
+                        title="previous chapter">node.ext.uml</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="node.ext.uml.classes.html"
+                        title="next chapter">node.ext.uml.classes</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/developers/api/node.ext.uml.core.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="node-ext-uml-core">
+<h1>node.ext.uml.core<a class="headerlink" href="#node-ext-uml-core" title="Permalink to this headline">¶</a></h1>
+<p>Includes zope interfaces from <cite>node.ext.uml.interfaces</cite>.</p>
+<span class="target" id="module-node.ext.uml.interfaces"></span><p>Literature:
+[1] OMG Unified Modeling LanguageTM (OMG UML), Superstructure. Version 2.2.</p>
+<p>[2] The Unified Modeling Language Reference Manual Second Edition.
+James Rumbaugh, Ivar Jacobson, Grady Booch. Addison-Wesley, 2005</p>
+<p>[3] Unified Modeling Language Specification (version 2.1)</p>
+<div class="section" id="api">
+<h2>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="node.ext.uml.core.UMLElement">
+<em class="property">class </em><tt class="descclassname">node.ext.uml.core.</tt><tt class="descname">UMLElement</tt><big>(</big><em>*args</em>, <em>**kw</em><big>)</big><a class="headerlink" href="#node.ext.uml.core.UMLElement" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="node.ext.uml.core.UMLElement.XMI">
+<tt class="descname">XMI</tt><em class="property"> = None</em><a class="headerlink" href="#node.ext.uml.core.UMLElement.XMI" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.core.UMLElement.abstract">
+<tt class="descname">abstract</tt><em class="property"> = True</em><a class="headerlink" href="#node.ext.uml.core.UMLElement.abstract" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="node.ext.uml.core.UMLElement.check_model_constraints">
+<tt class="descname">check_model_constraints</tt><big>(</big><big>)</big><a class="headerlink" href="#node.ext.uml.core.UMLElement.check_model_constraints" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="node.ext.uml.core.UMLElement.copy">
+<tt class="descname">copy</tt><big>(</big><em>*args</em>, <em>**kw</em><big>)</big><a class="headerlink" href="#node.ext.uml.core.UMLElement.copy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="node.ext.uml.core.UMLElement.detach">
+<tt class="descname">detach</tt><big>(</big><em>*args</em>, <em>**kw</em><big>)</big><a class="headerlink" href="#node.ext.uml.core.UMLElement.detach" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.core.UMLElement.index">
+<tt class="descname">index</tt><a class="headerlink" href="#node.ext.uml.core.UMLElement.index" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="node.ext.uml.core.UMLElement.insertafter">
+<tt class="descname">insertafter</tt><big>(</big><em>newnode</em>, <em>refnode</em><big>)</big><a class="headerlink" href="#node.ext.uml.core.UMLElement.insertafter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="node.ext.uml.core.UMLElement.insertbefore">
+<tt class="descname">insertbefore</tt><big>(</big><em>newnode</em>, <em>refnode</em><big>)</big><a class="headerlink" href="#node.ext.uml.core.UMLElement.insertbefore" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="node.ext.uml.core.UMLElement.insertfirst">
+<tt class="descname">insertfirst</tt><big>(</big><em>newnode</em><big>)</big><a class="headerlink" href="#node.ext.uml.core.UMLElement.insertfirst" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="node.ext.uml.core.UMLElement.insertlast">
+<tt class="descname">insertlast</tt><big>(</big><em>newnode</em><big>)</big><a class="headerlink" href="#node.ext.uml.core.UMLElement.insertlast" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.core.UMLElement.maxoccurs">
+<tt class="descname">maxoccurs</tt><a class="headerlink" href="#node.ext.uml.core.UMLElement.maxoccurs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.core.UMLElement.name">
+<tt class="descname">name</tt><a class="headerlink" href="#node.ext.uml.core.UMLElement.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="node.ext.uml.core.UMLElement.node">
+<tt class="descname">node</tt><big>(</big><em>uuid</em><big>)</big><a class="headerlink" href="#node.ext.uml.core.UMLElement.node" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.core.UMLElement.normalizedname">
+<tt class="descname">normalizedname</tt><a class="headerlink" href="#node.ext.uml.core.UMLElement.normalizedname" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.core.UMLElement.overwrite_recursiv_on_copy">
+<tt class="descname">overwrite_recursiv_on_copy</tt><em class="property"> = True</em><a class="headerlink" href="#node.ext.uml.core.UMLElement.overwrite_recursiv_on_copy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="node.ext.uml.core.UMLElement.set_uuid_for">
+<tt class="descname">set_uuid_for</tt><big>(</big><em>node</em>, <em>override=False</em>, <em>recursiv=False</em><big>)</big><a class="headerlink" href="#node.ext.uml.core.UMLElement.set_uuid_for" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="node.ext.uml.core.UMLElement.stereotype">
+<tt class="descname">stereotype</tt><big>(</big><em>stereotypename</em><big>)</big><a class="headerlink" href="#node.ext.uml.core.UMLElement.stereotype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.core.UMLElement.stereotypes">
+<tt class="descname">stereotypes</tt><a class="headerlink" href="#node.ext.uml.core.UMLElement.stereotypes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="node.ext.uml.core.UMLElement.swap">
+<tt class="descname">swap</tt><big>(</big><em>node_a</em>, <em>node_b</em><big>)</big><a class="headerlink" href="#node.ext.uml.core.UMLElement.swap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.core.UMLElement.uuid">
+<tt class="descname">uuid</tt><a class="headerlink" href="#node.ext.uml.core.UMLElement.uuid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.core.UMLElement.xmiid">
+<tt class="descname">xmiid</tt><em class="property"> = None</em><a class="headerlink" href="#node.ext.uml.core.UMLElement.xmiid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.core.UMLElement.xminame">
+<tt class="descname">xminame</tt><em class="property"> = None</em><a class="headerlink" href="#node.ext.uml.core.UMLElement.xminame" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="interface">
+<dt id="node.ext.uml.interfaces.IUMLElement">
+<em class="property">interface </em><tt class="descclassname">node.ext.uml.interfaces.</tt><tt class="descname">IUMLElement</tt><a class="headerlink" href="#node.ext.uml.interfaces.IUMLElement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extends: <tt class="xref py py-class docutils literal"><span class="pre">node.interfaces.INode</span></tt></p>
+<p>An XMI Element.</p>
+<dl class="method">
+<dt id="node.ext.uml.interfaces.IUMLElement.check_model_constraints">
+<tt class="descname">check_model_constraints</tt><big>(</big><em>self</em><big>)</big><a class="headerlink" href="#node.ext.uml.interfaces.IUMLElement.check_model_constraints" title="Permalink to this definition">¶</a></dt>
+<dd><p>Since some rules cannot be evaluated at instantiation time this
+function should be called on model elements by the interpreter when
+building the concrete model.</p>
+<p>Don&#8217;t confuse this with &#8220;Constraint&#8221; from UML specification</p>
+<p>All &#8220;check_model_constraints&#8221; methods  through the whole inheritance
+hierarchy should be called. It&#8217;s up to the implementation to call the
+superclass&#8217; &#8220;check_model_constraints&#8221; implementation.</p>
+<dl class="docutils">
+<dt>For example, consider a model element which must have a parent:</dt>
+<dd>node[&#8216;element&#8217;] = Element()</dd>
+</dl>
+<p>Element does not have a parent at instatiation time.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.interfaces.IUMLElement.normalizedname">
+<tt class="descname">normalizedname</tt><a class="headerlink" href="#node.ext.uml.interfaces.IUMLElement.normalizedname" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleaned name of UML element name consists of [a..z A..Z 0..9 _] and does not start with [0..9].</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.interfaces.IUMLElement.XMI">
+<tt class="descname">XMI</tt><a class="headerlink" href="#node.ext.uml.interfaces.IUMLElement.XMI" title="Permalink to this definition">¶</a></dt>
+<dd><p>the current IXMIFlavor instance</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="node.ext.uml.interfaces.IUMLElement.stereotype">
+<tt class="descname">stereotype</tt><big>(</big><em>name</em><big>)</big><a class="headerlink" href="#node.ext.uml.interfaces.IUMLElement.stereotype" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns stereotype by name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.interfaces.IUMLElement.xmiid">
+<tt class="descname">xmiid</tt><a class="headerlink" href="#node.ext.uml.interfaces.IUMLElement.xmiid" title="Permalink to this definition">¶</a></dt>
+<dd><p>XMI identifier as string</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.interfaces.IUMLElement.xminame">
+<tt class="descname">xminame</tt><a class="headerlink" href="#node.ext.uml.interfaces.IUMLElement.xminame" title="Permalink to this definition">¶</a></dt>
+<dd><p>XMI name, should be used as canonical name for code generation</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.interfaces.IUMLElement.maxoccurs">
+<tt class="descname">maxoccurs</tt><a class="headerlink" href="#node.ext.uml.interfaces.IUMLElement.maxoccurs" title="Permalink to this definition">¶</a></dt>
+<dd><p>UML: maximum occurencies. integer expected.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.interfaces.IUMLElement.stereotypes">
+<tt class="descname">stereotypes</tt><a class="headerlink" href="#node.ext.uml.interfaces.IUMLElement.stereotypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of INode filtered contained stereotypes</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.interfaces.IUMLElement.iscomplex">
+<tt class="descname">iscomplex</tt><a class="headerlink" href="#node.ext.uml.interfaces.IUMLElement.iscomplex" title="Permalink to this definition">¶</a></dt>
+<dd><p>UML: complex or not. boolean expected</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="node.ext.uml.core.Profile">
+<em class="property">class </em><tt class="descclassname">node.ext.uml.core.</tt><tt class="descname">Profile</tt><big>(</big><em>*args</em>, <em>**kw</em><big>)</big><a class="headerlink" href="#node.ext.uml.core.Profile" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="node.ext.uml.core.Profile.abstract">
+<tt class="descname">abstract</tt><em class="property"> = False</em><a class="headerlink" href="#node.ext.uml.core.Profile.abstract" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="interface">
+<dt id="node.ext.uml.interfaces.IProfile">
+<em class="property">interface </em><tt class="descclassname">node.ext.uml.interfaces.</tt><tt class="descname">IProfile</tt><a class="headerlink" href="#node.ext.uml.interfaces.IProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extends: <a class="reference internal" href="#node.ext.uml.interfaces.IUMLElement" title="node.ext.uml.interfaces.IUMLElement"><tt class="xref py py-class docutils literal"><span class="pre">node.ext.uml.interfaces.IUMLElement</span></tt></a></p>
+<p>UML Profile.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="node.ext.uml.core.Datatype">
+<em class="property">class </em><tt class="descclassname">node.ext.uml.core.</tt><tt class="descname">Datatype</tt><big>(</big><em>*args</em>, <em>**kw</em><big>)</big><a class="headerlink" href="#node.ext.uml.core.Datatype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="interface">
+<dt id="node.ext.uml.interfaces.IDatatype">
+<em class="property">interface </em><tt class="descclassname">node.ext.uml.interfaces.</tt><tt class="descname">IDatatype</tt><a class="headerlink" href="#node.ext.uml.interfaces.IDatatype" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extends: <a class="reference internal" href="#node.ext.uml.interfaces.IUMLElement" title="node.ext.uml.interfaces.IUMLElement"><tt class="xref py py-class docutils literal"><span class="pre">node.ext.uml.interfaces.IUMLElement</span></tt></a>, <tt class="xref py py-class docutils literal"><span class="pre">node.interfaces.ILeaf</span></tt></p>
+<p>UML datatype.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="node.ext.uml.core.Stereotype">
+<em class="property">class </em><tt class="descclassname">node.ext.uml.core.</tt><tt class="descname">Stereotype</tt><big>(</big><em>name=None</em><big>)</big><a class="headerlink" href="#node.ext.uml.core.Stereotype" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="node.ext.uml.core.Stereotype.abstract">
+<tt class="descname">abstract</tt><em class="property"> = False</em><a class="headerlink" href="#node.ext.uml.core.Stereotype.abstract" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="node.ext.uml.core.Stereotype.check_model_constraints">
+<tt class="descname">check_model_constraints</tt><big>(</big><big>)</big><a class="headerlink" href="#node.ext.uml.core.Stereotype.check_model_constraints" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.core.Stereotype.profile">
+<tt class="descname">profile</tt><a class="headerlink" href="#node.ext.uml.core.Stereotype.profile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="node.ext.uml.core.Stereotype.taggedvalue">
+<tt class="descname">taggedvalue</tt><big>(</big><em>taggedvaluename</em><big>)</big><a class="headerlink" href="#node.ext.uml.core.Stereotype.taggedvalue" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.core.Stereotype.taggedvalues">
+<tt class="descname">taggedvalues</tt><a class="headerlink" href="#node.ext.uml.core.Stereotype.taggedvalues" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="interface">
+<dt id="node.ext.uml.interfaces.IStereotype">
+<em class="property">interface </em><tt class="descclassname">node.ext.uml.interfaces.</tt><tt class="descname">IStereotype</tt><a class="headerlink" href="#node.ext.uml.interfaces.IStereotype" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extends: <a class="reference internal" href="#node.ext.uml.interfaces.IUMLElement" title="node.ext.uml.interfaces.IUMLElement"><tt class="xref py py-class docutils literal"><span class="pre">node.ext.uml.interfaces.IUMLElement</span></tt></a></p>
+<p>UML stereotype</p>
+<p>From uml reference book &#8220;tagged value: A tag-value pair attached to a
+modeling element to hold some piece of information. Each tagged value
+is shown in the form tag = value. it always is part of a stereotype.</p>
+<dl class="attribute">
+<dt id="node.ext.uml.interfaces.IStereotype.taggedvalues">
+<tt class="descname">taggedvalues</tt><a class="headerlink" href="#node.ext.uml.interfaces.IStereotype.taggedvalues" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of ITaggedvalue  filtered contained taggedvalues.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="node.ext.uml.interfaces.IStereotype.taggedvalue">
+<tt class="descname">taggedvalue</tt><big>(</big><em>name</em><big>)</big><a class="headerlink" href="#node.ext.uml.interfaces.IStereotype.taggedvalue" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns tagged value by tag name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.interfaces.IStereotype.profiles">
+<tt class="descname">profiles</tt><a class="headerlink" href="#node.ext.uml.interfaces.IStereotype.profiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>UID of UML profile this stereotype belongs to.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="node.ext.uml.core.TaggedValue">
+<em class="property">class </em><tt class="descclassname">node.ext.uml.core.</tt><tt class="descname">TaggedValue</tt><big>(</big><em>*args</em>, <em>**kw</em><big>)</big><a class="headerlink" href="#node.ext.uml.core.TaggedValue" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="node.ext.uml.core.TaggedValue.abstract">
+<tt class="descname">abstract</tt><em class="property"> = False</em><a class="headerlink" href="#node.ext.uml.core.TaggedValue.abstract" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.core.TaggedValue.value">
+<tt class="descname">value</tt><em class="property"> = None</em><a class="headerlink" href="#node.ext.uml.core.TaggedValue.value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="interface">
+<dt id="node.ext.uml.interfaces.ITaggedValue">
+<em class="property">interface </em><tt class="descclassname">node.ext.uml.interfaces.</tt><tt class="descname">ITaggedValue</tt><a class="headerlink" href="#node.ext.uml.interfaces.ITaggedValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extends: <a class="reference internal" href="#node.ext.uml.interfaces.IUMLElement" title="node.ext.uml.interfaces.IUMLElement"><tt class="xref py py-class docutils literal"><span class="pre">node.ext.uml.interfaces.IUMLElement</span></tt></a>, <tt class="xref py py-class docutils literal"><span class="pre">node.interfaces.ILeaf</span></tt></p>
+<p>UML tagged value.</p>
+<dl class="attribute">
+<dt id="node.ext.uml.interfaces.ITaggedValue.value">
+<tt class="descname">value</tt><a class="headerlink" href="#node.ext.uml.interfaces.ITaggedValue.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="node.ext.uml.core.Package">
+<em class="property">class </em><tt class="descclassname">node.ext.uml.core.</tt><tt class="descname">Package</tt><big>(</big><em>*args</em>, <em>**kw</em><big>)</big><a class="headerlink" href="#node.ext.uml.core.Package" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="node.ext.uml.core.Package.abstract">
+<tt class="descname">abstract</tt><em class="property"> = False</em><a class="headerlink" href="#node.ext.uml.core.Package.abstract" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.core.Package.activities">
+<tt class="descname">activities</tt><a class="headerlink" href="#node.ext.uml.core.Package.activities" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.core.Package.classes">
+<tt class="descname">classes</tt><a class="headerlink" href="#node.ext.uml.core.Package.classes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.core.Package.interfaces">
+<tt class="descname">interfaces</tt><a class="headerlink" href="#node.ext.uml.core.Package.interfaces" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.core.Package.packages">
+<tt class="descname">packages</tt><a class="headerlink" href="#node.ext.uml.core.Package.packages" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.core.Package.profiles">
+<tt class="descname">profiles</tt><a class="headerlink" href="#node.ext.uml.core.Package.profiles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="interface">
+<dt id="node.ext.uml.interfaces.IPackage">
+<em class="property">interface </em><tt class="descclassname">node.ext.uml.interfaces.</tt><tt class="descname">IPackage</tt><a class="headerlink" href="#node.ext.uml.interfaces.IPackage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extends: <a class="reference internal" href="#node.ext.uml.interfaces.IUMLElement" title="node.ext.uml.interfaces.IUMLElement"><tt class="xref py py-class docutils literal"><span class="pre">node.ext.uml.interfaces.IUMLElement</span></tt></a></p>
+<p>An UML Package element.</p>
+<dl class="attribute">
+<dt id="node.ext.uml.interfaces.IPackage.activities">
+<tt class="descname">activities</tt><a class="headerlink" href="#node.ext.uml.interfaces.IPackage.activities" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of IActivities defined in the package</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.interfaces.IPackage.interfaces">
+<tt class="descname">interfaces</tt><a class="headerlink" href="#node.ext.uml.interfaces.IPackage.interfaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of INode filters contained classes</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.interfaces.IPackage.profiles">
+<tt class="descname">profiles</tt><a class="headerlink" href="#node.ext.uml.interfaces.IPackage.profiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of UML profiles loaded with this package</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.interfaces.IPackage.classes">
+<tt class="descname">classes</tt><a class="headerlink" href="#node.ext.uml.interfaces.IPackage.classes" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of INode filtered contained classes</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.interfaces.IPackage.packages">
+<tt class="descname">packages</tt><a class="headerlink" href="#node.ext.uml.interfaces.IPackage.packages" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of INode filtered contained packages</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="node.ext.uml.core.Model">
+<em class="property">class </em><tt class="descclassname">node.ext.uml.core.</tt><tt class="descname">Model</tt><big>(</big><em>*args</em>, <em>**kw</em><big>)</big><a class="headerlink" href="#node.ext.uml.core.Model" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="attribute">
+<dt id="node.ext.uml.core.Model.abstract">
+<tt class="descname">abstract</tt><em class="property"> = False</em><a class="headerlink" href="#node.ext.uml.core.Model.abstract" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.uml.core.Model.datatypes">
+<tt class="descname">datatypes</tt><a class="headerlink" href="#node.ext.uml.core.Model.datatypes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="interface">
+<dt id="node.ext.uml.interfaces.IModel">
+<em class="property">interface </em><tt class="descclassname">node.ext.uml.interfaces.</tt><tt class="descname">IModel</tt><a class="headerlink" href="#node.ext.uml.interfaces.IModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extends: <a class="reference internal" href="#node.ext.uml.interfaces.IPackage" title="node.ext.uml.interfaces.IPackage"><tt class="xref py py-class docutils literal"><span class="pre">node.ext.uml.interfaces.IPackage</span></tt></a>, <tt class="xref py py-class docutils literal"><span class="pre">node.interfaces.IRoot</span></tt></p>
+<p>UML Model Element.</p>
+<dl class="attribute">
+<dt id="node.ext.uml.interfaces.IModel.datatypes">
+<tt class="descname">datatypes</tt><a class="headerlink" href="#node.ext.uml.interfaces.IModel.datatypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>list of (INode filtered) contained datatypes</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="node.ext.uml.classes.html" title="node.ext.uml.classes"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="node.ext.uml.html" title="node.ext.uml"
+             >previous</a> |</li>
+        <li><a href="../../index.html">AGX 3.alpha documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Developers Documentation</a> &raquo;</li>
+          <li><a href="api.html" >AGX API documentation</a> &raquo;</li>
+          <li><a href="node.ext.uml.html" >node.ext.uml</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+        &copy; Copyright 2009-2010, BlueDynamics Alliance et al.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2376477-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  </body>
+</html>

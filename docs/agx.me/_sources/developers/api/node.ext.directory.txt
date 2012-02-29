@@ -1,0 +1,17 @@
+node.ext.directory
+==================
+
+API
+---
+
+.. autoclass:: node.ext.directory.Directory
+  :members:
+  :undoc-members:
+  :show-inheritance:
+
+.. autointerface:: node.ext.directory.interfaces.IDirectory
+  :members:
+
+.. autointerface:: node.ext.directory.interfaces.IFile
+  :members:
+  

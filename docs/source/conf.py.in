@@ -19,7 +19,8 @@ extensions = [
     'agx.sphinx.ext',
 ]
 
-graphviz_dot_args = ['-s30']
+#graphviz_dot_args = ['-s30']
+graphviz_output_format = 'svg'
 mscgen = "${buildout:bin-directory}/mscgen"
 
 # Add any paths that contain templates here, relative to this directory.

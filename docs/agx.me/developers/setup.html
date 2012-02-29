@@ -1,0 +1,162 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Setting up AGX Tests &mdash; AGX 3.alpha documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.alpha',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="AGX 3.alpha documentation" href="../index.html" />
+    <link rel="up" title="Developers Documentation" href="index.html" />
+    <link rel="next" title="Under the hood" href="under_the_hood.html" />
+    <link rel="prev" title="Developers Documentation" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="under_the_hood.html" title="Under the hood"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Developers Documentation"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">AGX 3.alpha documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Developers Documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/agx.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Developers Documentation</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="under_the_hood.html"
+                        title="next chapter">Under the hood</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/developers/setup.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="setting-up-agx-tests">
+<h1>Setting up AGX Tests<a class="headerlink" href="#setting-up-agx-tests" title="Permalink to this headline">¶</a></h1>
+<p>This describes the procedure to get the AGX tests up and running from scratch.
+In this example we build a full Python 2.6 installation to keep the setup clean
+and self-contained. You might want to skip the installation of Python if you
+consider to use an other interpreter of your choice.</p>
+<ol class="arabic simple">
+<li>First we install plain Python 2.6:</li>
+</ol>
+<p>$ svn co <a class="reference external" href="https://svn.plone.org/svn/collective/buildout/bda-naked-pyt">https://svn.plone.org/svn/collective/buildout/bda-naked-pyt</a>
+$ cd bda-naked-python
+bda-naked-python$ python bootsrtap.py
+bda-naked-python$ ./bin/buildout -v
+bda-naked-python$ cd ..</p>
+<ol class="arabic simple" start="2">
+<li>Then we get the development bundle of AGX:</li>
+</ol>
+<p>$ git clone git://github.com/bluedynamics/agx.dev.git
+$ cd agx.dev
+agx.dev$ ../bda-naked-python/parts/python/bin/python2.6 bootstrap.py -c [dev.cfg|anon.cfg]
+agx.dev$ ./bin/buildout -c [dev.cfg|anon.cfg]
+agx.dev$ cd ..</p>
+<ol class="arabic simple" start="3">
+<li>What we can do now is we can run the tests:</li>
+</ol>
+<p>agx.dev$ ./bin/test</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="under_the_hood.html" title="Under the hood"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Developers Documentation"
+             >previous</a> |</li>
+        <li><a href="../index.html">AGX 3.alpha documentation</a> &raquo;</li>
+          <li><a href="index.html" >Developers Documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+        &copy; Copyright 2009-2010, BlueDynamics Alliance et al.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2376477-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  </body>
+</html>

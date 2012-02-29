@@ -1,0 +1,277 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Generating Python Code and Eggs &mdash; AGX 3.alpha documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.alpha',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="AGX 3.alpha documentation" href="../index.html" />
+    <link rel="up" title="Users Documentation" href="index.html" />
+    <link rel="next" title="Developers Documentation" href="../developers/index.html" />
+    <link rel="prev" title="Foundations - UML, Profiles, AGX-Generators and more" href="foundations.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../developers/index.html" title="Developers Documentation"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="foundations.html" title="Foundations - UML, Profiles, AGX-Generators and more"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">AGX 3.alpha documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Users Documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/agx.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Generating Python Code and Eggs</a><ul>
+<li><a class="reference internal" href="#profile">Profile</a><ul>
+<li><a class="reference internal" href="#uml-package">UML:Package</a><ul>
+<li><a class="reference internal" href="#pyegg">&lt;&lt;pyegg&gt;&gt;</a></li>
+<li><a class="reference internal" href="#pypackage">&lt;&lt;pypackage&gt;&gt;</a></li>
+<li><a class="reference internal" href="#pymodule">&lt;&lt;pymodule&gt;&gt;</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#uml-class">UML:Class</a><ul>
+<li><a class="reference internal" href="#stub">&lt;&lt;stub&gt;&gt;</a></li>
+<li><a class="reference internal" href="#decorator">&lt;&lt;decorator&gt;&gt;</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#uml-operation">UML:Operation</a><ul>
+<li><a class="reference internal" href="#id1">&lt;&lt;decorator&gt;&gt;</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#uml-generalization">UML:Generalization</a><ul>
+<li><a class="reference internal" href="#derive">&lt;&lt;derive&gt;&gt;</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#uml-property">UML:Property</a><ul>
+<li><a class="reference internal" href="#expression">&lt;&lt;expression&gt;&gt;</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="foundations.html"
+                        title="previous chapter">Foundations - UML, Profiles, AGX-Generators and more</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../developers/index.html"
+                        title="next chapter">Developers Documentation</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/users/profile_pyegg.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="generating-python-code-and-eggs">
+<h1>Generating Python Code and Eggs<a class="headerlink" href="#generating-python-code-and-eggs" title="Permalink to this headline">¶</a></h1>
+<p>This document describes the <strong>pyegg</strong> UML profile.</p>
+<img alt="../_images/profile_pyegg_uml.png" src="../_images/profile_pyegg_uml.png" />
+<div class="section" id="profile">
+<h2>Profile<a class="headerlink" href="#profile" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="uml-package">
+<h3>UML:Package<a class="headerlink" href="#uml-package" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="pyegg">
+<h4>&lt;&lt;pyegg&gt;&gt;<a class="headerlink" href="#pyegg" title="Permalink to this headline">¶</a></h4>
+<p>Create or point at (reference and import) a complete python egg structure.
+A pyegg package can be given a dotted name.
+A split name represents namespace packages. Package
+directories are located in the <tt class="docutils literal"><span class="pre">src</span></tt> folder of the egg root. A <tt class="docutils literal"><span class="pre">README.txt</span></tt> is
+created if inexistent. <tt class="docutils literal"><span class="pre">setup.py</span></tt> is created or referenced.</p>
+<p><strong>Tagged Values</strong>:</p>
+<ul class="simple">
+<li><strong>version</strong>: Used as <tt class="docutils literal"><span class="pre">version</span></tt> in setup.</li>
+<li><strong>description</strong>: Used as <tt class="docutils literal"><span class="pre">description</span></tt> in setup.</li>
+<li><strong>author</strong>: Used as <tt class="docutils literal"><span class="pre">author</span></tt> in setup.</li>
+<li><strong>email</strong>: Used as <tt class="docutils literal"><span class="pre">author_email</span></tt> in setup.</li>
+<li><strong>keywords</strong>: Used as <tt class="docutils literal"><span class="pre">keywords</span></tt> in setup.</li>
+<li><strong>url</strong>: Used as <tt class="docutils literal"><span class="pre">url</span></tt> in setup.</li>
+<li><strong>license</strong>: Used as <tt class="docutils literal"><span class="pre">license</span></tt> in setup.</li>
+<li><strong>zipsafe</strong>: Used as <tt class="docutils literal"><span class="pre">zipsafe</span></tt> in setup. Either <tt class="docutils literal"><span class="pre">True</span></tt> or <tt class="docutils literal"><span class="pre">False</span></tt>.</li>
+<li><strong>classifiers</strong>: Used as <tt class="docutils literal"><span class="pre">classifiers</span></tt> in setup. Valid Classifiers can be
+found at  <a class="reference external" href="http://pypi.python.org/pypi?%3Aaction=list_classifiers">http://pypi.python.org/pypi?%3Aaction=list_classifiers</a>.
+Classifiers must be seperated by comma (<tt class="docutils literal"><span class="pre">,</span></tt>).</li>
+<li><strong>copyright</strong>: Used as copyright header for python modules. A linebreak is
+indicated by linefeed (<tt class="docutils literal"><span class="pre">\n</span></tt>).</li>
+</ul>
+</div>
+<div class="section" id="pypackage">
+<h4>&lt;&lt;pypackage&gt;&gt;<a class="headerlink" href="#pypackage" title="Permalink to this headline">¶</a></h4>
+<p>Create or point to the directory with package name and create or point at a package&#8217;s
+<tt class="docutils literal"><span class="pre">__init__.py</span></tt> file.</p>
+<p><strong>Tagged Values</strong>: None</p>
+</div>
+<div class="section" id="pymodule">
+<h4>&lt;&lt;pymodule&gt;&gt;<a class="headerlink" href="#pymodule" title="Permalink to this headline">¶</a></h4>
+<p>Treat package as python module. Thus create or point at a python file with a package
+name. All classes in this package are written into same module instead of
+creating module files for each class in a UML package if marked with
+<tt class="docutils literal"><span class="pre">pypackage</span></tt>.</p>
+<p><strong>Tagged Values</strong>: None</p>
+</div>
+</div>
+<div class="section" id="uml-class">
+<h3>UML:Class<a class="headerlink" href="#uml-class" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="stub">
+<h4>&lt;&lt;stub&gt;&gt;<a class="headerlink" href="#stub" title="Permalink to this headline">¶</a></h4>
+<p>Indicate class as stub. Used for generalization of 3rd-party objects.</p>
+<p><strong>Tagged Values</strong>:</p>
+<ul class="simple">
+<li><strong>import</strong>: Package name to import general class from, i.e. assuming class
+name is <tt class="docutils literal"><span class="pre">Baz</span></tt>, setting value to <tt class="docutils literal"><span class="pre">foo.bar</span></tt> results in
+<tt class="docutils literal"><span class="pre">from</span> <span class="pre">foo.bar</span> <span class="pre">import</span> <span class="pre">Baz</span></tt>.</li>
+</ul>
+</div>
+<div class="section" id="decorator">
+<h4>&lt;&lt;decorator&gt;&gt;<a class="headerlink" href="#decorator" title="Permalink to this headline">¶</a></h4>
+<p>Define a python decorator.</p>
+<p>If <tt class="docutils literal"><span class="pre">args</span></tt> and <tt class="docutils literal"><span class="pre">kwargs</span></tt> are omitted in the model, they&#8217;re never touched,
+change them in the generated code as you like.</p>
+<p><strong>Tagged Values</strong>:</p>
+<ul class="simple">
+<li><strong>name</strong>: Decorator name.</li>
+<li><strong>args</strong>: Arguments passed to decorator, i.e. <tt class="docutils literal"><span class="pre">foo,</span> <span class="pre">bar</span></tt>. Arguments must
+be seperated by comma (<tt class="docutils literal"><span class="pre">,</span></tt>).</li>
+<li><strong>kwargs</strong>: Keyword arguments passed to decorator, i.e. <tt class="docutils literal"><span class="pre">foo=0,</span> <span class="pre">bar=1</span></tt>.
+Keyword arguments must be seperated by comma (<tt class="docutils literal"><span class="pre">,</span></tt>).</li>
+</ul>
+</div>
+</div>
+<div class="section" id="uml-operation">
+<h3>UML:Operation<a class="headerlink" href="#uml-operation" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h4>&lt;&lt;decorator&gt;&gt;<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>See <strong>UML:Class::decorator</strong></p>
+</div>
+</div>
+<div class="section" id="uml-generalization">
+<h3>UML:Generalization<a class="headerlink" href="#uml-generalization" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="derive">
+<h4>&lt;&lt;derive&gt;&gt;<a class="headerlink" href="#derive" title="Permalink to this headline">¶</a></h4>
+<p>Derive settings.</p>
+<p><strong>Tagged Values</strong>:</p>
+<ul class="simple">
+<li><strong>order</strong>: If UML Class inherits from 2 or more bases but order matters, set
+integer value for all generalizations. Lower value for the one needed first.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="uml-property">
+<h3>UML:Property<a class="headerlink" href="#uml-property" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="expression">
+<h4>&lt;&lt;expression&gt;&gt;<a class="headerlink" href="#expression" title="Permalink to this headline">¶</a></h4>
+<p>Set an expression for UML Property. Normally you do not model properties on
+python level, except they are useful for documentation or semantic reasons.
+Even if, value is set to <tt class="docutils literal"><span class="pre">None</span></tt> by default. Expression stereotype provides
+changing this.</p>
+<p><strong>Tagged Values</strong>:</p>
+<ul class="simple">
+<li><strong>expression</strong>: Some python expression, i.e. <tt class="docutils literal"><span class="pre">[x</span> <span class="pre">for</span> <span class="pre">x</span> <span class="pre">in</span> <span class="pre">[&quot;xxx&quot;]]</span></tt>.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../developers/index.html" title="Developers Documentation"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="foundations.html" title="Foundations - UML, Profiles, AGX-Generators and more"
+             >previous</a> |</li>
+        <li><a href="../index.html">AGX 3.alpha documentation</a> &raquo;</li>
+          <li><a href="index.html" >Users Documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+        &copy; Copyright 2009-2010, BlueDynamics Alliance et al.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2376477-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,586 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>node.ext.python &mdash; AGX 3.alpha documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '3.alpha',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="AGX 3.alpha documentation" href="../../index.html" />
+    <link rel="up" title="AGX API documentation" href="api.html" />
+    <link rel="next" title="agx.transform.xmi2uml" href="agx.transform.xmi2uml.html" />
+    <link rel="prev" title="node.ext.template" href="node.ext.template.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="agx.transform.xmi2uml.html" title="agx.transform.xmi2uml"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="node.ext.template.html" title="node.ext.template"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">AGX 3.alpha documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Developers Documentation</a> &raquo;</li>
+          <li><a href="api.html" accesskey="U">AGX API documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../../index.html">
+              <img class="logo" src="../../_static/agx.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">node.ext.python</a><ul>
+<li><a class="reference internal" href="#api">API</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="node.ext.template.html"
+                        title="previous chapter">node.ext.template</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="agx.transform.xmi2uml.html"
+                        title="next chapter">agx.transform.xmi2uml</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/developers/api/node.ext.python.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="node-ext-python">
+<h1>node.ext.python<a class="headerlink" href="#node-ext-python" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="api">
+<h2>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="node.ext.python.Block">
+<em class="property">class </em><tt class="descclassname">node.ext.python.</tt><tt class="descname">Block</tt><big>(</big><em>text=None</em>, <em>buffer=</em><span class="optional">[</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#node.ext.python.Block" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">node.ext.python.nodes.PythonNode</span></tt>, <tt class="xref py py-class docutils literal"><span class="pre">node.ext.python.nodes._TextMixin</span></tt></p>
+<dl class="attribute">
+<dt id="node.ext.python.Block.endlineno">
+<tt class="descname">endlineno</tt><a class="headerlink" href="#node.ext.python.Block.endlineno" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Block.lines">
+<tt class="descname">lines</tt><a class="headerlink" href="#node.ext.python.Block.lines" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Block.parserfactory">
+<tt class="descname">parserfactory</tt><a class="headerlink" href="#node.ext.python.Block.parserfactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <tt class="xref py py-class docutils literal"><span class="pre">BaseParser</span></tt></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Block.rendererfactory">
+<tt class="descname">rendererfactory</tt><a class="headerlink" href="#node.ext.python.Block.rendererfactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <tt class="xref py py-class docutils literal"><span class="pre">BlockRenderer</span></tt></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Block.startlineno">
+<tt class="descname">startlineno</tt><a class="headerlink" href="#node.ext.python.Block.startlineno" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="interface">
+<dt id="node.ext.python.interfaces.IBlock">
+<em class="property">interface </em><tt class="descclassname">node.ext.python.interfaces.</tt><tt class="descname">IBlock</tt><a class="headerlink" href="#node.ext.python.interfaces.IBlock" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extends: <tt class="xref py py-class docutils literal"><span class="pre">node.ext.python.interfaces.IPythonNode</span></tt></p>
+<p>Python code block.</p>
+<dl class="attribute">
+<dt id="IBlock.text">
+<tt class="descname">text</tt><a class="headerlink" href="#IBlock.text" title="Permalink to this definition">¶</a></dt>
+<dd><p>block contents as text.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="IBlock.lines">
+<tt class="descname">lines</tt><a class="headerlink" href="#IBlock.lines" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of code lines.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="node.ext.python.Class">
+<em class="property">class </em><tt class="descclassname">node.ext.python.</tt><tt class="descname">Class</tt><big>(</big><em>classname=None</em>, <em>astnode=None</em>, <em>buffer=</em><span class="optional">[</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#node.ext.python.Class" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">node.ext.python.nodes.PythonNode</span></tt></p>
+<dl class="method">
+<dt id="node.ext.python.Class.decorators">
+<tt class="descname">decorators</tt><big>(</big><em>name=None</em><big>)</big><a class="headerlink" href="#node.ext.python.Class.decorators" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Class.defendlineno">
+<tt class="descname">defendlineno</tt><a class="headerlink" href="#node.ext.python.Class.defendlineno" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Class.parserfactory">
+<tt class="descname">parserfactory</tt><a class="headerlink" href="#node.ext.python.Class.parserfactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <tt class="xref py py-class docutils literal"><span class="pre">ClassParser</span></tt></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Class.rendererfactory">
+<tt class="descname">rendererfactory</tt><a class="headerlink" href="#node.ext.python.Class.rendererfactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <tt class="xref py py-class docutils literal"><span class="pre">ClassRenderer</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="interface">
+<dt id="node.ext.python.interfaces.IClass">
+<em class="property">interface </em><tt class="descclassname">node.ext.python.interfaces.</tt><tt class="descname">IClass</tt><a class="headerlink" href="#node.ext.python.interfaces.IClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extends: <tt class="xref py py-class docutils literal"><span class="pre">node.ext.python.interfaces.IPythonNode</span></tt></p>
+<p>Python class.</p>
+<dl class="attribute">
+<dt id="IClass.defendlineno">
+<tt class="descname">defendlineno</tt><a class="headerlink" href="#IClass.defendlineno" title="Permalink to this definition">¶</a></dt>
+<dd><p>End line number of class def. Read-only.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="IClass.classname">
+<tt class="descname">classname</tt><a class="headerlink" href="#IClass.classname" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the class.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="IClass.bases">
+<tt class="descname">bases</tt><a class="headerlink" href="#IClass.bases" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of base classes for this class</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="IClass.decorators">
+<tt class="descname">decorators</tt><big>(</big><em>name=None</em><big>)</big><a class="headerlink" href="#IClass.decorators" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return decorators. If name is not None, filter by name.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="node.ext.python.Decorator">
+<em class="property">class </em><tt class="descclassname">node.ext.python.</tt><tt class="descname">Decorator</tt><big>(</big><em>decoratorname=None</em>, <em>astnode=None</em>, <em>buffer=</em><span class="optional">[</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#node.ext.python.Decorator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">node.ext.python.nodes.PythonNode</span></tt>, <tt class="xref py py-class docutils literal"><span class="pre">node.ext.python.nodes.CallableArguments</span></tt></p>
+<dl class="attribute">
+<dt id="node.ext.python.Decorator.bufend">
+<tt class="descname">bufend</tt><a class="headerlink" href="#node.ext.python.Decorator.bufend" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Decorator.endlineno">
+<tt class="descname">endlineno</tt><a class="headerlink" href="#node.ext.python.Decorator.endlineno" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="node.ext.python.Decorator.equals">
+<tt class="descname">equals</tt><big>(</big><em>other</em><big>)</big><a class="headerlink" href="#node.ext.python.Decorator.equals" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Decorator.nodelevel">
+<tt class="descname">nodelevel</tt><a class="headerlink" href="#node.ext.python.Decorator.nodelevel" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Decorator.parserfactory">
+<tt class="descname">parserfactory</tt><a class="headerlink" href="#node.ext.python.Decorator.parserfactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <tt class="xref py py-class docutils literal"><span class="pre">DecoratorParser</span></tt></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Decorator.rendererfactory">
+<tt class="descname">rendererfactory</tt><a class="headerlink" href="#node.ext.python.Decorator.rendererfactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <tt class="xref py py-class docutils literal"><span class="pre">DecoratorRenderer</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="interface">
+<dt id="node.ext.python.interfaces.IDecorator">
+<em class="property">interface </em><tt class="descclassname">node.ext.python.interfaces.</tt><tt class="descname">IDecorator</tt><a class="headerlink" href="#node.ext.python.interfaces.IDecorator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extends: <tt class="xref py py-class docutils literal"><span class="pre">node.ext.python.interfaces.IPythonNode</span></tt>, <tt class="xref py py-class docutils literal"><span class="pre">node.ext.python.interfaces.ICallableArguments</span></tt></p>
+<p>Decorator.</p>
+<dl class="method">
+<dt id="IDecorator.equals">
+<tt class="descname">equals</tt><big>(</big><em>other</em><big>)</big><a class="headerlink" href="#IDecorator.equals" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check whether other decorator is equal to self.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="IDecorator.decoratorname">
+<tt class="descname">decoratorname</tt><a class="headerlink" href="#IDecorator.decoratorname" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the decorator.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="node.ext.python.Function">
+<em class="property">class </em><tt class="descclassname">node.ext.python.</tt><tt class="descname">Function</tt><big>(</big><em>functionname=None</em>, <em>astnode=None</em>, <em>buffer=</em><span class="optional">[</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#node.ext.python.Function" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">node.ext.python.nodes.PythonNode</span></tt>, <tt class="xref py py-class docutils literal"><span class="pre">node.ext.python.nodes.CallableArguments</span></tt></p>
+<dl class="attribute">
+<dt id="node.ext.python.Function.bufstart">
+<tt class="descname">bufstart</tt><a class="headerlink" href="#node.ext.python.Function.bufstart" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="node.ext.python.Function.decorators">
+<tt class="descname">decorators</tt><big>(</big><em>name=None</em><big>)</big><a class="headerlink" href="#node.ext.python.Function.decorators" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Function.defendlineno">
+<tt class="descname">defendlineno</tt><a class="headerlink" href="#node.ext.python.Function.defendlineno" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="node.ext.python.Function.initdecorators">
+<tt class="descname">initdecorators</tt><big>(</big><big>)</big><a class="headerlink" href="#node.ext.python.Function.initdecorators" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Function.parserfactory">
+<tt class="descname">parserfactory</tt><a class="headerlink" href="#node.ext.python.Function.parserfactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <tt class="xref py py-class docutils literal"><span class="pre">FunctionParser</span></tt></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Function.rendererfactory">
+<tt class="descname">rendererfactory</tt><a class="headerlink" href="#node.ext.python.Function.rendererfactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <tt class="xref py py-class docutils literal"><span class="pre">FunctionRenderer</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="interface">
+<dt id="node.ext.python.interfaces.IFunction">
+<em class="property">interface </em><tt class="descclassname">node.ext.python.interfaces.</tt><tt class="descname">IFunction</tt><a class="headerlink" href="#node.ext.python.interfaces.IFunction" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extends: <tt class="xref py py-class docutils literal"><span class="pre">node.ext.python.interfaces.IPythonNode</span></tt>, <tt class="xref py py-class docutils literal"><span class="pre">node.ext.python.interfaces.ICallableArguments</span></tt></p>
+<p>Python function.</p>
+<dl class="attribute">
+<dt id="IFunction.defendlineno">
+<tt class="descname">defendlineno</tt><a class="headerlink" href="#IFunction.defendlineno" title="Permalink to this definition">¶</a></dt>
+<dd><p>End line number of function def. Read-only.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="IFunction.decorators">
+<tt class="descname">decorators</tt><big>(</big><em>name=None</em><big>)</big><a class="headerlink" href="#IFunction.decorators" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return decorators. If name is not None, filter by name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="IFunction.functionname">
+<tt class="descname">functionname</tt><a class="headerlink" href="#IFunction.functionname" title="Permalink to this definition">¶</a></dt>
+<dd><p>Name of the function</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="node.ext.python.Docstring">
+<em class="property">class </em><tt class="descclassname">node.ext.python.</tt><tt class="descname">Docstring</tt><big>(</big><em>text=None</em>, <em>astnode=None</em>, <em>buffer=</em><span class="optional">[</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#node.ext.python.Docstring" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">node.ext.python.nodes.PythonNode</span></tt>, <tt class="xref py py-class docutils literal"><span class="pre">node.ext.python.nodes._TextMixin</span></tt></p>
+<dl class="attribute">
+<dt id="node.ext.python.Docstring.bufstart">
+<tt class="descname">bufstart</tt><a class="headerlink" href="#node.ext.python.Docstring.bufstart" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Docstring.lines">
+<tt class="descname">lines</tt><a class="headerlink" href="#node.ext.python.Docstring.lines" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Docstring.parserfactory">
+<tt class="descname">parserfactory</tt><a class="headerlink" href="#node.ext.python.Docstring.parserfactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <tt class="xref py py-class docutils literal"><span class="pre">BaseParser</span></tt></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Docstring.rendererfactory">
+<tt class="descname">rendererfactory</tt><a class="headerlink" href="#node.ext.python.Docstring.rendererfactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <tt class="xref py py-class docutils literal"><span class="pre">DocstringRenderer</span></tt></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Docstring.startlineno">
+<tt class="descname">startlineno</tt><a class="headerlink" href="#node.ext.python.Docstring.startlineno" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="interface">
+<dt id="node.ext.python.interfaces.IDocstring">
+<em class="property">interface </em><tt class="descclassname">node.ext.python.interfaces.</tt><tt class="descname">IDocstring</tt><a class="headerlink" href="#node.ext.python.interfaces.IDocstring" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extends: <tt class="xref py py-class docutils literal"><span class="pre">node.ext.python.interfaces.IPythonNode</span></tt></p>
+<p>Docstring.</p>
+<dl class="attribute">
+<dt id="IDocstring.text">
+<tt class="descname">text</tt><a class="headerlink" href="#IDocstring.text" title="Permalink to this definition">¶</a></dt>
+<dd><p>block contents as text.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="IDocstring.lines">
+<tt class="descname">lines</tt><a class="headerlink" href="#IDocstring.lines" title="Permalink to this definition">¶</a></dt>
+<dd><p>The doc string contents.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="node.ext.python.Import">
+<em class="property">class </em><tt class="descclassname">node.ext.python.</tt><tt class="descname">Import</tt><big>(</big><em>fromimport=None</em>, <em>names=</em><span class="optional">[</span><span class="optional">]</span>, <em>astnode=None</em>, <em>buffer=</em><span class="optional">[</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#node.ext.python.Import" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">node.ext.python.nodes.PythonNode</span></tt></p>
+<dl class="attribute">
+<dt id="node.ext.python.Import.bufend">
+<tt class="descname">bufend</tt><a class="headerlink" href="#node.ext.python.Import.bufend" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Import.endlineno">
+<tt class="descname">endlineno</tt><a class="headerlink" href="#node.ext.python.Import.endlineno" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Import.parserfactory">
+<tt class="descname">parserfactory</tt><a class="headerlink" href="#node.ext.python.Import.parserfactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <tt class="xref py py-class docutils literal"><span class="pre">ImportParser</span></tt></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Import.rendererfactory">
+<tt class="descname">rendererfactory</tt><a class="headerlink" href="#node.ext.python.Import.rendererfactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <tt class="xref py py-class docutils literal"><span class="pre">ImportRenderer</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="interface">
+<dt id="node.ext.python.interfaces.IImport">
+<em class="property">interface </em><tt class="descclassname">node.ext.python.interfaces.</tt><tt class="descname">IImport</tt><a class="headerlink" href="#node.ext.python.interfaces.IImport" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extends: <tt class="xref py py-class docutils literal"><span class="pre">node.ext.python.interfaces.IPythonNode</span></tt></p>
+<p>Import line.</p>
+<dl class="attribute">
+<dt id="IImport.names">
+<tt class="descname">names</tt><a class="headerlink" href="#IImport.names" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of tuples containing (importname, asname)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="IImport.fromimport">
+<tt class="descname">fromimport</tt><a class="headerlink" href="#IImport.fromimport" title="Permalink to this definition">¶</a></dt>
+<dd><p>The module name from import or None</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="node.ext.python.Module">
+<em class="property">class </em><tt class="descclassname">node.ext.python.</tt><tt class="descname">Module</tt><big>(</big><em>name=None</em><big>)</big><a class="headerlink" href="#node.ext.python.Module" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">node.ext.python.nodes.PythonNode</span></tt></p>
+<dl class="attribute">
+<dt id="node.ext.python.Module.buffer">
+<tt class="descname">buffer</tt><a class="headerlink" href="#node.ext.python.Module.buffer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Module.filepath">
+<tt class="descname">filepath</tt><a class="headerlink" href="#node.ext.python.Module.filepath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Module.indent">
+<tt class="descname">indent</tt><a class="headerlink" href="#node.ext.python.Module.indent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Module.modulename">
+<tt class="descname">modulename</tt><a class="headerlink" href="#node.ext.python.Module.modulename" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Module.parserfactory">
+<tt class="descname">parserfactory</tt><a class="headerlink" href="#node.ext.python.Module.parserfactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <tt class="xref py py-class docutils literal"><span class="pre">ModuleParser</span></tt></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.Module.rendererfactory">
+<tt class="descname">rendererfactory</tt><a class="headerlink" href="#node.ext.python.Module.rendererfactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <tt class="xref py py-class docutils literal"><span class="pre">ModuleRenderer</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="interface">
+<dt id="node.ext.python.interfaces.IModule">
+<em class="property">interface </em><tt class="descclassname">node.ext.python.interfaces.</tt><tt class="descname">IModule</tt><a class="headerlink" href="#node.ext.python.interfaces.IModule" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extends: <a class="reference internal" href="node.ext.directory.html#node.ext.directory.interfaces.IFile" title="node.ext.directory.interfaces.IFile"><tt class="xref py py-class docutils literal"><span class="pre">node.ext.directory.interfaces.IFile</span></tt></a>, <tt class="xref py py-class docutils literal"><span class="pre">node.ext.python.interfaces.IPythonNode</span></tt></p>
+<p>Python module.</p>
+<dl class="attribute">
+<dt id="IModule.bufoffset">
+<tt class="descname">bufoffset</tt><a class="headerlink" href="#IModule.bufoffset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of lines stripped at the top of a module file</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="IModule.modulename">
+<tt class="descname">modulename</tt><a class="headerlink" href="#IModule.modulename" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the module.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="IModule.encoding">
+<tt class="descname">encoding</tt><a class="headerlink" href="#IModule.encoding" title="Permalink to this definition">¶</a></dt>
+<dd><p>The file encoding. Defaults to utf-8</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="node.ext.python.ProtectedSection">
+<em class="property">class </em><tt class="descclassname">node.ext.python.</tt><tt class="descname">ProtectedSection</tt><big>(</big><em>sectionname=None</em>, <em>buffer=</em><span class="optional">[</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#node.ext.python.ProtectedSection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">node.ext.python.nodes.PythonNode</span></tt>, <tt class="xref py py-class docutils literal"><span class="pre">node.ext.python.nodes._TextMixin</span></tt></p>
+<dl class="attribute">
+<dt id="node.ext.python.ProtectedSection.lines">
+<tt class="descname">lines</tt><a class="headerlink" href="#node.ext.python.ProtectedSection.lines" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.ProtectedSection.parserfactory">
+<tt class="descname">parserfactory</tt><a class="headerlink" href="#node.ext.python.ProtectedSection.parserfactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <tt class="xref py py-class docutils literal"><span class="pre">BaseParser</span></tt></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="node.ext.python.ProtectedSection.rendererfactory">
+<tt class="descname">rendererfactory</tt><a class="headerlink" href="#node.ext.python.ProtectedSection.rendererfactory" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <tt class="xref py py-class docutils literal"><span class="pre">ProtectedSectionRenderer</span></tt></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="interface">
+<dt id="node.ext.python.interfaces.IProtectedSection">
+<em class="property">interface </em><tt class="descclassname">node.ext.python.interfaces.</tt><tt class="descname">IProtectedSection</tt><a class="headerlink" href="#node.ext.python.interfaces.IProtectedSection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Extends: <tt class="xref py py-class docutils literal"><span class="pre">node.ext.python.interfaces.IPythonNode</span></tt></p>
+<p>Protected section.</p>
+<dl class="attribute">
+<dt id="IProtectedSection.text">
+<tt class="descname">text</tt><a class="headerlink" href="#IProtectedSection.text" title="Permalink to this definition">¶</a></dt>
+<dd><p>block contents as text.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="IProtectedSection.lines">
+<tt class="descname">lines</tt><a class="headerlink" href="#IProtectedSection.lines" title="Permalink to this definition">¶</a></dt>
+<dd><p>List of code lines.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="agx.transform.xmi2uml.html" title="agx.transform.xmi2uml"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="node.ext.template.html" title="node.ext.template"
+             >previous</a> |</li>
+        <li><a href="../../index.html">AGX 3.alpha documentation</a> &raquo;</li>
+          <li><a href="../index.html" >Developers Documentation</a> &raquo;</li>
+          <li><a href="api.html" >AGX API documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+        &copy; Copyright 2009-2010, BlueDynamics Alliance et al.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2376477-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  </body>
+</html>

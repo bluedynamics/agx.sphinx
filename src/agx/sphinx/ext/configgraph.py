@@ -27,18 +27,26 @@ class ConfigGraph(Graphviz, AGXInfo):
         defs = self._defs()
         connections = self._connections()
         ret = list()
+        
         ret.append('digraph agxconfig {')
-        ret.append('size = "9,18"')
+
+        ret.append('size = "20,30"')
+        ret.append('page = "20,30"')
+        
         ret.append('ratio = "fill"')
+
         ret.append('ranksep = "0.2 equal"')
         ret.append('nodesep = "0.2 equal"')
+        
         ret.append('rankdir = "LR"')
+        
         body = connections + defs
         body.sort()
         ret += body
+        
         ret.append('}')
-        ret = '\n'.join(ret)
-        return ret
+        
+        return '\n'.join(ret)
 
     def _defs(self):
         agx_defs = self.read_agx()

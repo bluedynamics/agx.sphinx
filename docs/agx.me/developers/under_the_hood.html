@@ -1,0 +1,304 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Under the hood &mdash; AGX 3.alpha documentation</title>
+    
+    <link rel="stylesheet" href="../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.alpha',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="AGX 3.alpha documentation" href="../index.html" />
+    <link rel="up" title="Developers Documentation" href="index.html" />
+    <link rel="next" title="AGX Overview" href="overview.html" />
+    <link rel="prev" title="Setting up AGX Tests" href="setup.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="overview.html" title="AGX Overview"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="setup.html" title="Setting up AGX Tests"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../index.html">AGX 3.alpha documentation</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">Developers Documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/agx.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Under the hood</a><ul>
+<li><a class="reference internal" href="#introducing-the-tree-transformation-framework">Introducing the tree transformation framework</a></li>
+<li><a class="reference internal" href="#naming-conventions">Naming Conventions</a></li>
+<li><a class="reference internal" href="#components-of-the-transformation-chain">Components of the transformation chain</a></li>
+<li><a class="reference internal" href="#overall-process-of-the-pipelined-multi-pass-tree-transformation">Overall Process of the Pipelined Multi Pass Tree Transformation</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="setup.html"
+                        title="previous chapter">Setting up AGX Tests</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="overview.html"
+                        title="next chapter">AGX Overview</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../_sources/developers/under_the_hood.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="under-the-hood">
+<h1>Under the hood<a class="headerlink" href="#under-the-hood" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introducing-the-tree-transformation-framework">
+<h2>Introducing the tree transformation framework<a class="headerlink" href="#introducing-the-tree-transformation-framework" title="Permalink to this headline">¶</a></h2>
+<p>Basically AGX consists of transformation processing components and a crafty I/O
+concept. Latter could be used apart from tree transformation tasks as well to
+read and write data.</p>
+<p>The transform components treat all input/output data as <strong>tree</strong>, which makes it
+possible to use the chain for several usecases, like:</p>
+<blockquote>
+<div><ul class="simple">
+<li>code generation</li>
+<li>data exchange</li>
+<li>data conversion</li>
+<li>[fill in your use-case here]</li>
+</ul>
+</div></blockquote>
+<p>The major use-case and main goal of AGX is to generate Python code from an
+source, such as UML.</p>
+<p>The framework is based on the Zope Component Architecture (ZCA), thus pluggable
+and highly customizable.</p>
+<p>We tried to make extension work for developers as easy and as less code
+expensive as possible at the same time.</p>
+<p>Thus its easy to write own generators and hook them in existing
+transformation chains. Extending i.e. UML models by profiles with stereotypes
+and tagged values and providing additional generators enables new behavior in
+your generated code.</p>
+</div>
+<div class="section" id="naming-conventions">
+<h2>Naming Conventions<a class="headerlink" href="#naming-conventions" title="Permalink to this headline">¶</a></h2>
+<p>There exist several namespaces which contain core components and logical groups
+of components. Please follow the naming conventions when providing your own
+modules.</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">agx.core</span></tt></dt>
+<dd>contains all transform related components and some base implementations aimed
+to be used or derived from when providing own components.</dd>
+<dt><tt class="docutils literal"><span class="pre">node.ext.*</span></tt></dt>
+<dd>packages contain concrete I/O related implementations, i.e. for XML, UML,
+file-system directory, python-code, ...</dd>
+<dt><tt class="docutils literal"><span class="pre">agx.transform.*</span></tt></dt>
+<dd>packages providing specific source and target tree instances for the
+transformation chain- I.e. <tt class="docutils literal"><span class="pre">agx.transform.xml2uml</span></tt> provides an
+<tt class="docutils literal"><span class="pre">node.ext.xml</span></tt> tree as source and an <tt class="docutils literal"><span class="pre">node.ext.uml</span></tt> tree as target.</dd>
+<dt><tt class="docutils literal"><span class="pre">agx.generator.*</span></tt></dt>
+<dd>packages are containing specific generator logic. Most of the time this is a
+bunch of registered handlers for a transform. This handlers are responsible
+to read from the source tree desired information and write nodes to the
+target tree and are called by the transformation chain.</dd>
+</dl>
+</div>
+<div class="section" id="components-of-the-transformation-chain">
+<h2>Components of the transformation chain<a class="headerlink" href="#components-of-the-transformation-chain" title="Permalink to this headline">¶</a></h2>
+<p>The AGX transformation chain provided by <tt class="docutils literal"><span class="pre">agx.core</span></tt> consists out several
+components. These are decoupled by ZCA.</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">Controller</span></tt></dt>
+<dd>The start point is usally the <tt class="docutils literal"><span class="pre">Controller</span></tt>. It loads the configuration, then
+iterates over the chain (or pipeline) of registered transformations walking
+from one source-tree over one or more intermediate trees to the target-tree.
+For each step with each pair source and target it calls the processor with
+source, target and transform. The target of the first transform is the the
+source of the second and so on. The last target is called to get persisted.</dd>
+<dt><tt class="docutils literal"><span class="pre">Processor</span></tt></dt>
+<dd>Responsible to  invoke all registered <tt class="docutils literal"><span class="pre">Generator</span></tt> instances of the
+transform the <tt class="docutils literal"><span class="pre">Processor</span></tt> is working on. Generators are having an execution
+order defined by dependencies. The processor takes care of this. Before a
+generator is invoked the <tt class="docutils literal"><span class="pre">TargetHandler</span></tt>  is looked up and initialised with
+the target. The Generator is called with source and handler wrapped target.</dd>
+<dt><tt class="docutils literal"><span class="pre">Generator</span></tt></dt>
+<dd><p class="first">It walks recursivly through the whole source tree. For each node found it</p>
+<ul class="last simple">
+<li>calls the <tt class="docutils literal"><span class="pre">TargetHandler</span></tt> with the source node and</li>
+<li>invokes a <tt class="docutils literal"><span class="pre">Dispatcher</span></tt> with source node and the handler wrapped target.</li>
+</ul>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">Dispatcher</span></tt></dt>
+<dd><p class="first">Looks up all <tt class="docutils literal"><span class="pre">Handler</span></tt> instances registered for the current transform and
+generator. For each Handler it</p>
+<ul class="last simple">
+<li>checks whether the source node applies to the <tt class="docutils literal"><span class="pre">Scope</span></tt> (if one is
+defined) of the handler and</li>
+<li>call the handler with the ource and target node if scope matches.</li>
+</ul>
+</dd>
+<dt><tt class="docutils literal"><span class="pre">Handler</span></tt></dt>
+<dd>Responsible to do atomic transformation related tasks. Finally here data may
+be transfered from source to target. I.e creation and adding of target nodes,
+copy data to specific target nodes, collecting data on <tt class="docutils literal"><span class="pre">Token</span></tt> instances
+and any other required task.</dd>
+<dt><tt class="docutils literal"><span class="pre">Token</span></tt></dt>
+<dd>For information and data exchange inside the transformation chain there exist
+an object called <tt class="docutils literal"><span class="pre">Token</span></tt>. Every handler can create and set or read an
+already existing token, which exists unique per transform by name.</dd>
+</dl>
+</div>
+<div class="section" id="overall-process-of-the-pipelined-multi-pass-tree-transformation">
+<h2>Overall Process of the Pipelined Multi Pass Tree Transformation<a class="headerlink" href="#overall-process-of-the-pipelined-multi-pass-tree-transformation" title="Permalink to this headline">¶</a></h2>
+<p>AGX core provides a generic pipelined multi pass tree transformation. It is
+based on source tree traversal and dispatching to handlers. The core itself
+provides the basic toolset and logic for such a transform. Setup, configuration
+and handlers must be provided by the application using AGX.</p>
+<dl class="docutils">
+<dt>pipelined transformations</dt>
+<dd>First process a source tree A and create target tree B of it. In next
+iteration tree B is the source tree and new target tree C is created.</dd>
+<dt>multi pass processing</dt>
+<dd>In each tree processing step one or more generators are called. Each
+generator traverse the full source tree again.</dd>
+<dt>dispatched generation</dt>
+<dd>target trees are generated by prioritized handlers. Scope detection is used
+to filter handlers responsible for the currently traversed  source node.</dd>
+</dl>
+<p>The overall process is described by the following diagram:</p>
+<p class="mscgen">
+<img src="../_images/mscgen-6544e208ffd1120989663fac6ad44476e4c9dd44.png" alt="msc {
+hscale = &quot;1.5&quot;;
+
+controller,processor,generator,dispatcher;
+
+controller-&gt;controller [ label = &quot;initialize with path/file of source and target&quot; ];
+controller=&gt;controller [ label = &quot;fetch configuration&quot; ];
+--- [label = &quot;iterate over transform names&quot;, textcolor=&quot;maroon&quot;,linecolor=&quot;red&quot;];
+controller=&gt;controller [ label = &quot;lookup transform&quot; ];
+controller=&gt;controller [ label = &quot;create source using transform&quot; ];
+controller=&gt;controller [ label = &quot;if no source factored use previos target as source&quot; ];
+controller=&gt;controller [ label = &quot;create target using transform and source&quot; ];
+controller=&gt;controller [ label = &quot;create processor for transform&quot; ];
+controller=&gt;processor [ label = &quot;process target&quot; ];
+processor=&gt;processor [ label = &quot;lookup generators for transform&quot;];
+--- [label = &quot;iterate over generators&quot;, textcolor=&quot;olive&quot;,linecolor=&quot;green&quot;];
+processor=&gt;processor [ label = &quot;lookup targethandler for generator&quot;];
+processor=&gt;processor [ label = &quot;set anchor of targethandler to target&quot;];
+processor=&gt;generator [ label = &quot;call generator with source and targethandler&quot;];
+generator=&gt;generator [ label = &quot;lookup dispatcher with same name as generator&quot; ];
+--- [label = &quot;walk through source tree top to bottom, depth last.&quot;, textcolor=&quot;orange&quot;,linecolor=&quot;orange&quot;];
+generator=&gt;generator [ label = &quot;preprocess target, call it with current source node&quot; ];
+generator=&gt;dispatcher [ label = &quot;call dispatcher with source-node and targethandler&quot; ];
+dispatcher=&gt;dispatcher [ label = &quot;lookup all ordered handlers&quot;];
+--- [label = &quot;iterate over handlers&quot;, textcolor=&quot;purple&quot;,linecolor=&quot;fuchsia&quot;];
+dispatcher=&gt;dispatcher [ label = &quot;lookup scope&quot;];
+dispatcher=&gt;dispatcher [ label = &quot;if not scope(source) matches, next()&quot;];
+dispatcher rbox dispatcher [ label = &quot;call handler(source, target)&quot;];
+dispatcher=&gt;dispatcher [ label = &quot;next()&quot;];
+--- [label = &quot;end iteration over handlers&quot;, textcolor=&quot;purple&quot;,linecolor=&quot;fuchsia&quot;];
+generator&lt;-dispatcher [ label = &quot;dispatching done&quot;];
+--- [label = &quot;end walking source tree&quot;, textcolor=&quot;orange&quot;,linecolor=&quot;orange&quot;];
+processor&lt;-generator [ label = &quot;generation done&quot; ];
+processor=&gt;processor [ label = &quot;next&quot;];
+--- [label = &quot;end iteration over generators&quot;, textcolor=&quot;olive&quot;,linecolor=&quot;green&quot;];
+controller&lt;=processor [ label = &quot;return target&quot; ];
+controller=&gt;controller [ label = &quot;next&quot; ];
+--- [label = &quot;end iteration over transform names&quot;,textcolor=&quot;maroon&quot;,linecolor=&quot;red&quot;];
+controller=&gt;controller [ label = &quot;persist last target&quot; ];
+}" usemap="#6544e208ffd1120989663fac6ad44476e4c9dd44" />
+<map id="6544e208ffd1120989663fac6ad44476e4c9dd44" name="6544e208ffd1120989663fac6ad44476e4c9dd44"></map></p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="overview.html" title="AGX Overview"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="setup.html" title="Setting up AGX Tests"
+             >previous</a> |</li>
+        <li><a href="../index.html">AGX 3.alpha documentation</a> &raquo;</li>
+          <li><a href="index.html" >Developers Documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+        &copy; Copyright 2009-2010, BlueDynamics Alliance et al.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
+    </div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2376477-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+  </body>
+</html>
