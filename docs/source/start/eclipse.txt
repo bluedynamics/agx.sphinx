@@ -10,7 +10,7 @@ Installing Eclipse
 Make sure to have an appropriate Java-interpreter on your machine.
 Check out `<http://java.sun.com>`_ for details.
 
-Download and the **Galileo** Eclipse Modeling Tools bundle from
+Download and install the **Galileo** Eclipse Modeling Tools bundle from
 `<http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/galileosr2>`_.
 
 Unpack the downloaded ZIP or tarball to a location of choice. Eclipse should run 
@@ -29,10 +29,10 @@ script as eclipse launcher.
     /eclipse/install/path/eclipse -vmargs -XX:+AggressiveHeap
 
 On first startup, eclipse asks you for a workspace location. This is the
-location where eclipse projects are.
+location where your eclipse projects live.
 
-After defining the workspace eclipse welcome screen comes up. Go ahead for
-digging around a little bit or go directly to the workbench (icon on the 
+After defining the workspace the eclipse welcome screen comes up. Go ahead and
+dig around a little bit or go directly to the workbench (icon on the 
 right).
 
 Installing ANTLR
