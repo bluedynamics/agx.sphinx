@@ -20,3 +20,15 @@ $ git clone git://github.com/bluedynamics/agx.sphinx.git
 $ . env/bin/activate
 (env)$ python bootstrap.py -c dev.mac.cfg
 (env)$ bin/buildout -c dev.mac.cfg
+
+If you get a traceback during buildout about 'locale', try setting the locale
+to a reasonable value and rerun buildout:
+
+   ...
+       raise ValueError, 'unknown locale: %s' % localename
+   ValueError: unknown locale: UTF-8
+
+
+(env)$ export LC_ALL=de_DE.UTF-8
+(env)$ export LANG=de_DE.UTF-8
+(env)$ bin/buildout -c dev.mac.cfg
