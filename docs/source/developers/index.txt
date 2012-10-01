@@ -2,13 +2,13 @@
 Developers Documentation
 ========================
 
-This documentation aims at developers who want to work at AGX itself or develop
-own extensions for AGX. 
+This documentation is aimed at developers who want to develop AGX itself or develop
+their own extensions for AGX. 
 
 .. toctree::
    :maxdepth: 2
    
-   Setup Development Environment <setup>
+   Setup the Development Environment <setup>
    Under the Hood <under_the_hood>
    AGX Overview <overview>
    Handler Documentation <handler>
