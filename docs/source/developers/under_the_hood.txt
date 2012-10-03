@@ -8,7 +8,7 @@ Basically AGX consists of transformation processing components and a crafty I/O
 concept. Latter could be used apart from tree transformation tasks as well to 
 read and write data.
 
-The transform components treat all input/output data as **tree**, which makes it
+The transform components treat all input/output data as **tree**, making it
 possible to use the chain for several usecases, like:
 
   * code generation
@@ -16,17 +16,17 @@ possible to use the chain for several usecases, like:
   * data conversion
   * [fill in your use-case here]
   
-The major use-case and main goal of AGX is to generate Python code from an 
+The major use-case and main goal of AGX is to generate Python code from any 
 source, such as UML. 
 
 The framework is based on the Zope Component Architecture (ZCA), thus pluggable 
 and highly customizable.
 
-We tried to make extension work for developers as easy and as less code
+We tried to make extension work for developers as easy and as little code
 expensive as possible at the same time.
 
-Thus its easy to write own generators and hook them in existing 
-transformation chains. Extending i.e. UML models by profiles with stereotypes 
+Thus it's easy to write your own generators and hook them into existing 
+transformation chains. Extending UML models by profiles with stereotypes 
 and tagged values and providing additional generators enables new behavior in 
 your generated code. 
 
@@ -47,34 +47,34 @@ modules.
   
 ``agx.transform.*`` 
   packages providing specific source and target tree instances for the 
-  transformation chain- I.e. ``agx.transform.xml2uml`` provides an 
-  ``node.ext.xml`` tree as source and an ``node.ext.uml`` tree as target.
+  transformation chain- like ``agx.transform.xml2uml`` provides a 
+  ``node.ext.xml`` tree as source and a ``node.ext.uml`` tree as target.
 
 ``agx.generator.*`` 
-  packages are containing specific generator logic. Most of the time this is a 
-  bunch of registered handlers for a transform. This handlers are responsible 
-  to read from the source tree desired information and write nodes to the 
-  target tree and are called by the transformation chain.
+  packages are containing specific generator logic. Mostly these are a 
+  bunch of registered handlers for a transformation. Thess handlers are responsible 
+  to read from the source tree the information given and write nodes to the 
+  target tree. They are called by the transformation chain.
 
   
 Components of the transformation chain
 --------------------------------------
 
-The AGX transformation chain provided by ``agx.core`` consists out several 
-components. These are decoupled by ZCA. 
+The AGX transformation chain provided by ``agx.core`` consists of several 
+components. They are decoupled by ZCA. 
 
 ``Controller``
   The start point is usally the ``Controller``. It loads the configuration, then 
-  iterates over the chain (or pipeline) of registered transformations walking 
+  iterates over the chain (or pipeline) of registered transformations, walking 
   from one source-tree over one or more intermediate trees to the target-tree. 
-  For each step with each pair source and target it calls the processor with 
-  source, target and transform. The target of the first transform is the the 
+  For each step with each pair of source and target it calls the processor with 
+  source, target and transformation. The target of the first transformation is the 
   source of the second and so on. The last target is called to get persisted. 
 
 ``Processor`` 
   Responsible to  invoke all registered ``Generator`` instances of the 
-  transform the ``Processor`` is working on. Generators are having an execution 
-  order defined by dependencies. The processor takes care of this. Before a
+  transform the ``Processor`` is working on. Generators have an execution 
+  order defined by dependencies. The processor takes care of those. Before a
   generator is invoked the ``TargetHandler``  is looked up and initialised with
   the target. The Generator is called with source and handler wrapped target.
   
@@ -85,23 +85,23 @@ components. These are decoupled by ZCA.
   * invokes a ``Dispatcher`` with source node and the handler wrapped target.
   
 ``Dispatcher``
-  Looks up all ``Handler`` instances registered for the current transform and
-  generator. For each Handler it
+  Looks up all ``Handler`` instances registered for the current transformation
+  and generator. For each Handler it
   
   * checks whether the source node applies to the ``Scope`` (if one is 
     defined) of the handler and 
-  * call the handler with the ource and target node if scope matches.
+  * calls the handler with the source and target node if the scope is matched.
 
 ``Handler`` 
-  Responsible to do atomic transformation related tasks. Finally here data may 
+  Responsible to do atomic transformation related tasks. Finally, here data may 
   be transfered from source to target. I.e creation and adding of target nodes, 
-  copy data to specific target nodes, collecting data on ``Token`` instances 
+  copying data to specific target nodes, collecting data on ``Token`` instances 
   and any other required task.
 
 ``Token``  
-  For information and data exchange inside the transformation chain there exist 
+  For information and data exchange inside the transformation chain there exists 
   an object called ``Token``. Every handler can create and set or read an 
-  already existing token, which exists unique per transform by name.
+  already existing tokens, which are unique per transform by name.
   
   
 Overall Process of the Pipelined Multi Pass Tree Transformation
@@ -109,21 +109,21 @@ Overall Process of the Pipelined Multi Pass Tree Transformation
   
 AGX core provides a generic pipelined multi pass tree transformation. It is 
 based on source tree traversal and dispatching to handlers. The core itself 
-provides the basic toolset and logic for such a transform. Setup, configuration 
-and handlers must be provided by the application using AGX.
+provides the basic toolset and logic for such a transformation. Setup, 
+configuration and handlers must be provided by the application using AGX.
 
 pipelined transformations
-    First process a source tree A and create target tree B of it. In next
-    iteration tree B is the source tree and new target tree C is created.
+    First process a source tree A and create target tree B from it. In the
+    next iteration tree B is the source tree and new target tree C is created.
 
 multi pass processing
     In each tree processing step one or more generators are called. Each 
-    generator traverse the full source tree again.
+    generator traverses the full source tree again.
    
 dispatched generation
     target trees are generated by prioritized handlers. Scope detection is used 
-    to filter handlers responsible for the currently traversed  source node. 
-    
+    to filter handlers responsible for the currently traversed source node. 
+
 The overall process is described by the following diagram:
 
 .. msc::

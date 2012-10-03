@@ -7,3 +7,14 @@ Changes
 ---------
 
   -make it work
+
+
+How to get going
+================
+
+$ pip install virtualenv
+$ git clone git://github.com/bluedynamics/agx.sphinx.git
+$ . env/bin/activate
+(env)$ python bootstrap.py -c dev.cfg
+(env)$ bin/buildout -c dev.cfg
+

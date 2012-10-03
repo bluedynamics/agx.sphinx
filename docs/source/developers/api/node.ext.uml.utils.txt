@@ -1,7 +1,7 @@
 node.ext.uml.utils
 ==================
 
-Convinience for every day tasks to work with the UML.
+Convenience for every day tasks to work with UML.
 
 API
 ---
