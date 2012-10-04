@@ -34,7 +34,7 @@ extensions = [
 
 #graphviz_dot_args = ['-s30']
 graphviz_output_format = 'svg'
-mscgen = "${buildout:bin-directory}/mscgen"
+#mscgen = "${buildout:bin-directory}/mscgen"
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
