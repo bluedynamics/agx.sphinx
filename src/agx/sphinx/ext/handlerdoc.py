@@ -1,12 +1,8 @@
-# -*- coding: utf-8 -*-
-# Copyright BlueDynamics Alliance - http://bluedynamics.com
-# GNU General Public License Version 2
-
 from docutils import nodes
-from docutils.utils import new_document
 from sphinx.ext.autodoc import AutoDirective
 from sphinx.ext.autodoc import FunctionDocumenter
 from util import AGXInfo
+
 
 class HandlerDoc(AutoDirective, AGXInfo):
 
@@ -27,12 +23,12 @@ class HandlerDoc(AutoDirective, AGXInfo):
                 gen = nodes.subtitle(text=text)
                 sec.append(gen)
                 ret.append(sec)
-                
+
                 description = generator['description']
                 if description:
                     desc = nodes.paragraph(text=description)
                     sec.append(desc)
-                
+
                 for handler in generator['handler']:
                     name = handler['name']
                     self.arguments = [handler['package_path']]
@@ -40,23 +36,23 @@ class HandlerDoc(AutoDirective, AGXInfo):
                     sec += doc
                     body = doc[1].children[-1]
                     position = len(doc[1].children[-1]) - 2
-                    
+
                     dl = nodes.definition_list()
                     body.insert(position, dl)
-                    
+
                     iname = name[:name.find('.')]
                     dl.append(self._definition_item('Transform', iname))
-                    
+
                     iname = name[name.find('.') + 1:name.rfind('.')]
                     dl.append(self._definition_item('Generator', iname))
-                    
+
                     scope = handler['scope']
                     if scope is not None:
                         modulename = scope['class'].__module__
                         classname = scope['class'].__name__
                         iname = "%s.%s" % (modulename, classname)
                         dl.append(self._definition_item('Scope', iname))
-                    
+
                     iname = handler['order']
                     dl.append(self._definition_item('Order', iname))
         self.name = old_name

@@ -1,7 +1,3 @@
-# -*- coding: utf-8 -*-
-# Copyright BlueDynamics Alliance - http://bluedynamics.com
-# GNU General Public License Version 2
-
 import agx.dev
 import zope.component
 from zope.component import getUtility
@@ -16,6 +12,7 @@ from agx.core import (
     Processor,
     Dispatcher,
 )
+
 
 class AGXInfo(object):
 
