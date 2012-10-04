@@ -13,6 +13,18 @@ On debian based systems, install dev headers like so::
 
     apt-get install libxml2-dev libxslt1-dev
 
+Attention Ubuntu Users
+----------------------
+
+If you run 12.04, run the following steps in order to install python2.6:
+
+    add-apt-repository ppa:fkrull/deadsnakes
+    apt-get update
+    apt-get install python2.6-dev
+    apt-get install git
+    apt-get install libxml2-dev libxslt1-dev
+    apt-get install python-distribute-deadsnakes
+
 
 Install AGX from source (currently the only method)
 ---------------------------------------------------
@@ -24,7 +36,7 @@ Clone development buildout from github::
 Change directory to location of already checked out repository and run
 bootstrap.py and buidlout::
 
-    python bootstrap.py
+    python2.6 bootstrap.py
     ./bin/buildout
 
 When buildout has finished, the AGX binary is located at ``bin/agx`` in
