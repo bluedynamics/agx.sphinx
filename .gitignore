@@ -8,7 +8,6 @@ bin/
 develop-eggs/
 docs/Makefile
 docs/make.bat
-docs/source/conf.py
 eggs/
 parts/
 docs/doctrees/
