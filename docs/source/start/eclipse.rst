@@ -8,7 +8,10 @@ Installing Eclipse
 ------------------
 
 Make sure to have an appropriate Java-interpreter on your machine.
-Check out `<http://java.sun.com>`_ for details.
+Check out `<http://java.sun.com>`_ for details. Ubuntu users can simply
+
+::
+    sudo apt-get install openjdk-7-jdk
 
 Download and install the **Galileo** Eclipse Modeling Tools bundle from
 `<http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/galileosr2>`_.
@@ -35,28 +38,11 @@ After defining the workspace the eclipse welcome screen comes up. Go ahead and
 dig around a little bit or go directly to the workbench (icon on the 
 right).
 
-Installing ANTLR
-----------------
-
-Open the Update Manager of Eclipse. It is at
-:mod:`help` -> :mod:`install new Software...`.
-
-.. image:: eclipse_update_manager.png
-
-Click the add button, give it name ANTLR, enter the ANTLR update site 
-`<http://antlreclipse.sourceforge.net/updates/>`_ as :mod:`location` and klick
-ok. Eclipse now fetches the Plug-In information from this location.
-
-.. image:: eclipse_update_manager_select_package.png
-
-Select :mod:`ANTLR UI`, click :mod:`next` and follow the installation
-instructions. After installation you'll be asked to restart Eclipse. Do it!
-
 Installing Papyrus
 ------------------
 
 Eclipse Modeling Tools come along with facilities for drawing UML models.
-Anyway we'll use Papyrus for modeling, it's more handy than the shipped tools.
+Anyway we'll use Papyrus for modeling, it's one of the shipped tools.
 
 Repeat the installation procedure from above, this time using the Papyrus update
 site `<http://www.papyrusuml.org/home/liblocal/docs/updates/papyrus/>`_ and
