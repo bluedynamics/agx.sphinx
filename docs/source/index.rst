@@ -30,7 +30,7 @@ compatible with the old code-generator. AGX itself is written in Python.
    Getting Started <start/index>
    Users Documentation <users/index>
    Developer Documentations <developers/index>
-   
+
 
 .. toctree::
    :hidden:
