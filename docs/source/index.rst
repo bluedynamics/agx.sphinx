@@ -15,7 +15,7 @@ AGX transforms trees of information. It was intended to generate Python code
 from UML2 diagrams.
 
 Its generic core is a framework to convert or transform any data 
-source tree into any data target tree. Its generic model of pipelined 
+source tree into any data target tree. It's generic model of pipelined 
 multi-pass transformations allows to solve complex source based tasks of 
 data-transformation.
 

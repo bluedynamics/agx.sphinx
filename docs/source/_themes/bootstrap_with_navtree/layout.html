@@ -87,7 +87,7 @@
                  '<li class="divider"></li>');
     
     // Add styling, structure to TOC's.
-    $(".dropdown-menu").each(function () {
+    $('.dropdown-menu').each(function () {
       $(this).find("ul").each(function (index, item){
         var $item = $(item);
         $item.addClass('unstyled');
@@ -96,6 +96,9 @@
         $(this).parent().append(this);
       });
     });
+    
+    // Add note styles
+    $('div.note').addClass('alert');
 
     // Patch in level.
     patchToc($("ul.globaltoc"), 2);
