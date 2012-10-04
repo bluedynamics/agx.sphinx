@@ -16,7 +16,7 @@ On debian based systems, install dev headers like so::
 Attention Ubuntu Users
 ----------------------
 
-If you run 12.04, run the following steps in order to install python2.6:
+If you run 12.04, run the following steps in order to install python2.6::
 
     add-apt-repository ppa:fkrull/deadsnakes
     apt-get update
