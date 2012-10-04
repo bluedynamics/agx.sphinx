@@ -2,35 +2,55 @@
 Installing AGX
 ==============
 
-Pre-Requirements
+
+Pre-requirements
 ----------------
 
-You need Python 2.6 and the dev-headers of libxml2 in order to run AGX.
+AGX requires python 2.6 and dev header files for libxml2 in order to install
+and run correctly.
 
-Install AGX from Source (currently the only method)
+On debian based systems, install dev headers like so::
+
+    apt-get install libxml2-dev libxslt1-dev
+
+
+Install AGX from source (currently the only method)
 ---------------------------------------------------
 
-Checkout development project by typing
-::
+Clone development buildout from github::
 
     git clone git://github.com/bluedynamics/agx.dev.git
 
-Enter agx.dev and run bootstrap
-::
+.. note::
 
-    python bootstrap.py -c [dev.cfg|anon.cfg]
+    If you don't have a github account, you need to clone the repository from
+    https://github.com/bluedynamics/agx.dev.git
 
-Run Buildout
-::
+Change directory to location of already checked out repository and run
+bootstrap.py::
 
-    ./bin/buildout -c [dev.cfg|anon.cfg]
+    python bootstrap.py -c anon.cfg
 
-When buildout has finished, the AGX binary is located at
-``bin/agx`` in install_dir.
+.. note::
 
-Run ``./bin/agx -i`` and you get output similar to this
-::
+    The repository also ships a dev.cfg configuration file, used by developers
+    with write access to our repositories.
+
+Run Buildout::
+
+    ./bin/buildout -c anon.cfg
+
+.. note::
+
+    Developers with write access use dev.cfg, see above.
+
+When buildout has finished, the AGX binary is located at ``bin/agx`` in
+the installation directory.
+
+Run ``./bin/agx -i``. If you get output similar to this::
 
     AGX 3.0-dev Development
+
+AGX is ready to be used.
 
 Congratulations, you can now use AGX.
