@@ -21,28 +21,11 @@ Clone development buildout from github::
 
     git clone git://github.com/bluedynamics/agx.dev.git
 
-.. note::
-
-    If you don't have a github account, you need to clone the repository from
-    https://github.com/bluedynamics/agx.dev.git
-
 Change directory to location of already checked out repository and run
-bootstrap.py::
+bootstrap.py and buidlout::
 
-    python bootstrap.py -c anon.cfg
-
-.. note::
-
-    The repository also ships a dev.cfg configuration file, used by developers
-    with write access to our repositories.
-
-Run Buildout::
-
-    ./bin/buildout -c anon.cfg
-
-.. note::
-
-    Developers with write access use dev.cfg, see above.
+    python bootstrap.py
+    ./bin/buildout
 
 When buildout has finished, the AGX binary is located at ``bin/agx`` in
 the installation directory.
