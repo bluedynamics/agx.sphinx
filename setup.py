@@ -2,11 +2,11 @@
 # GNU General Public License Version 2
 
 from setuptools import setup, find_packages
-import sys, os
+import os
 
-version = "1.0"
-shortdesc ="AGX Sphinx extension"
-longdesc = open(os.path.join(os.path.dirname(__file__), 'README.txt')).read()
+version = "1.0dev"
+shortdesc = "AGX Sphinx extension"
+longdesc = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 
 setup(name="agx.sphinx",
       version=version,
@@ -21,7 +21,7 @@ setup(name="agx.sphinx",
       keywords="AGX, Code Generator, Sphinx",
       author="BlueDynamics Alliance",
       author_email="dev@bluedynamics.com",
-      url="https://svn.plone.org/svn/archetypes/AGX",
+      url="https://github.com/bluedynamics/agx.sphinx",
       license="GNU General Public Licence",
       packages=find_packages("src"),
       package_dir={"": "src"},
