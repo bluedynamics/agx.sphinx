@@ -16,8 +16,7 @@ $ . env/bin/activate
 Mac based Installation
 ======================
 
-$ rm /usr/local/lib/libiconv.2.dylib
-$ ln -s /usr/lib/libiconv.2.dylib /usr/local/lib/libiconv.2.dylib
+
 $ brew install mscgen
 $ easy_install pip
 $ pip install virtualenv
@@ -26,6 +25,11 @@ $ . env/bin/activate
 (env)$ python bootstrap.py -c mac.cfg
 (env)$ bin/buildout -c mac.cfg
 (env)$ bin/sphinx
+
+If there are problems with compilation of some libs during the above:
+$ rm /usr/local/lib/libiconv.2.dylib
+$ ln -s /usr/lib/libiconv.2.dylib /usr/local/lib/libiconv.2.dylib
+ 
 
 If you get a traceback during buildout about 'locale', try setting the locale
 to a reasonable value and re-run buildout::
