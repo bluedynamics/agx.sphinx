@@ -123,7 +123,6 @@ An Eclipse plug-in providing support to edit reStructuredText files.
   http://resteditor.sourceforge.net/eclipse
 
 
-
 YAML Editor
 ~~~~~~~~~~~
 
