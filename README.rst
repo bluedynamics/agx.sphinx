@@ -1,4 +1,12 @@
-This Package is part of **AGX**. See `<http://agx.me>`_ for Details.
+Documentation building buildout for AGX.
+========================================
+Install this buildout to work on and build the documentation. 
+It will pull (sic!) in all relevant AGX packages.
+
+Nightly build: https://jenkins.c-3-s.org/job/agx.sphinx_bluedynamics/AGX_Docs
+Old stable version: https://agx.me
+
+This Package is part of **AGX**. See `<http://agx.me>`_ for Details. 
 
 
 Debian based Installation
