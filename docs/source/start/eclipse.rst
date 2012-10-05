@@ -122,6 +122,8 @@ An Eclipse plug-in providing support to edit reStructuredText files.
 * Update Sites: http://eclipse-color-theme.github.com/update and
   http://resteditor.sourceforge.net/eclipse
 
+* Even easier: find it in the marketplace. Click Install. Go.
+
 
 YAML Editor
 ~~~~~~~~~~~
