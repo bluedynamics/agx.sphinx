@@ -85,7 +85,7 @@ To install the AGX Eclipse plugin, repeat the procedure as shown in
 plugin location when adding the AGX update site.
 
 .. note::
-    The AGX plugin required both Papyrus and Pydev in order to install and
+    The AGX plugin required both Papyrus and PyDev in order to install and
     run correctly.
 
 
@@ -93,8 +93,27 @@ Unrelated but useful plugins for development with Eclipse
 ---------------------------------------------------------
 
 
-Install ReST Editor
-~~~~~~~~~~~~~~~~~~~
+Eclipse Web Tools
+~~~~~~~~~~~~~~~~~
+
+* `Homepage <http://eclipse.org/webtools/>`_.
+
+* Update Site: http://download.eclipse.org/releases/indigo/
+  (default update site for indigo)
+
+The eclipse web tools project contains lots of plugins, the most interresting
+obe might be in category
+``Web, XML, Java EE, and OSGi Enterprise Development``:
+
+* Eclipse Web Developer Tools
+
+* Eclipse XML Editors and Tools
+
+* JavasScript Developer Tools
+
+
+ReST Editor
+~~~~~~~~~~~
 
 An Eclipse plug-in providing support to edit reStructuredText files.
 
@@ -104,27 +123,11 @@ An Eclipse plug-in providing support to edit reStructuredText files.
   http://resteditor.sourceforge.net/eclipse
 
 
-Install YAML Editor
-~~~~~~~~~~~~~~~~~~~
+YAML Editor
+~~~~~~~~~~~
 
 An Eclipse plug-in providing support to edit YAML files.
 
-* `Homepage <http://foo.bar/>`_.
+* `Homepage <http://code.google.com/p/yedit/>`_.
 
-* Update Site: http://foo.bar
-
-
-Install Javascript Editor
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Eclipse provides a webtools project which ships editors for web technologies.
-
-...
-
-
-Install XML/HTML/PT Editor
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Install foo plugins from the webtools update site.
-
-...
+* Update Site: http://dadacoalition.org/yedit
