@@ -10,7 +10,7 @@ This Package is part of **AGX**. See `<http://agx.me>`_ for Details.
 
 
 Debian based Installation
-=========================
+-------------------------
 
 $ sudo apt-get install mscgen
 $ pip install virtualenv
@@ -22,7 +22,7 @@ $ . env/bin/activate
 
 
 Mac based Installation
-======================
+----------------------
 
 
 $ brew install mscgen
@@ -49,6 +49,23 @@ to a reasonable value and re-run buildout::
 (env)$ export LC_ALL=de_DE.UTF-8
 (env)$ export LANG=de_DE.UTF-8
 (env)$ bin/buildout -c dev.mac.cfg
+
+
+Creating Screenshots
+--------------------
+
+The screenshots were made on Ubuntu 12 and edited with Gimp to beautify them
+with drop shadows. From the Menu pick
+``Filters --> Light and Shadow --> Drop Shadow...''
+first a dark one:
+
+  Offset X = 8, Offset Y = 8, Blur radius = 15, Black,
+  Opacity = 80, Allow Resizing=True
+
+then a light one for the upper left corner:
+
+  Offset X = -2, Offset Y = -2, Blur radius = 20, Black,
+  Opacity = 30, Allow Resizing=True
 
 
 Changes

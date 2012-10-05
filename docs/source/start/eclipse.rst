@@ -67,7 +67,7 @@ To install pydev, use Eclipses menu and find ``Help --> Install New Software``,
 click ``add`` button, enter ``pydev`` as name and the location
 ``http://pydev.org/updates/`` to search for the plugin.
 
-.. image:: ../_static/eclipse_indigo_modeling_components_add_plugin.png
+.. image:: ../_static/eclipse_add_pydev.png
 
 Select ``pydev`` plugin from available software, click ``install`` and follow
 the install procedure.
@@ -121,6 +121,7 @@ An Eclipse plug-in providing support to edit reStructuredText files.
 
 * Update Sites: http://eclipse-color-theme.github.com/update and
   http://resteditor.sourceforge.net/eclipse
+
 
 
 YAML Editor
