@@ -2,18 +2,46 @@
 Hello World - The first Model
 =============================
 
-Creating the first model and generating code using Eclipse.
+
+Motivation
+----------
+
+Now we create a first model and generate code.
+
+Even some early versions of the agx. family of packages were made with
+the same toolchain: using Eclipse & Papyrus for modeling and agx as generator.
+
+Look at this model. It was used to generate the package structure (python egg)
+of agx.generator.buildout.
+
+.. image:: ../_static/helloworld_eclipse_model_package_agx.generator.buildout.png
 
 
-Create a project
-================
+But first...
+
+
+
+Create a Pydev Project
+======================
+
 
 Open the  **PyDev** perspective, then click **File** in main menu and
 select **new** -> **Pydev Project**.
 
-Enter desired name, normally the desired egg name, and click **finish**
+You can also right-click the white space in the Package Explorer and choose 
+**New** -> **Pydev Project**.
 
-.. image:: ../_static/hello_world_create_pydev_project.png
+Enter the desired projectname name, possibly the desired egg name, 
+and click **Finish**
+
+
+.. image:: ../_static/helloworld_eclipse_new_project_pydev.png
+
+
+When asked, choose Python 2.6 (Ubuntu: deadsnakes, remember?)
+
+
+.. image:: ../_static/helloworld_eclipse_new_project_pydev_name_grammar2.6.png
 
 
 Create the model
@@ -22,10 +50,39 @@ Create the model
 Open the **Papyrus** perspective and navigate to the created project.
 
 Create a new model by right clicking the project in the navigator and selecting
-**new** -> **create an empty Model**. Select the target folder and enter a name
-for the model. finally click **finish**.
+**new** -> **create an empty Model**.
 
-.. image:: ../_static/hello_world_create_empty_model.png
+
+.. image:: ../_static/helloworld_eclipse_new_model_papyrus.png
+
+
+Choose **UML** for diagram language
+
+
+.. image:: ../_static/helloworld_eclipse_new_model_papyrus_UML.png
+
+
+Select the **target folder** and give the model a **Name**. *model.di* will do.
+
+Finally click **finish**.
+
+
+.. image:: ../_static/helloworld_eclipse_new_model_papyrus_filename.png
+
+
+As of now the name does not influence any generator or generated features.
+
+
+.. image:: ../_static/helloworld_eclipse_select_new_agx_model.png
+
+Choose from the templates.
+
+.. image:: ../_static/helloworld_eclipse_new_model_select_template.png
+  
+
+The result will be an empty model.
+
+.. image:: ../_static/helloworld_eclipse_new_model_empty_explorer.png
 
 Two files are created. The diagram file and a UML file. After refreshing they
 appear in the **navigator**.
@@ -33,7 +90,7 @@ appear in the **navigator**.
 .. image:: ../_static/hello_world_navigator.png
 
 Open **outline** view by clicking **Window** and selecting **Show View** ->
-**Outline**.
+  **Outline**.
 
 .. image:: ../_static/hello_world_outline.png
 
@@ -48,7 +105,12 @@ Configure AGX
 Right click on the already created **uml** file, select **Properties** and navigate
 to **AGX Properties**.
 
-Define the output directory. This is where generated code will be written to.
+Define the output directory (**Default Generation Target**).
+This is where generated code will be written to.
+
+
+.. image:: ../_static/helloworld_eclipse_agx_preferences.png
+
 
 Define the generator executable. By clicking **apply** AGX Eclipse will fetch
 the profiles to be provided by invoking the defined executable (./bin/agx -l, see Pre-Requirements).
@@ -71,10 +133,10 @@ That is because the path to profile is stored in model.
 .. image:: ../_static/hello_world_import_profiles.png
 
 
-Apply profile(s) on model
-=========================
+Apply Profile(s) on the Model
+=============================
 
-Select (by double-clicking) the model in outline (in Helios: project explorer).
+Select (by double-clicking) the model in outline view (since Helios: project explorer view).
 
 Click on the **Properties** tab at the bottom of the Eclipse IDE and click on the contained **Profiles** tab.
 
@@ -91,6 +153,11 @@ Choose **pyegg** profile, click **OK** and save model (**ctrl + s**)
 
 .. image:: ../_static/hello_world_choose_profiles.png
 
+
+Generate
+========
+
+.. image:: ../_static/eclipse_indigo_agx_generate.png
 
 Creating a UML package for a python egg
 =======================================
