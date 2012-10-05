@@ -12,7 +12,7 @@ Assuming **PyDev** is installed, select **PyDev** perspective, click
 
 Enter desired name, commonly the egg name, and click **finish**
 
-.. image:: _static/hello_world_create_pydev_project.png
+.. image:: ../_static/hello_world_create_pydev_project.png
 
 Create a new folder named **agx** inside new project by right clicking
 on the project in navigator and selecting **new** -> **Folder**.
@@ -26,21 +26,21 @@ Create a new model by right clicking the folder in the navigator and selecting
 **new** -> **create an empty Model**. Select the target folder and enter a name
 for the model. finally click **finish**.
 
-.. image:: _static/hello_world_create_empty_model.png
+.. image:: ../_static/hello_world_create_empty_model.png
 
 Two files are created. The diagram file and a UML file. After refreshing they
 appear in the **navigator**.
 
-.. image:: _static/hello_world_navigator.png
+.. image:: ../_static/hello_world_navigator.png
 
 Open **outline** view by clicking **Window** and selecting **Show View** ->
 **Outline**.
 
-.. image:: _static/hello_world_outline.png
+.. image:: ../_static/hello_world_outline.png
 
 The UML model related toolbar can be expanded at the top right.
 
-.. image:: _static/hello_world_uml_toolbar.png
+.. image:: ../_static/hello_world_uml_toolbar.png
 
 Configure AGX
 =============
@@ -58,18 +58,18 @@ Select the **pydev** profile, and activate it by selecting it and clicking **>>*
 Click **import selected profiles**. The selected profiles are now copied
 to the location of the UML model. (Click F5 to refresh the project explorer view.)
 
-.. image:: _static/hello_world_agx_properties.png
+.. image:: ../_static/hello_world_agx_properties.png
 
 The dialogue in the bottom window will display a message.
 
-.. image:: _static/hello_world_import_profiles_receipt.png
+.. image:: ../_static/hello_world_import_profile_receipt.png
 
 
 After refreshing the navigator shows the imported profile next to model. Keep
 in mind that it is essential to have the model and profile(s) in the same folder.
 That is because the path to profile is stored in model.
 
-.. image:: _static/hello_world_import_profiles.png
+.. image:: ../_static/hello_world_import_profiles.png
 
 Apply profile(s) on model
 =========================
@@ -80,16 +80,16 @@ Click on the **Properties** tab at the bottom of the Eclipse IDE and click on th
 
 On the right you find the **+** icon for applying profiles.
 
-.. image:: _static/hello_world_apply_profile.png
+.. image:: ../_static/hello_world_apply_profile.png
 
 Click the **+** icon, navigate to **pyegg.profile.uml** in **agx** folder, select it
 and click **OK**.
 
-.. image:: _static/hello_world_select_profile_to_apply.png
+.. image:: ../_static/hello_world_select_profile_to_apply.png
 
 Choose **pyegg** profile, click **OK** and save model (**ctrl + s**)
 
-.. image:: _static/hello_world_choose_profiles.png
+.. image:: ../_static/hello_world_choose_profiles.png
 
 Creating a UML package for a python egg
 =======================================
@@ -105,7 +105,7 @@ when hovering over the diagrams canvas and choose the symbol for package.
 Click **Properties** Tab -> **General** and give it the desired egg name. This must
 be a target package name, preceding names define the namespace packages.
 
-.. image:: _static/hello_world_create_package.png
+.. image:: ../_static/hello_world_create_package.png
 
 Apply pyegg stereotype on package
 =================================
@@ -114,11 +114,11 @@ Right-click the package in the diagram and select **profile** -> **Apply Stereot
 
 Select **pyegg** profile, click **->** and **OK**.
 
-.. image:: _static/hello_world_select_stereotype.png
+.. image:: ../_static/hello_world_select_stereotype.png
 
 **pyegg** stereotype now apears to be set on package.
 
-.. image:: _static/hello_world_package_with_pyegg_stereotype.png
+.. image:: ../_static/hello_world_package_with_pyegg_stereotype.png
 
 Set the tagged values for the pyegg stereotype
 ==============================================
@@ -134,7 +134,7 @@ UML2 does not support multi valued tagged values. In case where enumerations
 are needed, value is seperated by comma. Refer to **Users Documentation** for
 details.
 
-.. image:: _static/hello_world_define_tagged_values.png
+.. image:: ../_static/hello_world_define_tagged_values.png
 
 Save changes after defining tagged values.
 
@@ -146,10 +146,10 @@ The Model is now ready to be generated. Right-click the diagram related UML file
 
 AGX opens a console and prints generator output to it.
 
-.. image:: _static/hello_world_agx_console.png
+.. image:: ../_static/hello_world_agx_console.png
 
 After refreshing generated code appears in navigator.
 
-.. image:: _static/hello_world_navigator_generated.png
+.. image:: ../_static/hello_world_navigator_generated.png
 
 Congratulations. You have done your first AGX MDSD project.
