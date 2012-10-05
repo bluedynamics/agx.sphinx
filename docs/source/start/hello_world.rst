@@ -8,23 +8,20 @@ Creating the first model and generating code using Eclipse.
 Create a project
 ================
 
-Assuming **PyDev** is installed, select **PyDev** perspective, click
-**File** in main menu and select **new** -> **Pydev Project**.
+Open the  **PyDev** perspective, then click **File** in main menu and
+select **new** -> **Pydev Project**.
 
-Enter desired name, commonly the egg name, and click **finish**
+Enter desired name, normally the desired egg name, and click **finish**
 
 .. image:: ../_static/hello_world_create_pydev_project.png
-
-Create a new folder named **agx** inside new project by right clicking
-on the project in navigator and selecting **new** -> **Folder**.
 
 
 Create the model
 ================
 
-Open the Papyrus perspective and navigate to the newly generated**agx** folder.
+Open the **Papyrus** perspective and navigate to the created project.
 
-Create a new model by right clicking the folder in the navigator and selecting
+Create a new model by right clicking the project in the navigator and selecting
 **new** -> **create an empty Model**. Select the target folder and enter a name
 for the model. finally click **finish**.
 

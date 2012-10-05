@@ -2,12 +2,14 @@
 Foundations - UML, Profiles, AGX-Generators and more
 ====================================================
 
+
 UML - the Unified Modeling Language
 ===================================
 
 UML (Unified Modelling Language) is a graphical language designed to 
-describe software systems visually through diagrams. There are several different types of 
-diagrams available, but at the moment AGX version 3 uses only class-diagrams.
+describe software systems visually through diagrams. There are several
+different types of diagrams available, but at the moment AGX version 3 uses
+only class-diagrams.
 
 ArchGenXML (versions 1 and 2), the predecessor of AGX, was able to use both 
 class diagrams and state machine diagrams. Its sole purpose was 
@@ -44,6 +46,7 @@ web. A very good starting point is the
 tutorials. For a quick-start reading 
 `Practical UML <http://edn.embarcadero.com/article/31863>`_ helps.
 
+
 UML Profiles
 ============
 
@@ -61,7 +64,6 @@ AGX makes use of UML2 and its profiles.
     
     from Wikipedia at 2010-07-08 
     `Profile (UML) <http://en.wikipedia.org/wiki/Profile_%28UML%29>`_ 
-                
 
 AGX provides a specific profile for each generator package. The ``pyegg`` 
 profile for example contains support for packages, modules, decorators etc. 
@@ -71,6 +73,7 @@ AGX is extensible: Each generator addresses one specific domain and
 provides a profile for this domain. Generators and profiles may depend on a more 
 basic domain, e.g. the ZCA-generator (Zope Component Architecture) extends the 
 pyegg-generator.
+
 
 How does it work?
 =================

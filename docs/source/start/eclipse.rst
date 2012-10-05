@@ -6,8 +6,8 @@ This is the installation instruction to use the Eclipse IDE for development.
 Currenty AGX requires Eclipse Indigo Modelling Edition.
 
 
-Installing Eclipse
-------------------
+Install Eclipse
+---------------
 
 Make sure to have an appropriate Java-interpreter on your machine.
 Ubuntu users can simply::
@@ -29,13 +29,14 @@ should run if Java was installed properly by executing the eclipse binary::
 
     /eclipse/install/path/eclipse
 
-Note for GTK Users (Gnome i.e.) - There is a bug in some versions of GTK that
-causes certain print backends to hang. Fix it by providing a 2-liner
-script as eclipse launcher::
+.. note::
+    Note for GTK Users (Gnome i.e.) - There is a bug in some older versions of
+    GTK that causes certain print backends to hang. Fix it by providing a
+    2-liner script as eclipse launcher::
 
-    #!/bin/sh
-    export GDK_NATIVE_WINDOWS=1
-    /eclipse/install/path/eclipse -vmargs -XX:+AggressiveHeap
+        #!/bin/sh
+        export GDK_NATIVE_WINDOWS=1
+        /eclipse/install/path/eclipse -vmargs -XX:+AggressiveHeap
 
 On first startup, eclipse asks you for a workspace location. This is the
 location where your eclipse projects live.
@@ -45,43 +46,85 @@ dig around a little bit or go directly to the workbench (icon on the
 right).
 
 
-Installing Papyrus
-------------------
+Install Papyrus
+---------------
 
 Eclipse Modeling Tools come along with facilities for drawing UML models.
 Anyway we'll use Papyrus for modeling, it's one of the shipped tools.
 
-Use Eclipses Menu and find 'Help --> Install Modeling Components',
+Use Eclipses menu and find ``Help --> Install Modeling Components``,
 search for Papyrus and install it. 
 
 .. image:: ../_static/eclipse_indigo_modeling_components_papyrus.png
 
 
-Installing Eclipse AGX
-----------------------
+Install PyDev
+-------------
+
+PyDev is an Eclipse plugin for Python development.
+
+To install pydev, use Eclipses menu and find ``Help --> Install New Software``,
+click ``add`` button, enter ``pydev`` as name and the location
+``http://pydev.org/updates/`` to search for the plugin.
+
+.. image:: ../_static/eclipse_indigo_modeling_components_add_plugin.png
+
+Select ``pydev`` plugin from available software, click ``install`` and follow
+the install procedure.
+
+.. image:: ../_static/eclipse_indigo_modeling_components_install_plugin.png
+
+
+Install AGX Eclipse plugin
+--------------------------
 
 AGX Ships with an Eclipse plugin for invoking the generator out of the IDE.
-The update site for this plugin is at `<http://agx.me/updates/>`_. Install it
-using the update manager.
+
+To install the AGX Eclipse plugin, repeat the procedure as shown in
+``Install PyDev``, using ``AGX`` as name and ``http://agx.me/updates`` as
+plugin location when adding the AGX update site.
+
+.. note::
+    The AGX plugin required both Papyrus and Pydev in order to install and
+    run correctly.
 
 
-Using PyDev
------------
-
-PyDev is an Eclipse plugin for Python development and the choice if you
-decide to use Eclipse as your Python IDE.
-
-Using it has the advantage of combining modeling, code generation and custom
-work on the generated stuff all in the same IDE - hurrah!.
-
-The update site for Pydev is at `<http://pydev.org/updates/>`_.
+Unrelated but useful plugins for development with Eclipse
+---------------------------------------------------------
 
 
-Using Aptana Studio
--------------------
+Install ReST Editor
+~~~~~~~~~~~~~~~~~~~
 
-Aptana Studio is an IDE for building Web-applications and comes along
-with HTML, CSS and JavaScript tools and is is a pretty useful extension.
+An Eclipse plug-in providing support to edit reStructuredText files.
 
-The update site for Aptana is located at
-`<http://download.aptana.org/tools/studio/plugin/install/studio>`_.
+* `Homepage <http://resteditor.sourceforge.net/>`_.
+
+* Update Sites: http://eclipse-color-theme.github.com/update and
+  http://resteditor.sourceforge.net/eclipse
+
+
+Install YAML Editor
+~~~~~~~~~~~~~~~~~~~
+
+An Eclipse plug-in providing support to edit YAML files.
+
+* `Homepage <http://foo.bar/>`_.
+
+* Update Site: http://foo.bar
+
+
+Install Javascript Editor
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Eclipse provides a webtools project which ships editors for web technologies.
+
+...
+
+
+Install XML/HTML/PT Editor
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Install foo plugins from the webtools update site.
+
+...
