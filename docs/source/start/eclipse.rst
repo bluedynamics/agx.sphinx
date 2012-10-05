@@ -121,6 +121,8 @@ Eclipse provides a webtools project which ships editors for web technologies.
 
 ...
 
+.. image:: ../_static/eclipse_add_pydev.png
+
 
 Install XML/HTML/PT Editor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
