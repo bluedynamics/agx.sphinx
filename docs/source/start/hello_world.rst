@@ -4,6 +4,7 @@ Hello World - The first Model
 
 Creating the first model and generating code using Eclipse.
 
+
 Create a project
 ================
 
@@ -16,6 +17,7 @@ Enter desired name, commonly the egg name, and click **finish**
 
 Create a new folder named **agx** inside new project by right clicking
 on the project in navigator and selecting **new** -> **Folder**.
+
 
 Create the model
 ================
@@ -42,6 +44,7 @@ The UML model related toolbar can be expanded at the top right.
 
 .. image:: ../_static/hello_world_uml_toolbar.png
 
+
 Configure AGX
 =============
 
@@ -64,12 +67,12 @@ The dialogue in the bottom window will display a message.
 
 .. image:: ../_static/hello_world_import_profile_receipt.png
 
-
 After refreshing the navigator shows the imported profile next to model. Keep
 in mind that it is essential to have the model and profile(s) in the same folder.
 That is because the path to profile is stored in model.
 
 .. image:: ../_static/hello_world_import_profiles.png
+
 
 Apply profile(s) on model
 =========================
@@ -91,6 +94,7 @@ Choose **pyegg** profile, click **OK** and save model (**ctrl + s**)
 
 .. image:: ../_static/hello_world_choose_profiles.png
 
+
 Creating a UML package for a python egg
 =======================================
 
@@ -107,6 +111,7 @@ be a target package name, preceding names define the namespace packages.
 
 .. image:: ../_static/hello_world_create_package.png
 
+
 Apply pyegg stereotype on package
 =================================
 
@@ -119,6 +124,7 @@ Select **pyegg** profile, click **->** and **OK**.
 **pyegg** stereotype now apears to be set on package.
 
 .. image:: ../_static/hello_world_package_with_pyegg_stereotype.png
+
 
 Set the tagged values for the pyegg stereotype
 ==============================================
@@ -137,6 +143,7 @@ details.
 .. image:: ../_static/hello_world_define_tagged_values.png
 
 Save changes after defining tagged values.
+
 
 Invoking AGX
 ============

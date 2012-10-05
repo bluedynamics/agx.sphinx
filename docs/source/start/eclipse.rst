@@ -4,28 +4,26 @@ Installing and configuring Eclipse for use with AGX
 
 The setup for AGX described here uses Eclipse Galileo.
 
+
 Installing Eclipse
 ------------------
 
 Make sure to have an appropriate Java-interpreter on your machine.
-Check out `<http://java.sun.com>`_ for details. Ubuntu users can simply
+Check out `<http://java.sun.com>`_ for details. Ubuntu users can simply::
 
-::
     sudo apt-get install openjdk-7-jdk
 
 Download and install the **Galileo** Eclipse Modeling Tools bundle from
 `<http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/galileosr2>`_.
 
 Unpack the downloaded ZIP or tarball to a location of choice. Eclipse should run 
-if Java was installed correctly.
-::
+if Java was installed correctly::
 
     /eclipse/install/path/eclipse
 
 Note for GTK Users (Gnome i.e.) - There is a bug in some versions of GTK that
 causes certain print backends to hang. Fix it by providing a 2-liner
-script as eclipse launcher.
-::
+script as eclipse launcher::
 
     #!/bin/sh
     export GDK_NATIVE_WINDOWS=1
@@ -38,6 +36,7 @@ After defining the workspace the eclipse welcome screen comes up. Go ahead and
 dig around a little bit or go directly to the workbench (icon on the 
 right).
 
+
 Installing Papyrus
 ------------------
 
@@ -48,12 +47,14 @@ Repeat the installation procedure from above, this time using the Papyrus update
 site `<http://www.papyrusuml.org/home/liblocal/docs/updates/papyrus/>`_ and
 select :mod:`Papyrus modelling tools`.
 
+
 Installing Eclipse AGX
 ----------------------
 
 AGX Ships with an Eclipse plugin for invoking the generator out of the IDE.
 The update site for this plugin is at `<http://agx.me/updates/>`_. Install it
 using the update manager.
+
 
 Using PyDev
 -----------
@@ -65,6 +66,7 @@ Using it has the advantage of combining modeling, code generation and custom
 work on the generated stuff all in the same IDE - hurrah!.
 
 The update site for Pydev is at `<http://pydev.org/updates/>`_.
+
 
 Using Aptana Studio
 -------------------

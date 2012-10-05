@@ -13,7 +13,7 @@ On debian based systems, install dev headers like so::
 
     apt-get install libxml2-dev libxslt1-dev
 
-:: note
+.. note::
    Debian folks may grep buildout.cfg for "apt-get" instructions ;-)
 
 
@@ -55,8 +55,9 @@ Run ``./bin/agx -i``. If you get output similar to this::
         agx.generator.zca (4c8e835921da036f92a52d80b1378c344f528a88)
         agx.generator.sql (08a33d0c1b49505e26b9885e575dc67fe1d8e864)
         agx.generator.plone (b9d04d1c86c8977151adc635f35d883486b12268)
-        agx.generator.dexterity (f4ba3f45b63281ab75cde3d86a23af8cbdad2e02)
+        agx.generator.dexterity (771dde17a7bf4640b672aac46b41e09d042302a8)
         agx.generator.buildout (7d10edbeaa5089f133853b93e58cc77945322a2b)
+        agx.generator.generator (5ad11b18339b5cf85989257c1622dcdbf9579521)
 
 AGX is ready to be used.
 
