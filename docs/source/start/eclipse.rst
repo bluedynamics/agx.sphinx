@@ -22,6 +22,7 @@ your operating system from the
     If in doubt whether to install 32bit or 64bit version of eclipse, this
     issue has been discussed at `stack overflow 
     <http://stackoverflow.com/questions/9727430/java-and-eclipse-32-vs-64bit>`_.
+    Spoiler: 32bit
 
 Unpack the downloaded ZIP or tarball to a location of your choice. Eclipse
 should run if Java was installed properly by executing the eclipse binary::
@@ -50,9 +51,10 @@ Installing Papyrus
 Eclipse Modeling Tools come along with facilities for drawing UML models.
 Anyway we'll use Papyrus for modeling, it's one of the shipped tools.
 
-Repeat the installation procedure from above, this time using the Papyrus update
-site `<http://www.papyrusuml.org/home/liblocal/docs/updates/papyrus/>`_ and
-select :mod:`Papyrus modelling tools`.
+Use Eclipses Menu and find 'Help --> Install Modeling Components',
+search for Papyrus and install it. 
+
+.. image:: ../_static/eclipse_indigo_modeling_components_papyrus.png
 
 
 Installing Eclipse AGX
