@@ -72,7 +72,7 @@ click ``add`` button, enter ``pydev`` as name and the location
 Select ``pydev`` plugin from available software, click ``install`` and follow
 the install procedure.
 
-.. image:: ../_static/eclipse_indigo_modeling_components_install_plugin.png
+.. image:: ../_static/eclipse_indigo_modeling_components_install_plugin_pydev.png
 
 
 Install AGX Eclipse plugin
