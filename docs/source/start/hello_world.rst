@@ -14,7 +14,7 @@ the same toolchain: using Eclipse & Papyrus for modeling and agx as generator.
 Look at this model. It was used to generate the package structure (python egg)
 of agx.generator.buildout.
 
-.. image:: ../_static/helloworld_eclipse_model_package_agx.generator.buildout.png
+.. image:: ../_static/helloworld_indigo_model_package_agx.generator.buildout.png
 
 
 But first...
@@ -35,13 +35,13 @@ Enter the desired projectname name, possibly the desired egg name,
 and click **Finish**
 
 
-.. image:: ../_static/helloworld_eclipse_new_project_pydev.png
+.. image:: ../_static/helloworld_indigo_new_project_pydev.png
 
 
 When asked, choose Python 2.6 (Ubuntu: deadsnakes, remember?)
 
 
-.. image:: ../_static/helloworld_eclipse_new_project_pydev_name_grammar2.6.png
+.. image:: ../_static/helloworld_indigo_new_project_pydev_name_grammar2.6.png
 
 
 Create the model
@@ -53,13 +53,13 @@ Create a new model by right clicking the project in the navigator and selecting
 **new** -> **create an empty Model**.
 
 
-.. image:: ../_static/helloworld_eclipse_new_model_papyrus.png
+.. image:: ../_static/helloworld_indigo_new_model_papyrus.png
 
 
 Choose **UML** for diagram language
 
 
-.. image:: ../_static/helloworld_eclipse_new_model_papyrus_UML.png
+.. image:: ../_static/helloworld_indigo_new_model_papyrus_UML.png
 
 
 Select the **target folder** and give the model a **Name**. *model.di* will do.
@@ -67,22 +67,22 @@ Select the **target folder** and give the model a **Name**. *model.di* will do.
 Finally click **finish**.
 
 
-.. image:: ../_static/helloworld_eclipse_new_model_papyrus_filename.png
+.. image:: ../_static/helloworld_indigo_new_model_papyrus_filename.png
 
 
 As of now the name does not influence any generator or generated features.
 
 
-.. image:: ../_static/helloworld_eclipse_select_new_agx_model.png
+.. image:: ../_static/helloworld_indigo_select_new_agx_model.png
 
 Choose from the templates.
 
-.. image:: ../_static/helloworld_eclipse_new_model_select_template.png
+.. image:: ../_static/helloworld_indigo_new_model_select_template.png
   
 
 The result will be an empty model.
 
-.. image:: ../_static/helloworld_eclipse_new_model_empty_explorer.png
+.. image:: ../_static/helloworld_indigo_new_model_empty_explorer.png
 
 Two files are created. The diagram file and a UML file. After refreshing they
 appear in the **navigator**.
@@ -109,7 +109,7 @@ Define the output directory (**Default Generation Target**).
 This is where generated code will be written to.
 
 
-.. image:: ../_static/helloworld_eclipse_agx_preferences.png
+.. image:: ../_static/helloworld_indigo_agx_preferences.png
 
 
 Define the generator executable. By clicking **apply** AGX Eclipse will fetch
