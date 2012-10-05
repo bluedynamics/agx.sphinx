@@ -2,22 +2,29 @@
 Installing and configuring Eclipse for use with AGX
 ===================================================
 
-The setup for AGX described here uses Eclipse Galileo.
+This is the installation instruction to use the Eclipse IDE for development.
+Currenty AGX requires Eclipse Indigo Modelling Edition.
 
 
 Installing Eclipse
 ------------------
 
 Make sure to have an appropriate Java-interpreter on your machine.
-Check out `<http://java.sun.com>`_ for details. Ubuntu users can simply::
+Ubuntu users can simply::
 
     sudo apt-get install openjdk-7-jdk
 
-Download and install the **Galileo** Eclipse Modeling Tools bundle from
-`<http://www.eclipse.org/downloads/packages/eclipse-modeling-tools-includes-incubating-components/galileosr2>`_.
+Download and install the **Indigo** Eclipse Modeling Tools bundle suitable for
+your operating system from the
+`download page <http://www.eclipse.org/downloads/packages/release/indigo/sr2>`_.
 
-Unpack the downloaded ZIP or tarball to a location of choice. Eclipse should run 
-if Java was installed correctly::
+.. note::
+    If in doubt whether to install 32bit or 64bit version of eclipse, this
+    issue has been discussed at `stack overflow 
+    <http://stackoverflow.com/questions/9727430/java-and-eclipse-32-vs-64bit>`_.
+
+Unpack the downloaded ZIP or tarball to a location of your choice. Eclipse
+should run if Java was installed properly by executing the eclipse binary::
 
     /eclipse/install/path/eclipse
 
