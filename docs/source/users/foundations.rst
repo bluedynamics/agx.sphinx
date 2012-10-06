@@ -9,7 +9,7 @@ UML - the Unified Modeling Language
 UML (Unified Modelling Language) is a graphical language designed to 
 describe software systems visually through diagrams. There are several
 different types of diagrams available, but at the moment AGX version 3 uses
-only class-diagrams.
+only class diagrams.
 
 ArchGenXML (versions 1 and 2), the predecessor of AGX, was able to use both 
 class diagrams and state machine diagrams. Its sole purpose was 
@@ -78,17 +78,21 @@ pyegg-generator.
 How does it work?
 =================
 
-While creating a UML model the author applies desired domain specific profiles. 
-Through profiles available stereotypes and tagged values for the domain are provided.
+While creating her UML model the developer applies domain specific features to
+the various items in the model.
+Through profiles the relevant stereotypes and tagged values for the
+domain are made available.
 After creating a diagram with domain specific information set on the elements
 AGX is invoked and code is generated.
 
 While AGX is running, domain specific generators are working in sequence.
 Each generator reads the same source tree and writes to the same target tree, 
-i.e. from a UML model to a tree of files. A domain specific generator could be 
-for Python eggs, Zope Component Architecture with its ZCML configuration, 
-GenericSetup profiles, Django specific profiles or any other framework or
-puropse, like buildout.
+e.g. from a UML model to a tree of files. A domain specific generator can be
+tailored for any purpose.
+
+AGX already supports some standard structures from the Python world, and has
+things set up for Python eggs, Zope Component Architecture with its ZCML
+configuration, GenericSetup profiles, buildout.
 
 Each generator extends or modifies the target tree to fit it's needs. During
 the whole transformation process the target tree is held in memory. After the
