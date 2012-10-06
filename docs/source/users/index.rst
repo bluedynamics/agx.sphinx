@@ -9,4 +9,4 @@ generate code from it.
    :maxdepth: 2
    
    Foundations - about UML, Profiles, AGX-Generators and more <foundations>
-   Generating Python Eggs <profile_pyegg>
+   Generating Python Eggs <pyegg>
