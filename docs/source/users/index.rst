@@ -10,3 +10,9 @@ generate code from it.
    
    Foundations - about UML, Profiles, AGX-Generators and more <foundations>
    Generating Python Eggs <pyegg>
+   Zope Component Architecture <zca>
+   Plone <plone>
+   Dexterity <dexterity
+   Buildout <buildout>
+   SQL ORM <sql>
+   Generator Generator <generator>
