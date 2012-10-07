@@ -6,6 +6,8 @@ This document describes the **pyegg** UML profile.
 
 .. image:: profile_pyegg_uml.png
 
+.. image:: profile_pyegg.SVG
+
 Profile
 =======
 
