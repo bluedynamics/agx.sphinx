@@ -5,6 +5,7 @@ src/agx.sphinx.egg-info
 .mr.developer.cfg
 devsrc
 bin/
+env/
 develop-eggs/
 docs/Makefile
 docs/make.bat
@@ -12,6 +13,8 @@ eggs/
 parts/
 docs/doctrees/
 docs/html/
+docs/epub/
+docs/latex/
 .DS_Store
 .project
 .pydevproject
