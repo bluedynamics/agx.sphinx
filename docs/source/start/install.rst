@@ -14,7 +14,8 @@ On debian based systems, install dev headers like so::
     apt-get install libxml2-dev libxslt1-dev
 
 .. note::
-   Debian folks may grep buildout.cfg for "apt-get" instructions ;-)
+   Debian folks may grep buildout.cfg
+   (and etc/base.cfg) for "apt-get" instructions ;-)
 
 
 Attention Ubuntu Users
