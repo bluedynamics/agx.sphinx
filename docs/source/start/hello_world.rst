@@ -14,7 +14,7 @@ the same toolchain: using Eclipse & Papyrus for modeling and agx as generator.
 Look at this model. It was used to generate the package structure (python egg)
 of agx.generator.buildout.
 
-.. image:: ../_static/helloworld_indigo_model_package_agx.generator.buildout.png
+.. image:: ../_static/helloworld_indigo_model_package_agx-generator-buildout.png
 
 
 But first...
@@ -36,13 +36,13 @@ and click **Finish**
 
 
 .. image:: ../_static/helloworld_indigo_new_project_pydev.png
-
+   :scale: 50%
 
 When asked, choose Python 2.6 (Ubuntu: deadsnakes, remember?)
 
 
-.. image:: ../_static/helloworld_indigo_new_project_pydev_name_grammar2.6.png
-
+.. image:: ../_static/helloworld_indigo_new_project_pydev_name_grammar2_6.png
+   :scale: 50%
 
 Create the model
 ================
@@ -54,13 +54,13 @@ Create a new model by right clicking the project in the navigator and selecting
 
 
 .. image:: ../_static/helloworld_indigo_new_model_papyrus.png
-
+   :scale: 50%
 
 Choose **UML** for diagram language
 
 
 .. image:: ../_static/helloworld_indigo_new_model_papyrus_UML.png
-
+   :scale: 50%
 
 Select the **target folder** and give the model a **Name**. *model.di* will do.
 
@@ -68,35 +68,40 @@ Finally click **finish**.
 
 
 .. image:: ../_static/helloworld_indigo_new_model_papyrus_filename.png
-
+   :scale: 50%
 
 As of now the name does not influence any generator or generated features.
 
 
 .. image:: ../_static/helloworld_indigo_select_new_agx_model.png
+   :scale: 50%
 
 Choose from the templates.
 
 .. image:: ../_static/helloworld_indigo_new_model_select_template.png
-  
+   :scale: 50%
 
 The result will be an empty model.
 
 .. image:: ../_static/helloworld_indigo_new_model_empty_explorer.png
+   :scale: 50%
 
 Two files are created. The diagram file and a UML file. After refreshing they
 appear in the **navigator**.
 
 .. image:: ../_static/hello_world_navigator.png
+   :scale: 50%
 
 Open **outline** view by clicking **Window** and selecting **Show View** ->
   **Outline**.
 
 .. image:: ../_static/hello_world_outline.png
+   :scale: 50%
 
 The UML model related toolbar can be expanded at the top right.
 
 .. image:: ../_static/hello_world_uml_toolbar.png
+   :scale: 50%
 
 
 Configure AGX
