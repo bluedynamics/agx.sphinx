@@ -2,8 +2,8 @@
 Installing and configuring Eclipse for use with AGX
 ===================================================
 
-This is the installation instruction to use the Eclipse IDE for development.
-Currenty AGX requires Eclipse Indigo Modelling Edition.
+These are installation instructions for using the Eclipse IDE for development.
+Currenty AGX requires the **Modelling Edition** of **Eclipse Indigo** (3.7).
 
 
 Install Eclipse
