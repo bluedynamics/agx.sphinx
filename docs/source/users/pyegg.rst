@@ -4,9 +4,13 @@ Generating Python Code and Eggs
 
 This document describes the **pyegg** UML profile.
 
+png:
+
 .. image:: profile_pyegg_uml.png
 
-.. image:: profile_pyegg.SVG
+
+.. image:: profile_pyegg_uml_indigo.png
+
 
 Profile
 =======
