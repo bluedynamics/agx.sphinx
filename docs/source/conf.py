@@ -182,7 +182,7 @@ htmlhelp_basename = 'AGXdoc'
 # -- Options for LaTeX output -------------------------------------------------
 
 # The paper size ('letter' or 'a4').
-#latex_paper_size = 'letter'
+#latex_paper_size = 'a4'
 
 # The font size ('10pt', '11pt' or '12pt').
 #latex_font_size = '10pt'
@@ -191,13 +191,13 @@ htmlhelp_basename = 'AGXdoc'
 # (source start file, target name, title, author, documentclass
 # [howto/manual]).
 latex_documents = [
-  ('index', 'YAFOWIL.tex', u'YAFOWIL Documentation',
+  ('index', 'AGX.tex', u'AGX Documentation',
    u'Jens W. Klein, Robert Niederreiter et al', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-#latex_logo = None
+#latex_logo = '_static/agx.png'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
