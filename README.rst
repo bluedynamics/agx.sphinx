@@ -13,7 +13,7 @@ This Package is part of **AGX**. See `<http://agx.me>`_ for Details.
 Debian based Installation
 -------------------------
 
-.. code-block :: bash
+::
    $ sudo apt-get install mscgen
    $ pip install virtualenv
    $ git clone git://github.com/bluedynamics/agx.sphinx.git
@@ -26,7 +26,7 @@ Debian based Installation
 Mac based Installation
 ----------------------
 
-.. code-block :: bash
+::
    $ brew install mscgen
    $ easy_install pip
    $ pip install virtualenv
@@ -38,7 +38,7 @@ Mac based Installation
 
 If there are problems with compilation of some libs during the above:
 
-.. code-block :: bash
+::
    $ rm /usr/local/lib/libiconv.2.dylib
    $ ln -s /usr/lib/libiconv.2.dylib /usr/local/lib/libiconv.2.dylib
 
@@ -50,7 +50,7 @@ to a reasonable value and re-run buildout::
        raise ValueError, 'unknown locale: %s' % localename
    ValueError: unknown locale: UTF-8
 
-.. code-block :: bash
+::
    (env)$ export LC_ALL=de_DE.UTF-8
    (env)$ export LANG=de_DE.UTF-8
    (env)$ bin/buildout -c dev.mac.cfg
