@@ -78,14 +78,17 @@ the install procedure.
 Install AGX Eclipse plugin
 --------------------------
 
-AGX Ships with an Eclipse plugin for invoking the generator out of the IDE.
+AGX Ships with an Eclipse plugin for invoking the generator via the IDE.
 
 To install the AGX Eclipse plugin, repeat the procedure as shown in
 ``Install PyDev``, using ``AGX`` as name and ``http://agx.me/updates`` as
 plugin location when adding the AGX update site.
 
+.. image:: ../_static/eclipse_indigo_install_plugin_AGX.png
+
+
 .. note::
-    The AGX plugin required both Papyrus and PyDev in order to install and
+    The AGX plugin requires both Papyrus and PyDev in order to install and
     run correctly.
 
 
@@ -102,14 +105,14 @@ Eclipse Web Tools
   (default update site for indigo)
 
 The eclipse web tools project contains lots of plugins, the most interresting
-obe might be in category
+ones might be in category
 ``Web, XML, Java EE, and OSGi Enterprise Development``:
 
 * Eclipse Web Developer Tools
 
 * Eclipse XML Editors and Tools
 
-* JavasScript Developer Tools
+* JavaScript Developer Tools
 
 
 ReST Editor
