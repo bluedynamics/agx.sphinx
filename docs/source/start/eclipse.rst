@@ -63,28 +63,35 @@ Install PyDev
 
 PyDev is an Eclipse plugin for Python development.
 
-To install pydev, use Eclipses menu and find ``Help --> Install New Software``,
-click ``add`` button, enter ``pydev`` as name and the location
+To install PyDev, use Eclipses menu and find ``Help --> Install New Software``,
+click ``add`` button, enter ``PyDev`` as name and the location
 ``http://pydev.org/updates/`` to search for the plugin.
 
 .. image:: ../_static/eclipse_add_pydev.png
+   :scale: 50%
+   :align: center
 
-Select ``pydev`` plugin from available software, click ``install`` and follow
+
+Select the ``PyDev`` plugin from available software, click ``install`` and follow
 the install procedure.
 
 .. image:: ../_static/eclipse_indigo_modeling_components_install_plugin_pydev.png
+   :scale: 50%
+   :align: center
 
 
 Install AGX Eclipse plugin
 --------------------------
 
-AGX Ships with an Eclipse plugin for invoking the generator via the IDE.
+AGX ships with an Eclipse plugin for invoking the generator via the IDE.
 
 To install the AGX Eclipse plugin, repeat the procedure as shown in
 ``Install PyDev``, using ``AGX`` as name and ``http://agx.me/updates`` as
 plugin location when adding the AGX update site.
 
 .. image:: ../_static/eclipse_indigo_install_plugin_AGX.png
+   :scale: 50%
+   :align: center
 
 
 .. note::

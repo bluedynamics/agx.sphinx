@@ -39,7 +39,7 @@ Clone development buildout from github::
     git clone git://github.com/bluedynamics/agx.dev.git
 
 Change directory to location of already checked out repository and run
-bootstrap.py and buidlout::
+bootstrap.py and buildout::
 
     python2.6 bootstrap.py
     ./bin/buildout

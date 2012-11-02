@@ -15,12 +15,12 @@ AGX transforms trees of information. It was intended to generate Python code
 from UML2 diagrams.
 
 Its generic core is a framework to convert or transform any data 
-source tree into any data target tree. It's generic model of pipelined 
+source tree into any data target tree. Its generic model of pipelined
 multi-pass transformations allows to solve complex source based tasks of 
 data-transformation.
 
-AGX roots are in the 2003 started ArchGenXML code-generator and is also its 
-successor. AGX is a complete rewrite with lessons learned included and in no way 
+AGX roots date back to the code-generator ArchGenXML (from 2003). It is also its
+successor. AGX is a complete rewrite with lessons learned and in no way
 compatible with the old code-generator. AGX itself is written in Python.
 
 

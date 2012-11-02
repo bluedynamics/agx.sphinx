@@ -16,6 +16,8 @@ of agx.generator.buildout.
 
 .. image:: ../_static/helloworld_indigo_model_package_agx-generator-buildout.png
    :scale: 50%
+   :align: center
+
 
 But first...
 
@@ -34,9 +36,10 @@ You can also right-click the white space in the Package Explorer and choose
 Enter the desired projectname name, possibly the desired egg name, 
 and click **Finish**
 
-
 .. image:: ../_static/helloworld_indigo_new_project_pydev.png
    :scale: 50%
+   :align: center
+
 
 When asked, choose Python 2.6 (Ubuntu: deadsnakes_, remember?)
 
@@ -44,6 +47,8 @@ When asked, choose Python 2.6 (Ubuntu: deadsnakes_, remember?)
 
 .. image:: ../_static/helloworld_indigo_new_project_pydev_name_grammar2_6.png
    :scale: 50%
+   :align: center
+
 
 Create the model
 ----------------
@@ -53,14 +58,16 @@ Open the **Papyrus** perspective and navigate to the created project.
 Create a new model by right clicking the project in the navigator and selecting
 **New** -> **Other...** -> **AGX** -> **AGX Model**.
 
-
 .. image:: ../_static/helloworld_indigo_select_new_agx_model.png
    :scale: 50%
+   :align: center
+
 
 Give the model a **Name**: *model.di* (the default) will do. 
 
 
 Choose from the templates. At the time of this writing there are templates for
+
 * Python Egg
 * Plone Product
 * Dexterity Product
@@ -70,6 +77,8 @@ For this Hello World, we will use the Python Egg template.
 
 .. image:: ../_static/helloworld_indigo_new_model_select_template.png
    :scale: 50%
+   :align: center
+
 
 Finally click **finish**. Some files are created.
 A diagram file (*model.di*), a UML file (*model.uml*), a notation file 
@@ -91,9 +100,9 @@ and navigate to **AGX Properties**.
 Define the output directory (**Default Generation Target**).
 This is where generated code will be written to.
 
-
 .. image:: ../_static/helloworld_indigo_agx_preferences.png
    :scale: 50%
+   :align: center
 
 
 Define the generator executable. By clicking **apply** AGX Eclipse will fetch
