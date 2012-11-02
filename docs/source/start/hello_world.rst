@@ -38,8 +38,9 @@ and click **Finish**
 .. image:: ../_static/helloworld_indigo_new_project_pydev.png
    :scale: 50%
 
-When asked, choose Python 2.6 (Ubuntu: deadsnakes, remember?)
+When asked, choose Python 2.6 (Ubuntu: deadsnakes_, remember?)
 
+.. _deadsnakes: /start/install#attention-ubuntu-users
 
 .. image:: ../_static/helloworld_indigo_new_project_pydev_name_grammar2_6.png
    :scale: 50%
