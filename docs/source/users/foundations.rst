@@ -13,7 +13,8 @@ only class diagrams.
 
 ArchGenXML (versions 1 and 2), the predecessor of AGX, was able to use both 
 class diagrams and state machine diagrams. Its sole purpose was 
-to generate Products (= plugins) for the Plone Content Management System, 
+to generate Products (= plugins) for the
+'Plone Content Management System <http://plone.org>'_ ,
 where class diagrams would be translated to content types 
 while state machines were used to generate workflow states and transitions
 of content types for Plone. When it is finished, AGX v.3 will be 
