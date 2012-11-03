@@ -155,7 +155,7 @@ included in the model (and thus the generated code) by adding them in so called
 **tagged values**.
 
 Open the model file (*.di*) using Eclipses **Papyrus perspective**. In the
- **Properties** view select the **Profile** tab. In **Applied stereotypes**
+**Properties** view select the **Profile** tab. In **Applied stereotypes**
 expand the **pyegg** section.
 
 Now the available tagged values appear for the defined stereotype. Select the tagged value
