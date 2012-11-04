@@ -33,6 +33,7 @@ the generated code.
 Naming Conventions
 ------------------
 
+The packages of the agx suite are named according to their function.
 There exist several namespaces which contain core components and logical groups
 of components. Please follow the naming conventions when providing your own
 modules.
@@ -42,16 +43,16 @@ modules.
   to be used or derived from when providing own components.
 
 ``node.ext.*``
-  packages contain concrete I/O related implementations, i.e. for XML, UML,
-  file-system directory, python-code, ...
+  packages contain concrete I/O related implementations for XML, UML,
+  file-system directories, python-code, ...
 
 ``agx.transform.*``
   packages provide specific source and target tree instances for the
-  transformation chain- like ``agx.transform.xml2uml`` consumes a
+  transformation chain -- like ``agx.transform.xml2uml`` consumes a
   ``node.ext.xml`` tree as source and provides a ``node.ext.uml`` tree as target.
 
 ``agx.generator.*``
-  packages are containing specific generator logic. Mostly these are a
+  packages contain specific generator logic. Mostly these are a
   bunch of registered handlers for a transformation. Thess handlers are responsible
   to read from the source tree the information given and write nodes to the
   target tree. They are called by the transformation chain.
