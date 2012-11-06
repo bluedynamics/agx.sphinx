@@ -32,8 +32,8 @@ compatible with the old code-generator. AGX itself is written in Python.
    :maxdepth: 2
    
    Getting Started <start/index>
-   Users Documentation <users/index>
-   Developer Documentations <developers/index>
+   User Documentation <users/index>
+   Developer Documentation <developers/index>
 
 
 .. toctree::
