@@ -11,7 +11,7 @@ generate code from it.
    Foundations - about UML, Profiles, AGX-Generators and more <foundations>
    Generating Python Eggs <pyegg>
    Zope Component Architecture <zca>
-   Plone <plone>
+   Plone (Generic Setup profiles) <plone>
    Dexterity <dexterity>
    Buildout <buildout>
    SQL ORM <sql>
@@ -30,7 +30,7 @@ respect to the various generation targets that AGX features.
   **Zope Component Architecture**
     The Zope Component Architecture (ZCA) is a term for modularized software.
     It came into being when
-    'Zope <http://zope.org>'_ ,
+    `Zope <http://zope.org>`_,
     one of the first web application servers that had grown
     to a large monolithic beast was rewritten and split into components.
 
