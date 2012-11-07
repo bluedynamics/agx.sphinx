@@ -16,6 +16,8 @@ Debian based Installation
 
    $ sudo apt-get install mscgen
 
+   $ sudo apt-get install graphviz
+
    $ pip install virtualenv
 
    $ git clone git://github.com/bluedynamics/agx.sphinx.git
