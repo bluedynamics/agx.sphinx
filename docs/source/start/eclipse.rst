@@ -56,6 +56,8 @@ Use Eclipses menu and find ``Help --> Install Modeling Components``,
 search for Papyrus and install it. 
 
 .. image:: ../_static/eclipse_indigo_modeling_components_papyrus.png
+   :scale: 50%
+   :align: center
 
 
 Install PyDev
