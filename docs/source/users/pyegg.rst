@@ -184,3 +184,12 @@ Tagged Values
 
 **expression**
     Some python expression, i.e. ``[x for x in ["xxx"]]``.
+
+
+An Example Model (for tests)
+----------------------------
+
+This model is used for the tests of this package.
+
+.. image:: model-agx.generator.pyegg-testpackage.png
+   :scale: 50%
