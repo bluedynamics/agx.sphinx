@@ -1,40 +1,50 @@
-============================
-Buildout Configuration Files
-============================
+====================
+UML:Profile buildout
+====================
 
-This document describes the **buildout** UML profile.
-
-.. image:: profile_buildout_uml.png
-
-Profile
-=======
-
------------
-UML:Package
------------
-
-<<buildout>>
-------------
-
-Create a working setup for a **buildout**.
+Create a working setup for **buildout**.
 
 Buildout is a software build system, the Python equivalent of Make, Maven and
 the like, enabling repeatable setups: bootstrap self-contained installations
 with dependencies and configuration.
-See also `<http://www.buildout.org/>`_.
+See `<http://www.buildout.org/>`_.
 
 
-**Tagged Values**
+Overview
+--------
 
-None
+**buildout** UML profile overview.
+
+.. image:: profile_buildout_uml.png
 
 
-<<self_contained_buildout>>
----------------------------
+UML:Stereotype <<self_contained_buildout>>
+------------------------------------------
 
-write me.
+Stereotype description
 
-<<plone_self_contained>>
-------------------------
+Metaclasses
+~~~~~~~~~~~
 
-write me.
+- UML:Package
+
+Tagged Values
+~~~~~~~~~~~~~
+
+**None**
+
+
+UML:Stereotype <<plone_self_contained>>
+---------------------------------------
+
+Stereotype description
+
+Metaclasses
+~~~~~~~~~~~
+
+- UML:Package
+
+Tagged Values
+~~~~~~~~~~~~~
+
+**None**
