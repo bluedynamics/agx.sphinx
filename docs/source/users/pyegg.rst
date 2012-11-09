@@ -11,7 +11,7 @@ Overview
 **pyegg** UML profile overview.
 
 .. image:: profile_pyegg_uml_indigo.png
-
+   :scale: 50%
 
 UML:Stereotype <<pyegg>>
 ------------------------
