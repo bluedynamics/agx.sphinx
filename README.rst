@@ -35,17 +35,26 @@ Debian based Installation
 Mac based Installation
 ----------------------
 
-::
+
    $ brew install mscgen
+
    $ easy_install pip
+
    $ pip install virtualenv
+
    $ git clone git://github.com/bluedynamics/agx.sphinx.git
+
    $ . env/bin/activate
+
    (env)$ python bootstrap.py -c mac.cfg
+
    (env)$ bin/buildout -c mac.cfg
+
    (env)$ bin/sphinx
 
-If there are problems with compilation of some libs during the above:
+
+
+If there are problems with compilation of some libs during the above::
 
 
    $ rm /usr/local/lib/libiconv.2.dylib
@@ -53,14 +62,16 @@ If there are problems with compilation of some libs during the above:
    $ ln -s /usr/lib/libiconv.2.dylib /usr/local/lib/libiconv.2.dylib
 
 
-If you get a traceback during buildout about 'locale', try setting the locale
-to a reasonable value and re-run buildout::
+If you get a traceback during buildout about 'locale' like the following...::
 
    ...
 
        raise ValueError, 'unknown locale: %s' % localename
 
    ValueError: unknown locale: UTF-8
+
+
+..try setting the locale to a reasonable value and re-run buildout.
 
 
    (env)$ export LC_ALL=de_DE.UTF-8
@@ -90,10 +101,10 @@ then a light one for the upper left corner:
 Changes
 =======
 
- - Hello World remade with screenshots featuring Eclipse Indigo
+- Hello World remade with screenshots featuring Eclipse Indigo
 
 
 1.0dev
 ------
 
- - Initial
+- Initial
