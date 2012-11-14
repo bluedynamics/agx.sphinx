@@ -6,10 +6,10 @@ Installing AGX
 Pre-requirements
 ----------------
 
-AGX requires python 2.6 and dev header files for libxml2 in order to install
+AGX requires header files for libxml2 in order to install
 and run correctly.
 
-On debian based systems, install dev headers like so::
+On debian based systems install the development headers like so::
 
     apt-get install libxml2-dev libxslt1-dev
 
@@ -18,30 +18,21 @@ On debian based systems, install dev headers like so::
    (and etc/base.cfg) for "apt-get" instructions ;-)
 
 
-Attention Ubuntu Users
-----------------------
-
-If you run 12.04, run the following steps in order to install python2.6::
-
-    add-apt-repository ppa:fkrull/deadsnakes
-    apt-get update
-    apt-get install python2.6-dev
-    apt-get install git
-    apt-get install libxml2-dev libxslt1-dev
-    apt-get install python-distribute-deadsnakes
-
-
 Install AGX from source (currently the only method)
 ---------------------------------------------------
 
-Clone development buildout from github::
+In case you don't have **git** on your system, install it::
+
+    apt-get install git
+
+Clone the development buildout from github::
 
     git clone git://github.com/bluedynamics/agx.dev.git
 
 Change directory to location of already checked out repository and run
 bootstrap.py and buildout::
 
-    python2.6 bootstrap.py
+    python bootstrap.py
     ./bin/buildout
 
 When buildout has finished, the AGX binary is located at ``bin/agx`` in
