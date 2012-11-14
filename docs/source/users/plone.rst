@@ -6,6 +6,7 @@ This document describes the UML profile used for Plone Products
 with Generic Setup profiles.
 
 .. image:: profile_plone.png
+   :scale: 50%
 
 
 Profile Plone
@@ -15,12 +16,11 @@ Profile Plone
 UML:Package
 ----------------
 
-There is one stereotype avaliable to attach to packages. 
+There is one stereotype avaliable to attach to packages.
 
 <<gsprofile>>
 -----------------
 
-write me.
 
 
 ----------------
@@ -33,44 +33,35 @@ Classes can have four stereotypes:
 <<content_type>>
 -----------------
 
-write me.
 
 **Tagged Values**
 
-- **create_contentclass**: write me.
+- **create_contentclass**:
 
 
 <<referencable>>
 -----------------
 
-write me.
 
 
 <<dynamic view>>
 -----------------
 
-write me.
 
 
 <<view>>
 -----------------
 
-write me.
 
 **Tagged Values**
 
-- **name**: write me.
+- **name**:
 
-- **permission**: write me.
+- **permission**:
 
-- **layer**: write me.
+- **layer**:
 
 
 ---------------------
 UML:Interface
 ---------------------
-
-write me.
-
-
-
