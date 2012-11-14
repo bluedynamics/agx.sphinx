@@ -183,7 +183,7 @@ Tagged Values
 ~~~~~~~~~~~~~
 
 **expression**
-    Some python expression, i.e. ``[x for x in ["xxx"]]``.
+    Some python expression, e.g. ``[x for x in ["xxx"]]``.
 
 
 An Example Model (for tests)
