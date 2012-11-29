@@ -2,133 +2,346 @@
 Using the Zope Component Architecture
 ========================================
 
+The Zope Component Architecture
+deals with the Adapter design pattern and uses Interfaces heavily.
+
+The Python programming language does not have a notion of interfaces, but the
+ZCA offers a solution, making use of several core packages:
+
+- zope.interface
+
+- zope.event
+
+- zope.component
+
+
+
+Overview
+---------
+
 This document describes the **ZCA** UML profile.
 
-.. image:: profile_zca.png
+.. image:: profile_zca.svg
+   :scale: 50%
 
 
-ZCA Profile
-=============
+UML:Stereotype <<permission>>
+------------------------------
 
+Permission settings. 
 
------------------
-UML:Class
------------------
+Metaclasses
+~~~~~~~~~~~~
 
+- UML:Class
 
-<<permission>>
------------------
+Tagged Values
+~~~~~~~~~~~~~~
 
-write me. XXX
+**title**
+    Name of permission.
 
-**Tagged Values**
+**description**
+    Description of permission.
 
-- **title**: write me, XXX
+**id**
+    Id of permission.
 
-- **description**: write me, XXX
 
-- **id**: write me, XXX
+UML:Stereotype <<subscriber>>
+------------------------------
 
+Metaclasses
+~~~~~~~~~~~~
 
-<<subscriber>>
------------------
+- UML:Class
 
-write me. XXX
+Tagged Values
+~~~~~~~~~~~~~~
 
+**None**
 
-<<event>>
------------------
 
-write me. XXX
+UML:Stereotype <<event>>
+-------------------------
 
+Metaclasses
+~~~~~~~~~~~~
 
-<<adapter>>
------------------
+- UML:Class
+- UML:Interface
 
-write me. XXX
+Tagged Values
+~~~~~~~~~~~~~~
 
+**None**
 
-**Tagged Values**
 
-- **name**: write me, XXX
+UML:Stereotype <<adapter>>
+---------------------------
 
+Metaclasses
+~~~~~~~~~~~~
 
+- UML:Class
+- UML:Interface
 
-<<empty>>
-----------------
+Tagged Values
+~~~~~~~~~~~~~~
 
-write me. XXX
+**name**
+    String: name of the adapter.
 
 
-**Tagged Values**
+UML:Stereotype <<utility>>
+---------------------------
 
-- **name**: write me, XXX
+Utilities modelled as Classes with outgoing dependencies (with the <<provides>>
+stereotype) to some interface.
 
+Metaclasses
+~~~~~~~~~~~~
 
+- UML:Class
+- UML:Interface
 
-----------------
-UML:Interface
-----------------
+Tagged Values
+~~~~~~~~~~~~~~
 
-<<event>>
------------------
+**name**
+    String: a name for it.
 
-write me. XXX
 
+UML:Stereotype <<adapts>>
+--------------------------
 
-<<adapter>>
------------------
+Draw a dependency from an **Adapter** to an adapted class or interface.
 
-write me. XXX
+Metaclasses
+~~~~~~~~~~~~
 
+- UML:Dependency
 
-**Tagged Values**
+Tagged Values
+~~~~~~~~~~~~~~
 
-- **name**: write me, XXX
+**order**
+    String: the order of adaption.
 
 
+UML:Stereotype <<permits>>
+---------------------------
 
-<<empty>>
-----------------
+Dependency between **Adapter** and a **Permission**.
 
-write me. XXX
+Metaclasses
+~~~~~~~~~~~~
 
+- UML:Dependency
 
-**Tagged Values**
+Tagged Values
+~~~~~~~~~~~~~~
 
-- **name**: write me, XXX
+**None**
 
 
 
+UML:Stereotype <<for>>
+-----------------------
 
------------------
-UML:Dependency
------------------
+Metaclasses
+~~~~~~~~~~~~
 
+- UML:Dependency
 
-<<permits>>
------------
+Tagged Values
+~~~~~~~~~~~~~~
 
-write me. XXX
+**None**
 
 
-<<adapts>>
-------------
 
-write me. XXX
+UML:Stereotype <<subscribes>>
+------------------------------
 
+Metaclasses
+~~~~~~~~~~~~
 
-**Tagged Values**
+- UML:Dependency
 
-- **order**: write me, XXX
+Tagged Values
+~~~~~~~~~~~~~~
 
+**None**
 
 
-<<for>>
-------------
 
-write me. XXX
+UML:Stereotype <<provides>>
+----------------------------
 
+Metaclasses
+~~~~~~~~~~~~
 
-<<subscribes>>
-------------
+- UML:InterfaceRealization
+
+
+Tagged Values
+~~~~~~~~~~~~~~
+
+**None**
+
+
+
+UML:Stereotype <<zcml>>
+------------------------
+
+Metaclasses
+~~~~~~~~~~~~
+
+- UML:InterfaceRealization
+
+Tagged Values
+~~~~~~~~~~~~~~
+
+**None**
+
+
+
+Example Model
+--------------
+
+This model is used for tests:
+
+.. image:: agx.generator.zca-sample.png
+   :scale: 50%
+
+
+The following structure of files and folders is created on the file system when
+AGX is given the example model as input for code generation.
+::
+
+
+   agx.generator.zca-sample
+    ├── LICENSE.rst
+    ├── MANIFEST.rst
+    ├── README.rst
+    ├── setup.py
+    └── src
+         └── agx
+              ├── __init__.py
+              └── testpackage
+                   ├── __init__.py
+                   ├── adapters.py              <p>
+                   ├── adapters.zcml            <zcml>
+                   ├── common.py                <p>
+                   ├── configure.zcml           <zcml>
+                   ├── interfaces.py            <p>
+                   ├── subscribers.py           <p>
+                   ├── subscribers.zcml         <zcml>
+                   └── utilities.py             <p>
+
+Most of this follows from what has been said about the **pyegg** generator
+documentation: A package named ``agx.testpackage`` assigned the <<pyegg>>
+stereotype governs the hierarchy of folders (and the namespace managing __init__.py).
+
+And all packages with the stereotype <<pymodule>> have manifested as .py files
+(marked with <p> above).
+
+The **adapter_function_package** has become a function definition in the
+innermost __init__.py.
+
+
+Two configuration files containing **Zope Component Markup Language (ZCML)** are generated:
+
+- adapters.zcml and
+- configure.zcml
+
+
+configure.zcml
+~~~~~~~~~~~~~~~
+
+.. code-block:: xml
+
+   <?xml version="1.0" encoding="UTF-8"?>
+   <configure xmlns="http://namespaces.zope.org/zope">
+
+     <permission
+         id="bda.View"
+         title="View It"
+         description="Some special View permission"/>
+
+     <permission id="agx.testpackage.Edit"/>
+
+     <include file="adapters.zcml"/>
+
+     <include file="subscribers.zcml"/>
+
+   </configure>
+
+
+Two entries for permissions were made: Edit and View.
+The latter has tagged values to it as shown in this screenshot:
+
+.. image:: model_axg-generator-zca_tagged_values.png
+   :scale: 50%
+
+Two other include directives are there: for two more ZCML files.
+
+
+adapters.zcml
+~~~~~~~~~~~~~~
+
+.. code-block:: xml
+
+   <?xml version="1.0" encoding="UTF-8"?>
+   <configure xmlns="http://namespaces.zope.org/zope">
+
+     <adapter
+        for="agx.testpackage.common.AdaptedClass"
+        factory="agx.testpackage.adapters.ClassAdapter"
+        provides="agx.testpackage.interfaces.ISomeInterface"
+        permission="agx.testpackage.Edit"/>
+
+     <adapter
+        for="agx.testpackage.interfaces.IAdapted"
+        name="interface_adapter"
+        factory="agx.testpackage.adapters.InterfaceAdapter"
+        provides="agx.somewhere_else.interfaces.IStubInterface"/>
+
+     <adapter
+        for="agx.testpackage.interfaces.IAdapted agx.testpackage.common.AdaptedClass"
+        factory="agx.testpackage.adapters.TheMultiAdapter"
+        provides="agx.somewhere_else.interfaces.IStubInterface"
+        permission="bda.View"/>
+
+   </configure>
+
+
+Three adapters are configured. Note that TheMultiAdapter adapts two classes.
+
+Two of these three adapters have permissions attached,
+the third is a **named adapter**. It has a tagged value 'name'.
+
+Named adapters can be found and used by their given name.
+
+
+
+
+subscribers.zcml
+~~~~~~~~~~~~~~~~~
+
+
+.. code-block:: xml
+
+   <?xml version="1.0" encoding="UTF-8"?>
+   <configure xmlns="http://namespaces.zope.org/zope">
+
+     <subscriber
+         for="agx.testpackage.subscribers.SomeClass agx.testpackage.subscribers.SomeEvent"
+         handler="agx.testpackage.subscribers.EventHandler"/>
+
+   </configure>
+
+
+The EventHandler subscriber (from the lower right corner of the model)
+has subscriptions for two Classes.
