@@ -13,6 +13,14 @@ Overview
 .. image:: profile_pyegg_uml_indigo.png
    :scale: 50%
 
+
+This image shows the diagram of the **pyegg** profile.
+
+Below, you can find a listing of the stereotypes from this profile, with some
+information about the diagramm elements they can be applied to, and some
+information about the relevant tagged values.
+
+
 UML:Stereotype <<pyegg>>
 ------------------------
 
@@ -57,7 +65,7 @@ Tagged Values
 **classifiers**
     Used as ``classifiers`` in setup. Valid Classifiers can be
     found at  `<http://pypi.python.org/pypi?%3Aaction=list_classifiers>`_.
-    Classifiers must be seperated by comma (``,``).
+    Classifiers must be separated by comma (``,``).
 
 **copyright**
     Used as copyright header for python modules. A linebreak is
@@ -67,6 +75,7 @@ Tagged Values
 UML:Stereotype <<pypackage>>
 ----------------------------
 
+UML-Package is treated as Python package (a directory with an ``__init_.py``)`.
 Create or point to the directory with package name and create or point at a
 package's ``__init__.py`` file.
 
@@ -84,10 +93,11 @@ Tagged Values
 UML:Stereotype <<pymodule>>
 ---------------------------
 
-Treat package as python module. Thus create or point at a python file with a
-package name. All classes in this package are written into same module instead
-of creating module files for each class in a UML package if marked with
-``pypackage``.
+Treat package as python module (i.e. a single python file).
+Thus create or point at a python file with a package name.
+All classes in this package are written into the same module as opposed to
+creating module files for each class in a UML package if marked with the
+``pypackage`` stereotype.
 
 Metaclasses
 ~~~~~~~~~~~
@@ -193,3 +203,23 @@ This model is used for the tests of this package.
 
 .. image:: model-agx.generator.pyegg-testpackage.png
    :scale: 50%
+
+When feeding it to AGX to generate code, the following files and folders are
+created on the filesystem in a folder **agx.testpackage**:
+::
+
+   agx.testpackage
+    ├── LICENSE.rst
+    ├── MANIFEST.rst
+    ├── README.rst
+    ├── setup.py
+    └── src
+         └── agx
+              ├── __init__.py
+              └── testpackage
+                   ├── __init__.py
+                   ├── classinegg.py
+                   ├── somepackage
+                   │    ├── __init__.py
+                   │    └── packageclass.py
+                   └── testmodule.py
