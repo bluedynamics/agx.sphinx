@@ -18,6 +18,10 @@ Overview
 .. image:: profile_buildout_uml.png
 
 
+At this stage, **agx.generator.buildout** only supports generation of buildouts
+for Plone version 4.1.2.
+
+
 UML:Stereotype <<self_contained_buildout>>
 ------------------------------------------
 
