@@ -1,7 +1,7 @@
 ====================================================
-Foundations - UML, Profiles, AGX-Generators and more
+Foundations
 ====================================================
-
+UML, Profiles, AGX-Generators and more
 
 UML - the Unified Modeling Language
 ===================================

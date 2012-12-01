@@ -1,6 +1,6 @@
-=======================================
-Model Dexterity Content Types for Plone
-=======================================
+======================
+UML:Profile dexterity
+======================
 
 This document describes the AGX Dexterity UML profile.
 

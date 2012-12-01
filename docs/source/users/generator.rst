@@ -1,5 +1,5 @@
 ======================
-Generator Generation
+UML:Profile generator
 ======================
 
 The generator used when generating code from UML models with AGX is also modeled

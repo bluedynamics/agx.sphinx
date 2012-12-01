@@ -1,6 +1,6 @@
-========================================
-Using the Zope Component Architecture
-========================================
+================
+UML:Profile zca
+================
 
 The Zope Component Architecture
 deals with the Adapter design pattern and uses Interfaces heavily.
