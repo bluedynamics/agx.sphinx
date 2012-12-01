@@ -251,11 +251,16 @@ The **adapter_function_package** has become a function definition in the
 innermost __init__.py.
 
 
-Two configuration files containing **Zope Component Markup Language (ZCML)** are generated:
+Three configuration files containing **Zope Component Markup Language (ZCML)** are generated:
 
-- adapters.zcml and
-- configure.zcml
+**configure.zcml**
+   General configuration of views, also includes / references adapters.zcml and subscribers.zcml
 
+**adapters.zcml**
+   Configuration of adapters (see below).
+
+**subscribers.zcml**
+   Configuration of subscribers (see below).
 
 configure.zcml
 ~~~~~~~~~~~~~~~
