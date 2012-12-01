@@ -721,6 +721,7 @@ Tagged Values**
 **None**
 
 
+.. _st_IObject:
 
 UML:Stereotype <<IObject>>
 -----------------------------
@@ -738,9 +739,10 @@ Tagged Values**
 **schema**
     String: the schema.
 
+
 UML:Stereotype <<Object>>
 --------------------------
-Specialization of IObject, see above.
+Specialization of :ref:`st_IObject`.
 
 Metaclasses
 ~~~~~~~~~~~~
@@ -748,7 +750,7 @@ Metaclasses
 
 Tagged Values**
 ~~~~~~~~~~~~~~~~
-**None**
+see :ref:`st_IObject`.
 
 
 
