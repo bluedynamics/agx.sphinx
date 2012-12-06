@@ -115,6 +115,10 @@ UML:Stereotype <<stub>>
 
 Indicate class as stub. Used for generalization of 3rd-party objects.
 
+Create a UML:Class somewhere in the model, give it the name of the class or
+module you want to import, add the **<<stub>>** stereotype and change the
+Prpoerty value of **import** in the properties view under *Profile*.
+
 Metaclasses
 ~~~~~~~~~~~
 
