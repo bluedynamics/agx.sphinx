@@ -59,6 +59,9 @@ e.g. Text, TextLine, Password, etc.
    * - UML:Stereotype
      - Metaclasses
      - Tagged Values
+   * - name of stereotype
+     - applicable to
+     - inherited and **new**
    * - :ref:`st_python`
      - UML:Class
      - None
@@ -130,6 +133,9 @@ e.g. Text, TextLine, Password, etc.
    * - UML:Stereotype
      - Metaclasses
      - Tagged Values
+   * - name of stereotype
+     - applicable to
+     - inherited and **new**
    * - :ref:`st_IField`
      - n/a
      - **title, description, required, readonly, default**
@@ -154,6 +160,9 @@ e.g. Text, TextLine, Password, etc.
    * - .
      - .
      - .
+   * - name of stereotype
+     - applicable to
+     - inherited and **new**
    * - :ref:`st_IField`
      - n/a
      - **title, description, required, readonly, default**
@@ -196,6 +205,9 @@ e.g. Text, TextLine, Password, etc.
    * - .
      - .
      - .
+   * - name of stereotype
+     - applicable to
+     - inherited and **new**
    * - :ref:`st_IField`
      - n/a
      - **title, description, required, readonly, default**
@@ -211,6 +223,9 @@ e.g. Text, TextLine, Password, etc.
    * - .
      - .
      - .
+   * - name of stereotype
+     - applicable to
+     - inherited and **new**
    * - :ref:`st_IField`
      - n/a
      - **title, description, required, readonly, default**
@@ -238,6 +253,9 @@ e.g. Text, TextLine, Password, etc.
    * - .
      - .
      - .
+   * - name of stereotype
+     - applicable to
+     - inherited and **new**
    * - :ref:`st_IField`
      - n/a
      - **title, description, required, readonly, default**
@@ -250,6 +268,9 @@ e.g. Text, TextLine, Password, etc.
    * - .
      - .
      - .
+   * - name of stereotype
+     - applicable to
+     - inherited and **new**
    * - :ref:`st_IField`
      - n/a
      - **title, description, required, readonly, default**
@@ -277,6 +298,9 @@ e.g. Text, TextLine, Password, etc.
    * - .
      - .
      - .
+   * - name of stereotype
+     - applicable to
+     - inherited and **new**
    * - :ref:`st_IField`
      - n/a
      - **title, description, required, readonly, default**
