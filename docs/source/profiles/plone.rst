@@ -17,6 +17,37 @@ Overview
 .. note:: A more general description can be found here: :ref:`users_plone`
 
 
+
+.. list-table:: List of Stereotypes
+   :widths: 55 20 25
+   :header-rows: 1
+
+   * - UML:Stereotype
+     - Metaclasses
+     - Tagged Values
+   * - name of stereotype with link to details
+     - applicable to
+     - .
+   * - :ref:`st_gsprofile`
+     - UML:Package
+     - None
+   * - :ref:`st_content_type`
+     - UML:Class
+     - create_content_class
+   * - :ref:`st_referencable`
+     - UML:Class
+     - None
+   * - :ref:`st_dynamic_view`
+     - UML:Class
+     - None
+   * - :ref:`st_view`
+     - UML:Class, UML:Dependency
+     - name. permission, layer
+
+
+
+.. _st_gsprofile:
+
 UML:Stereotype <<gsprofile>>
 -----------------------------
 
@@ -34,6 +65,9 @@ Tagged Values
 
 
 
+
+.. _st_content_type:
+
 UML:Stereotype <<content_type>>
 --------------------------------
 
@@ -49,6 +83,9 @@ Tagged Values
 **create_contentclass**
     Integer
 
+
+
+.. _st_referencable:
 
 UML:Stereotype <<referencable>>
 --------------------------------
@@ -66,6 +103,8 @@ Tagged Values
 
 
 
+.. _st_dynamic_view:
+
 UML:Stereotype <<dynamic view>>
 --------------------------------
 
@@ -81,6 +120,8 @@ Tagged Values
 **None**
 
 
+
+.. _st_view:
 
 UML:Stereotype <<view>>
 ------------------------
