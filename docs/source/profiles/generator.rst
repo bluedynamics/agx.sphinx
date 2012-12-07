@@ -10,15 +10,6 @@ and generated using UML and AGX.
 
 Click on this image for a larger view.
 
-Profile
-=========
-
-----------------------
-UML:Foo
-----------------------
-
-
-
 
 The Generators Model
 =====================

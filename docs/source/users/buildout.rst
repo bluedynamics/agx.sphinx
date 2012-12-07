@@ -1,6 +1,13 @@
-====================
-UML:Profile buildout
-====================
+.. _users_buildout:
+
+=========
+Buildout
+=========
+
+.. note::
+
+  Experienced developers can jump to :ref:`profile_buildout`.
+
 
 Create a working setup for **buildout**.
 
@@ -10,45 +17,10 @@ with dependencies and configuration.
 See `<http://www.buildout.org/>`_.
 
 
-Overview
---------
-
-**buildout** UML profile overview.
-
-.. image:: profile_buildout_uml.png
-
-
 At this stage, **agx.generator.buildout** only supports generation of buildouts
 for Plone version 4.1.2.
 
 
-UML:Stereotype <<self_contained_buildout>>
-------------------------------------------
+If you want AGX to generate files for a Plone 4.1.2 buildout,
+just add the **<<plone_self_contained>>** stereotype to your UML:Package.
 
-Stereotype description
-
-Metaclasses
-~~~~~~~~~~~
-
-- UML:Package
-
-Tagged Values
-~~~~~~~~~~~~~
-
-**None**
-
-
-UML:Stereotype <<plone_self_contained>>
----------------------------------------
-
-Stereotype description
-
-Metaclasses
-~~~~~~~~~~~
-
-- UML:Package
-
-Tagged Values
-~~~~~~~~~~~~~
-
-**None**

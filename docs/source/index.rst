@@ -33,6 +33,7 @@ compatible with the old code-generator. AGX itself is written in Python.
    
    Getting Started <start/index>
    User Documentation <users/index>
+   Profile Reference <profiles/index.rst>
    Developer Documentation <developers/index>
 
 

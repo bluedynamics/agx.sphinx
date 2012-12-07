@@ -49,12 +49,13 @@ respect to the various generation targets that AGX features.
    :maxdepth: 2
 
    Foundations - about UML, Profiles, AGX-Generators and more <foundations>
+   Import and use basic data types in you model <basic_types>
    Generating Python Eggs <pyegg>
    Buildout <buildout>
    Zope Component Architecture <zca>
    Plone (Generic Setup profiles) <plone>
    Dexterity <dexterity>
    SQL ORM <sql>
-   Generator Generator <generator>
+   Generator Generator <../developers/generator>
 
 
