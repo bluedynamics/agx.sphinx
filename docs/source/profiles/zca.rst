@@ -13,6 +13,55 @@ This document describes the **ZCA** UML profile.
    :scale: 50%
 
 
+.. note:: A more general description can be found here: :ref:`users_zca`.
+
+
+
+.. list-table:: List of Stereotypes
+   :widths: 55 20 25
+   :header-rows: 1
+
+   * - UML:Stereotype
+     - Metaclasses
+     - Tagged Values
+   * - name of stereotype with link to details
+     - applicable to
+     - .
+   * - :ref:`st_permission`
+     - UML:Package
+     - --
+   * - :ref:`st_subscriber`
+     - UML:Class
+     - title, description, id
+   * - :ref:`st_adapter`
+     - UML:Class, UML:Interface
+     - name
+   * - :ref:`st_utility`
+     - UML:Class, UML:Interface
+     - name
+   * - :ref:`st_adapts`
+     - UML:Dependency
+     - order
+   * - :ref:`st_permits`
+     - UML:Dependency
+     - --
+   * - :ref:`st_for`
+     - UML:Dependency
+     - --
+   * - :ref:`st_subscribes`
+     - UML:Dependency
+     - --
+   * - :ref:`st_provides`
+     - UML:InterfaceRealisation
+     - --
+   * - :ref:`st_zcml`
+     - UML:InterfaceRealization
+     - --
+
+
+
+.. _st_permission:
+
 UML:Stereotype <<permission>>
 ------------------------------
 
@@ -35,6 +84,10 @@ Tagged Values
 **id**
     Id of permission.
 
+
+
+
+.. _st_subscriber:
 
 UML:Stereotype <<subscriber>>
 ------------------------------
@@ -65,6 +118,9 @@ Tagged Values
 **None**
 
 
+
+.. _st_adapter:
+
 UML:Stereotype <<adapter>>
 ---------------------------
 
@@ -80,6 +136,10 @@ Tagged Values
 **name**
     String: name of the adapter.
 
+
+
+
+.. _st_utility:
 
 UML:Stereotype <<utility>>
 ---------------------------
@@ -100,6 +160,10 @@ Tagged Values
     String: a name for it.
 
 
+
+
+.. _st_adapts:
+
 UML:Stereotype <<adapts>>
 --------------------------
 
@@ -116,6 +180,10 @@ Tagged Values
 **order**
     String: the order of adaption.
 
+
+
+
+.. _st_permits:
 
 UML:Stereotype <<permits>>
 ---------------------------
@@ -134,6 +202,10 @@ Tagged Values
 
 
 
+
+
+.. _st_for:
+
 UML:Stereotype <<for>>
 -----------------------
 
@@ -148,6 +220,9 @@ Tagged Values
 **None**
 
 
+
+
+.. _st_subscribes:
 
 UML:Stereotype <<subscribes>>
 ------------------------------
@@ -164,6 +239,9 @@ Tagged Values
 
 
 
+
+.. _st_provides:
+
 UML:Stereotype <<provides>>
 ----------------------------
 
@@ -179,6 +257,9 @@ Tagged Values
 **None**
 
 
+
+
+.. _st_zcml:
 
 UML:Stereotype <<zcml>>
 ------------------------
