@@ -1,12 +1,16 @@
 # Copyright BlueDynamics Alliance - http://bluedynamics.com
 # GNU General Public License Version 2
-
-from setuptools import setup, find_packages
 import os
+from setuptools import (
+    setup,
+    find_packages,
+)
+
 
 version = "1.0dev"
 shortdesc = "AGX Sphinx extension"
 longdesc = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
+
 
 setup(name="agx.sphinx",
       version=version,
