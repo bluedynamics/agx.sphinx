@@ -2,11 +2,11 @@
 
 
 .. image:: _static/agx.png
-   :align: right
 
-=============================================
-AGX - Code-Generation and Tree-Transformation
-=============================================
+
+=======================================
+Code-Generation and Tree-Transformation
+=======================================
 
 .. note::
 
