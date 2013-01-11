@@ -1,4 +1,4 @@
-import agx.dev
+import agx.core
 import zope.component
 from zope.component import getUtility
 from zope.configuration.xmlconfig import XMLConfig
@@ -21,8 +21,9 @@ class AGXInfo(object):
         return getUtility(IConfLoader)
 
     def load_agx_config(self):
+        import agx.core.loader
         XMLConfig('meta.zcml', zope.component)()
-        XMLConfig('configure.zcml', agx.dev)()
+        XMLConfig('configure.zcml', agx.core)()
         confloader = self.confloader
         confloader()
 
