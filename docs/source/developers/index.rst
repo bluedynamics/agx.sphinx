@@ -9,6 +9,7 @@ their own extensions for AGX.
    :maxdepth: 2
    
    Setup the Development Environment <setup>
+   Manage multiple Git Repositories at once <githelper>
    Under the Hood <under_the_hood>
    AGX Overview <overview>
    Handler Documentation <handler>
