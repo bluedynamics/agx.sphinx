@@ -3,6 +3,13 @@
 Import and Use Basic Datatypes
 -------------------------------
 
+.. note:: When creating a new Papyrus diagram with the **New Papyrus Model** wizard,
+          after choosing **UML** as language of the diagramm,
+          you can activate the checkbox saying
+	  **A UML model with basic primitive types (ModelWithBasicTypes)**. 
+	  This is a valid workaround for omitting the problems detailed in this section.
+
+
 Import
 ~~~~~~~
 If you want to use standard data types like **Boolean**, **Integer**, **String**
