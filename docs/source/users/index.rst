@@ -49,7 +49,7 @@ respect to the various generation targets that AGX features.
    :maxdepth: 2
 
    Foundations - about UML, Profiles, AGX-Generators and more <foundations>
-   Import and use basic data types in you model <basic_types>
+   Import and use basic data types in the model <basic_types>
    Generating Python Eggs <pyegg>
    Buildout <buildout>
    Zope Component Architecture <zca>
