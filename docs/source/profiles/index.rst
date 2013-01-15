@@ -25,5 +25,5 @@ applicable -- attributed with a **Stereotypes** from the target domain.
    SQL Profile <sql>
    Generator Profile <generator>
 
-
+   Profile Cheat Sheet <cheat_sheet>
 
