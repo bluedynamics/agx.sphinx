@@ -11,7 +11,7 @@ and run correctly.
 
 On debian based systems install the development headers like so::
 
-    apt-get install libxml2-dev libxslt1-dev
+    apt-get install python-dev libxml2-dev libxslt1-dev
 
 .. note::
    Debian folks may grep buildout.cfg
