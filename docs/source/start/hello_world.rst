@@ -27,6 +27,9 @@ Create a Pydev Project
 ----------------------
 
 
+.. note:: The screenshots on this page were made with Eclipse Indigo so they
+          might look a little different from what you see in Eclipse Juno.
+
 Open the  **PyDev** perspective, then click **File** in main menu and
 select **new** -> **Pydev Project**.
 

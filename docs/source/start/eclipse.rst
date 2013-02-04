@@ -14,15 +14,19 @@ Ubuntu users can simply::
 
     sudo apt-get install openjdk-7-jdk
 
-Download and install the **Indigo** Eclipse Modeling Tools bundle suitable for
+Download and install the **Juno** Eclipse Modeling Tools bundle suitable for
 your operating system from the
-`download page <http://www.eclipse.org/downloads/packages/release/indigo/sr2>`_.
+`download page <http://www.eclipse.org/downloads/packages/eclipse-modeling-tools/junosr1>`_.
 
-.. note::
-    If in doubt whether to install 32bit or 64bit version of eclipse, this
-    issue has been discussed at `stack overflow 
-    <http://stackoverflow.com/questions/9727430/java-and-eclipse-32-vs-64bit>`_.
-    Spoiler: 32bit
+.. note:: The screenshots on this page were made with Eclipse Indigo so they
+          might look a little different from what you see in Eclipse Juno.
+
+.. note:: Models created with Eclipse Indigo and the related version of Papyrus
+          will work with Eclipse Juno and the related Papyrus,
+          so there is forward compatibility,
+          but there is no backward compatibility:
+          models created with a more recent version cannot be used with the older version.
+
 
 Unpack the downloaded ZIP or tarball to a location of your choice. Eclipse
 should run if Java was installed properly by executing the eclipse binary::
