@@ -57,5 +57,5 @@ respect to the various generation targets that AGX features.
    Dexterity <dexterity>
    SQL ORM <sql>
    Generator Generator <../developers/generator>
-
+   Using AGX on the command line <commandline>
 
