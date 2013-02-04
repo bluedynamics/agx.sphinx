@@ -166,7 +166,7 @@ name you want to define a value for and click the **+** button on the right to a
 value.
 
 UML2 does not support multi valued tagged values. In case where enumerations
-are needed, value is seperated by comma. Refer to **Users Documentation** for
+are needed, value is separated by comma. Refer to **Users Documentation** for
 details.
 
 .. image:: ../_static/helloworld_indigo_define_tagged_values.png

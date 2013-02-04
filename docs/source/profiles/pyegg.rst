@@ -215,11 +215,11 @@ Tagged Values
 ~~~~~~~~~~~~~
 **args**
     Arguments passed to decorator, i.e. ``foo, bar``. Arguments must be
-    seperated by comma (``,``).
+    separated by comma (``,``).
 
 **kwargs**
     Keyword arguments passed to decorator, i.e. ``foo=0, bar=1``. Keyword
-    arguments must be seperated by comma (``,``).
+    arguments must be separated by comma (``,``).
 
 
 
@@ -247,11 +247,11 @@ Tagged Values
 
 **args**
     Arguments passed to decorator, i.e. ``foo, bar``. Arguments must be
-    seperated by comma (``,``).
+    separated by comma (``,``).
 
 **kwargs**
     Keyword arguments passed to decorator, i.e. ``foo=0, bar=1``. Keyword
-    arguments must be seperated by comma (``,``).
+    arguments must be separated by comma (``,``).
 
 
 
