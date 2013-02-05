@@ -12,7 +12,7 @@ normal  way would be quite a lot of typing and changing directories.
 Githelper / igitt
 ------------------
 To ease this process, Robert has created a tool named **githelper** or **igitt**.
-You can check it out from  `Github <https://github.com/rnixx/githelper>`
+You can check it out from  `rnixx' githelper repository on Github <https://github.com/rnixx/githelper>`_
 and install it into your system.
 
 Once you have done that, you can change directory to *devsrc/* and update all
