@@ -44,9 +44,11 @@ and click **Finish**
    :align: center
 
 
-When asked, choose Python 2.6 (Ubuntu: deadsnakes_, remember?)
+When asked, you may have to choose a Python version to be used. 
+Both Python 2.6 and 2.7 will work. The dependency on 2.6 no longer exists.
+You might have to tell Eclipse to auto-configure a Python interpreter,
+if you have not done so before.
 
-.. _deadsnakes: /start/install#attention-ubuntu-users
 
 .. image:: ../_static/helloworld_indigo_new_project_pydev_name_grammar2_6.png
    :scale: 50%
