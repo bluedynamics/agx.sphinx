@@ -1,3 +1,5 @@
+.. _profile_documentation:
+
 ==================
 Profile Reference
 ==================

@@ -10,10 +10,11 @@ AGX' Eclipse plugin comes with some handy menu entries, e.g. for
 However, apart from the fact that Papyrus runs only in Eclipse [1]_ there is no
 need to use Eclipse for code generation. In fact, all Eclipse does is call AGX.
 
+And you can do that yourself!
+
 .. [1] There is a standalone version of Papyrus on `www.papyrusuml.org <http://www.papyrusuml.org>`_,
        but that again is an Eclipse plugin project offering the Papyrus editor.
 
-And you can do that yourself!
 
 
 Call AGX without arguments
@@ -65,19 +66,22 @@ List the available profiles (-l)
 If you want to see the list of the profiles registered with AGX,
 just call AGX with the **-l** (or **--listtemplates**) option.
 
-You will be presented with output similar to this::
+You will be presented with output similar to this.
+(Note that "..." here shows that some part ot the path has been omitted) ::
 
   user@host:~/workspace_indigo/agx.dev$ bin/agx -l
-  generator /home/christoph/workspace_indigo/agx.dev/devsrc/agx.generator.generator/src/agx/generator/generator/profiles/generator.profile.uml
-  sql /home/christoph/workspace_indigo/agx.dev/devsrc/agx.generator.sql/src/agx/generator/sql/profiles/sql.profile.uml
-  dexterity /home/christoph/workspace_indigo/agx.dev/devsrc/agx.generator.dexterity/src/agx/generator/dexterity/profiles/dexterity.profile.uml
-  pyegg /home/christoph/workspace_indigo/agx.dev/devsrc/agx.generator.pyegg/src/agx/generator/pyegg/profiles/pyegg.profile.uml
-  plone /home/christoph/workspace_indigo/agx.dev/devsrc/agx.generator.plone/src/agx/generator/plone/profiles/plone.profile.uml
-  buildout /home/christoph/workspace_indigo/agx.dev/devsrc/agx.generator.buildout/src/agx/generator/buildout/profiles/buildout.profile.uml
-  zca /home/christoph/workspace_indigo/agx.dev/devsrc/agx.generator.zca/src/agx/generator/zca/profiles/zca.profile.uml
+  generator /.../agx.generator.generator/src/agx/generator/generator/profiles/generator.profile.uml
+  sql /.../agx.generator.sql/src/agx/generator/sql/profiles/sql.profile.uml
+  dexterity /.../agx.generator.dexterity/src/agx/generator/dexterity/profiles/dexterity.profile.uml
+  pyegg /.../agx.generator.pyegg/src/agx/generator/pyegg/profiles/pyegg.profile.uml
+  plone /.../agx.generator.plone/src/agx/generator/plone/profiles/plone.profile.uml
+  buildout /.../agx.generator.buildout/src/agx/generator/buildout/profiles/buildout.profile.uml
+  zca /.../agx.generator.zca/src/agx/generator/zca/profiles/zca.profile.uml
 
 
-Please refer to the Users Documentation or Profile Documentation to find out what they can do for you.
+Please refer to the :ref:`user_documentation` or :ref:`profile_documentation`
+to find out what the profiles can do for you.
+
 
 Export profiles to the file system (-e)
 ----------------------------------------
@@ -121,25 +125,28 @@ or **--listtemplates** option. This will yield output similar to the following:
 
   user@host:/opt/agx/agx.dev$ bin/agx -t
   sql_example: SQL Product
-          Simple SQL content model with 2 sql_content classess
+          A simple SQL content model with two sql_content classes.
 
   dexterity_product: Dexterity Product
-          A vanilla Plone Dexterity model that containing the necessary
-          settings for content stuff for Plone
+          A vanilla Plone Dexterity model that contains the necessary
+          settings for content stuff for Plone.
 
   python_egg: Python Egg
-          Minimal Python egg model
+          A minimal Python egg model.
 
   plone_product: Plone Product
-          A vanilla Plone  model that containing the necessary settings for a Plone product without content framework
+          A vanilla Plone model that contains the necessary settings
+          for a Plone product: generic setup profile etc.
+          but without content classes.
 
   generator_example: Generator Example
-          (Advanced users only) Example model for a generator generator
+          An example model for a generator generator.
+          (Advanced users only!) 
 
   dexterity_example: Dexterity Example
           A ready-to-run Plone Dexterity example that demonstrates
           how to model content stuff for Plone.
-          contains a set of example classes
+          Contains a set of example classes.
 
 
 The listed templates can be used like in the following section.
@@ -155,13 +162,13 @@ profiles, as well as a log file documenting the process.
 
 ::
 
-  christoph@s3:/opt/agx/agx.dev/foo$ ../bin/agx -c sql_example
+  user@host:/opt/agx/agx.dev/foo$ ../bin/agx -c sql_example
   INFO  Export to target: './uml_profiles'
-  INFO  Export 'sql' 
-  INFO  Export 'pyegg' 
-  christoph@s3:/opt/agx/agx.dev/foo$ ls
+  INFO  Export 'sql'
+  INFO  Export 'pyegg'
+  user@host:/opt/agx/agx.dev/foo$ ls
   agx.core.log  model.di  model.notation  model.uml  model.uml.agx  uml_profiles
-  christoph@s3:/opt/agx/agx.dev/foo$ tree
+  user@host:/opt/agx/agx.dev/foo$ tree
   .
   ├── agx.core.log
   ├── model.di
