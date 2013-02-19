@@ -28,6 +28,15 @@ successor. AGX is a complete rewrite with lessons learned and in no way
 compatible with the old code-generator. AGX itself is written in Python.
 
 
+Watch `this video on YouTube <http://www.youtube.com/watch?v=I3471x5wpG4>`_ to see a short demo.
+
+.. image:: _static/agx-youtube-dexterity-example.png
+   :target: http://www.youtube.com/watch?v=I3471x5wpG4
+
+
+
+
+
 .. toctree::
    :maxdepth: 2
    
