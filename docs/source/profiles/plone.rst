@@ -10,7 +10,7 @@ with Generic Setup profiles.
 Overview
 ---------
 
-.. image:: profile_plone.png
+.. image:: profile_plone.svg
    :scale: 50%
 
 
