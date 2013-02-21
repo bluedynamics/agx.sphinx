@@ -10,7 +10,7 @@ Overview
 
 **buildout** UML profile overview.
 
-.. image:: profile_buildout_uml.png
+.. image:: profile_buildout.svg
 
 
 .. note:: 
