@@ -58,6 +58,9 @@ modules.
   target tree. They are called by the transformation chain.
 
 
+
+.. _under_the_hood-components_of_transformation_chain:
+
 Components of the transformation chain
 --------------------------------------
 
