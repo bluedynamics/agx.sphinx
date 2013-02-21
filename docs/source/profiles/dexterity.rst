@@ -9,7 +9,7 @@ This document describes the AGX Dexterity UML profile.
 Overview
 ---------
 
-.. image:: profile_dexterity.png
+.. image:: profile_dexterity.svg
    :scale: 50%
 
 
