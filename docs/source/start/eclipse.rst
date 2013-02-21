@@ -105,6 +105,13 @@ plugin location when adding the AGX update site.
     run correctly.
 
 
+Configure AGX Eclipse plugin
+--------------------------
+
+Open your Eclipse Preferences, select the AGX section and select the AGX binary 
+within bin directory of the agx.dev buildout.
+
+
 Unrelated but useful plugins for development with Eclipse
 ---------------------------------------------------------
 
