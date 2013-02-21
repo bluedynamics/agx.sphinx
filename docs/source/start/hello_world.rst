@@ -8,20 +8,6 @@ Motivation
 
 Now we create a first model and generate code.
 
-Even some early versions of the agx. family of packages were made with
-the same toolchain: using Eclipse & Papyrus for modeling and agx as generator.
-
-Look at this model. It was used to generate the package structure (python egg)
-of agx.generator.buildout.
-
-.. image:: ../_static/helloworld_indigo_model_package_agx-generator-buildout.png
-   :scale: 50%
-   :align: center
-
-
-But first...
-
-
 
 Create a Pydev Project
 ----------------------
@@ -32,6 +18,8 @@ Create a Pydev Project
 
 Open the  **PyDev** perspective, then click **File** in main menu and
 select **new** -> **Pydev Project**.
+
+.. note:: You can find and create perspectives under menu Window -> Open Perspective
 
 You can also right-click the white space in the Package Explorer and choose 
 **New** -> **Pydev Project**.
@@ -89,38 +77,6 @@ Finally click **finish**. Some files are created.
 A diagram file (*model.di*), a UML file (*model.uml*), a notation file 
 (*model.notation*) and an agx file (*model.uml.agx*). 
 
-
-Set the Projects AGX Preferences
---------------------------------
-
-.. note::
-   At this moment the following steps require you to switch to Eclipses
-   **Java Perspective** to make the AGX context menu work.
-   This bug will be squished in the future.
-   
-
-Right click on the already created **uml** file, select **Properties**
-and navigate to **AGX Properties**.
-
-Define the output directory (**Default Generation Target**).
-This is where generated code will be written to.
-
-.. image:: ../_static/helloworld_indigo_agx_preferences.png
-   :scale: 50%
-   :align: center
-
-
-Define the generator executable. By clicking **apply** AGX Eclipse will fetch
-the profiles to be provided by invoking the defined executable
-(./bin/agx -l, see Pre-Requirements).
-
-.. image:: ../_static/helloworld_indigo_package-explorer_dropdown_import_profiles.png
-   :scale: 50%
-   :align: center
-   
-
-If you have set the projects AGX preferences correctly, the console will show 
-some output indicating success.
 
 Generate Code from the Model
 ----------------------------
