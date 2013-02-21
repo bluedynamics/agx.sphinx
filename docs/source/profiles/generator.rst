@@ -5,7 +5,7 @@ UML:Profile generator
 The generator used when generating code from UML models with AGX is also modeled
 and generated using UML and AGX.
 
-.. image:: profile_generator.png
+.. image:: profile_generator.svg
    :scale: 50%
 
 Click on this image for a larger view.
