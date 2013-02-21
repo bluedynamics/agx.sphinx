@@ -12,7 +12,7 @@ Overview
 
 **pyegg** UML profile overview.
 
-.. image:: profile_pyegg_uml_indigo.png
+.. image:: profile_pyegg.svg
    :scale: 50%
 
 
