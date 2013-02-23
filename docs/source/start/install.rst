@@ -40,16 +40,16 @@ the installation directory.
 
 Run ``./bin/agx -i``. If you get output similar to this::
 
-    AGX 3.0-dev Develop
+    AGX 1.0a2 (Reincarnation)
     Installed generators:
-        agx.generator.uml (6b4b7c33b7d6e48f91479f902b80b37e834104c1)
-        agx.generator.pyegg (c51cecb86e21da6a60e126d36b21e59ee250c2d7)
-        agx.generator.zca (4c8e835921da036f92a52d80b1378c344f528a88)
-        agx.generator.sql (08a33d0c1b49505e26b9885e575dc67fe1d8e864)
-        agx.generator.plone (b9d04d1c86c8977151adc635f35d883486b12268)
-        agx.generator.dexterity (771dde17a7bf4640b672aac46b41e09d042302a8)
-        agx.generator.buildout (7d10edbeaa5089f133853b93e58cc77945322a2b)
-        agx.generator.generator (5ad11b18339b5cf85989257c1622dcdbf9579521)
+        agx.generator.generator (1.0a1)
+        agx.generator.sql (1.0a1)
+        agx.generator.dexterity (1.0a1)
+        agx.generator.uml (1.0a1)
+        agx.generator.pyegg (1.0a1)
+        agx.generator.plone (1.0a1)
+        agx.generator.buildout (1.0a1)
+        agx.generator.zca (1.0a1)
 
 AGX is ready to be used.
 
