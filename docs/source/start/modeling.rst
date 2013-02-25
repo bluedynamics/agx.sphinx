@@ -22,7 +22,20 @@ graphical language designed to describe software through diagrams. There are
 several different types of diagrams available, but at the moment AGX uses only 
 class-diagrams.
 
-AGX can be extended by using profiles and matching generators. Each profile defines 
-a set of features and contains a UML profile loadable in any modern UML 
-modeling tool. It also contains AGX generators bound to the scope of the profile 
-responsible for generating Python code, structures or configuration.
+AGX can be extended by using profiles and matching generators. Each profile
+defines a set of features and contains a UML profile loadable in any modern UML 
+modeling tool. It also contains AGX generators bound to the scope of the
+profile responsible for generating Python code, structures or configuration.
+
+
+Common Misunderstanding
+=======================
+
+When using UML for code generation i do not need to know how to program
+-----------------------------------------------------------------------
+
+Thats completly wrong. UML helps you to structure and document your software,
+can be a tool to communicate software architecture to non-programmers, helps
+you to boilerplate the software. Nontheless using a code generator requires
+the developer to understand what's generated, otherwise she gets stuck as soon
+as something gets wrong with the generated output.

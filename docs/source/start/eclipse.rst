@@ -1,9 +1,9 @@
-=====================================================
+===================================================
 Installing and configuring Eclipse for use with AGX
-=====================================================
+===================================================
 
 These are installation instructions for using the Eclipse IDE for development.
-Currenty AGX requires the **Modelling Edition** of **Eclipse Indigo** (3.7).
+Currenty AGX requires the **Modelling Edition** of **Eclipse Juno** (4.2).
 
 
 Install Eclipse
@@ -25,8 +25,8 @@ your operating system from the
           will work with Eclipse Juno and the related Papyrus,
           so there is forward compatibility,
           but there is no backward compatibility:
-          models created with a more recent version cannot be used with the older version.
-
+          models created with a more recent version cannot be used with the
+          older version.
 
 Unpack the downloaded ZIP or tarball to a location of your choice. Eclipse
 should run if Java was installed properly by executing the eclipse binary::
@@ -106,7 +106,7 @@ plugin location when adding the AGX update site.
 
 
 Configure AGX Eclipse plugin
---------------------------
+----------------------------
 
 Open your Eclipse Preferences, select the AGX section and select the AGX binary 
 within bin directory of the agx.dev buildout.

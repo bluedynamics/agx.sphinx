@@ -18,27 +18,51 @@ On debian based systems install the development headers like so::
    (and etc/base.cfg) for "apt-get" instructions ;-)
 
 
-Install AGX from source (currently the only method)
----------------------------------------------------
+Download and install from pypi
+------------------------------
+
+Download and unpack ``agx.dev`` from ``https://pypi.python.org/pypi/agx.dev``.
+
+Enter directory from command line and run buildout::
+
+    python bootstrap.py --version 1.7
+    ./bin/buildout
+
+
+Install AGX from github
+-----------------------
 
 In case you don't have **git** on your system, install it::
 
     apt-get install git
 
-Clone the development buildout from github::
+Clone ``agx.dev`` from github::
 
     git clone git://github.com/bluedynamics/agx.dev.git
 
-Change directory to location of already checked out repository and run
-bootstrap.py and buildout::
+Enter directory from command line and run buildout::
 
-    python bootstrap.py
+    python bootstrap.py --version 1.7
     ./bin/buildout
+
+
+Install development sources
+---------------------------
+
+Both - installation from pypi and from github provide installing AGX with
+source packages for development of AGX itself::
+
+    python bootstrap.py --version 1.7
+    ./bin/buildout -c dev.cfg
+
+
+Check Installation
+------------------
 
 When buildout has finished, the AGX binary is located at ``bin/agx`` in
 the installation directory.
 
-Run ``./bin/agx -i``. If you get output similar to this::
+Run ``./bin/agx -i``. You should get output similar to this::
 
     AGX 1.0a2 (Reincarnation)
     Installed generators:
@@ -51,6 +75,4 @@ Run ``./bin/agx -i``. If you get output similar to this::
         agx.generator.buildout (1.0a1)
         agx.generator.zca (1.0a1)
 
-AGX is ready to be used.
-
-Congratulations, you can now use AGX.
+Congratulations, AGX is now ready to be used.
