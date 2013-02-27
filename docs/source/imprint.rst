@@ -2,7 +2,7 @@
 Imprint
 =======
 
-This website is copyrighted by the
+This website is maintained and copyrighted by the
 `BlueDynamics Alliance <http://bluedynamics.com>`_
 
 All content - if not otherwise marked - is licensed under the 
@@ -11,3 +11,16 @@ All content - if not otherwise marked - is licensed under the
 This site is provided by Robert Niederreiter and Jens Klein.
 
 Write an e-mail to `dev@agx.me <mailto:dev@agx.me>`_.
+
+
+Contributors
+------------
+
+* Robert Niederreiter
+* Phil Auersperg-Castell
+* Jens Klein
+* Christoph Scheid
+* Peter Holzer
+* Johannes Raggam
+* Vincent Fretin
+* Michaël Launay
