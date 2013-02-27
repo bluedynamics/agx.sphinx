@@ -1,6 +1,6 @@
-=====================================================
+===================================================
 Installing and configuring Eclipse for use with AGX
-=====================================================
+===================================================
 
 These are installation instructions for using the Eclipse IDE for development.
 Currenty AGX requires the **Modelling Edition** of **Eclipse Juno** (4.2).
